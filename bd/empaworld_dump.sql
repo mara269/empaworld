@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost:8889
--- Tiempo de generación: 30-10-2017 a las 19:55:00
+-- Tiempo de generación: 30-10-2017 a las 20:16:33
 -- Versión del servidor: 5.5.42
 -- Versión de PHP: 5.6.10
 
@@ -32,7 +32,17 @@ CREATE TABLE `tanger_live` (
   `estado` int(11) NOT NULL,
   `mostrada` int(11) DEFAULT '0',
   `presentacion` int(11) DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tanger_live`
+--
+
+INSERT INTO `tanger_live` (`idtanger_live`, `comentario`, `estado`, `mostrada`, `presentacion`) VALUES
+(1, '1', 0, 0, 1),
+(2, '1', 0, 0, 1),
+(3, 'hola perras', 0, 0, 1),
+(4, 'hola de nuevo', 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -47,7 +57,7 @@ CREATE TABLE `voto_pregunta` (
   `estado` int(11) DEFAULT '0',
   `breakout` int(11) DEFAULT NULL,
   `presentacion` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `voto_pregunta`
@@ -60,12 +70,31 @@ INSERT INTO `voto_pregunta` (`idvoto_pregunta`, `nombre`, `tipo`, `estado`, `bre
 (4, 'Presento a los 90 min, disminución del ST de más del 50%, dolor precordial 1/10. ¿Cual es el siguiente paso?', 'caso1 Marko', 0, NULL, 6),
 (5, 'Solicita traslado a Centro con sala de  hemodinámica, es aceptado. Pero se retrasa “una semana”. Continua asintomático cardiovascular y con disminución del ST de más del 50% ¿Cual es el siguiente paso?', 'caso1 Marko', 0, NULL, 6),
 (6, '¿Qué esquemas anticoagulantes, podría dar?', 'caso2 Marko', 0, NULL, 6),
-(7, '¿Que tratamiento antiagregante plaquetario coadyuvante daría?', 'caso2 Marko', 0, NULL, 6),
-(8, '¿Cual es el siguiente paso?', 'caso2 Marko', 0, NULL, 6),
-(9, '¿Qué porcentaje de pacientes no reperfunden con trombólisis?', 'caso2 Marko', 0, NULL, 6),
-(10, 'Se reporta enfermedad trivascular con enfermedad de tronco coronario distal de 80% ¿Cual es el siguiente paso?', 'caso2 Marko', 0, NULL, 6),
-(11, '¿Cuáles son los factores de riesgo cardiovascular MAYORES?', 'multiple', 0, NULL, 9),
-(12, '¿Cuáles son los factores de riesgo cardiovascular MAYORES?', 'multiple', 0, NULL, 9);
+(7, '¿Que tratamiento antiagregante plaquetario coadyuvante daría?', 'caso2 Marko', 0, NULL, 6);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `voto_respondieron`
+--
+
+CREATE TABLE `voto_respondieron` (
+  `idvoto_pregunta` int(11) NOT NULL,
+  `idrespuesta` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `voto_respondieron`
+--
+
+INSERT INTO `voto_respondieron` (`idvoto_pregunta`, `idrespuesta`) VALUES
+(1, 2),
+(2, 12),
+(3, 18),
+(4, 21),
+(5, 24),
+(6, 28),
+(7, 29);
 
 -- --------------------------------------------------------
 
@@ -133,6 +162,12 @@ ALTER TABLE `voto_pregunta`
   ADD PRIMARY KEY (`idvoto_pregunta`);
 
 --
+-- Indices de la tabla `voto_respondieron`
+--
+ALTER TABLE `voto_respondieron`
+  ADD KEY `fk_algo` (`idvoto_pregunta`);
+
+--
 -- Indices de la tabla `voto_respuesta`
 --
 ALTER TABLE `voto_respuesta`
@@ -147,12 +182,12 @@ ALTER TABLE `voto_respuesta`
 -- AUTO_INCREMENT de la tabla `tanger_live`
 --
 ALTER TABLE `tanger_live`
-  MODIFY `idtanger_live` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idtanger_live` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `voto_pregunta`
 --
 ALTER TABLE `voto_pregunta`
-  MODIFY `idvoto_pregunta` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+  MODIFY `idvoto_pregunta` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT de la tabla `voto_respuesta`
 --
@@ -161,6 +196,12 @@ ALTER TABLE `voto_respuesta`
 --
 -- Restricciones para tablas volcadas
 --
+
+--
+-- Filtros para la tabla `voto_respondieron`
+--
+ALTER TABLE `voto_respondieron`
+  ADD CONSTRAINT `fk_algo` FOREIGN KEY (`idvoto_pregunta`) REFERENCES `voto_pregunta` (`idvoto_pregunta`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `voto_respuesta`

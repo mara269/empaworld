@@ -546,6 +546,7 @@ jQuery(function($){
 			$(".mandando-pregunta").show();
 			var pregunta=$("#pregunta-ponente").val();
 			var user=$("#usuario").val();
+			console.log(user);
 			socket.emit("pregunta live",{user:user,pregunta:pregunta},function(data){
 				console.log(data);
 				if (data) {
