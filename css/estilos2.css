@@ -3,10 +3,17 @@ body{
 	height: 768px !important;
 	background-color: rgb(223, 190, 154);
 }
+
 @font-face {
-   font-family: "Futura Std";
-   src: url(/../fonts/Hind-Medium.ttf) format("truetype");
+  font-family: interB;
+  src: url("/fonts/Interstate-Mono-Bold.otf");
 }
+
+@font-face {
+  font-family: interM;
+  src: url("/fonts/Interstate-Mono.otf");
+}
+
 table, th, td {
     border: 1px solid #ececec;
     border-collapse: collapse;
@@ -123,7 +130,7 @@ th {
     left: 31px;
 }
 
-.sub-grupos {
+.   sub-grupos {
     top: 535px;
     left: 505px;
     width: 300px;
@@ -141,7 +148,7 @@ th {
     white-space: pre;
     content: "Break Out";
     font-size: 40px;
-    font-family: "Futura Std";
+    font-family: "interM";
     /* text-align: left; */
     line-height: 30px;
     color: #FFFFFF;
@@ -171,7 +178,7 @@ th {
     white-space: pre;
     content: "Encuesta";
     font-size: 40px;
-    font-family: "Futura Std";
+    font-family: "interM";
     /* text-align: left; */
     line-height: 30px;
     color: #FFFFFF;
@@ -201,7 +208,7 @@ th {
     /* white-space: pre; */
     content: "Pregunta al experto";
     font-size: 32px;
-    font-family: "Futura Std";
+    font-family: "interM";
     /* text-align: left; */
     line-height: 30px;
     color: #FFFFFF;
@@ -340,7 +347,7 @@ th {
     position: absolute;
     top: -8px;
     left: -290px;
-    font-family: "Futura Std";
+    font-family: "interM";
     font-size: 40px;
     color: #cd1518;
     text-align: center;
@@ -386,7 +393,7 @@ th {
     height: 61px;
     width: 595px;
     font-size: 22px;
-    font-family: "Futura Std";
+    font-family: "interM";
     text-align: left;
     line-height: 30px;
     color: #000000;
@@ -402,7 +409,7 @@ th {
     height: 61px;
     width: 595px;
     font-size: 22px;
-    font-family: "Futura Std";
+    font-family: "interM";
     text-align: left;
     line-height: 30px;
     color: #000000;
@@ -418,7 +425,7 @@ th {
     height: 61px;
     width: 595px;
     font-size: 22px;
-    font-family: "Futura Std";
+    font-family: "interM";
     text-align: left;
     line-height: 30px;
     color: #000000;
@@ -434,7 +441,7 @@ th {
     height: 61px;
     width: 595px;
     font-size: 22px;
-    font-family: "Futura Std";
+    font-family: "interM";
     text-align: left;
     line-height: 30px;
     color: #000000;
@@ -450,7 +457,7 @@ th {
     height: 61px;
     width: 595px;
     font-size: 22px;
-    font-family: "Futura Std";
+    font-family: "interM";
     text-align: left;
     line-height: 30px;
     color: #000000;
@@ -466,7 +473,7 @@ th {
     height: 61px;
     width: 595px;
     font-size: 22px;
-    font-family: "Futura Std";
+    font-family: "interM";
     text-align: left;
     line-height: 30px;
     color: #000000;
@@ -482,7 +489,7 @@ th {
     height: 61px;
     width: 595px;
     font-size: 22px;
-    font-family: "Futura Std";
+    font-family: "interM";
     text-align: left;
     line-height: 30px;
     color: #000000;
@@ -498,7 +505,7 @@ th {
     height: 74px;
     width: 595px;
     font-size: 22px;
-    font-family: "Futura Std";
+    font-family: "interM";
     text-align: left;
     line-height: 30px;
     color: #000000;
@@ -514,7 +521,7 @@ th {
     height: 61px;
     width: 595px;
     font-size: 22px;
-    font-family: "Futura Std";
+    font-family: "interM";
     text-align: left;
     line-height: 30px;
     color: #000000;
@@ -530,7 +537,7 @@ th {
     height: 83px;
     width: 770px;
     font-size: 20px;
-    font-family: "Futura Std";
+    font-family: "interM";
     text-align: left;
     line-height: 30px;
     color: #000000;
@@ -546,7 +553,7 @@ th {
     height: 61px;
     width: 573px;
     font-size: 22px;
-    font-family: "Futura Std";
+    font-family: "interM";
     text-align: left;
     line-height: 30px;
     color: #000000;
@@ -562,7 +569,7 @@ th {
     height: 61px;
     width: 595px;
     font-size: 22px;
-    font-family: "Futura Std";
+    font-family: "interM";
     text-align: left;
     line-height: 30px;
     color: #000000;
@@ -1155,7 +1162,7 @@ position: absolute;
     position: absolute;
     top: -8px;
     left: -400px;
-    font-family: "Futura Std";
+    font-family: "interM";
     font-size: 40px;
     color: #cd1518;
     text-align: center;
@@ -1176,7 +1183,7 @@ position: absolute;
     position: absolute;
     background: #e0e0e0;
     font-size: 25px;
-    font-family: "Futura Std";
+    font-family: "interM";
     padding-left: 15px;
     padding-top: 15px;
     border-radius: 25px;
@@ -1304,7 +1311,7 @@ position: absolute;
     position: absolute;
     top: -8px;
     left: -200px;
-    font-family: "Futura Std";
+    font-family: "interM";
     font-size: 40px;
     color: #cd1518;
     text-align: center;
@@ -1343,7 +1350,7 @@ position: absolute;
     margin-right: auto;
     margin-top: 10px;
     color: #c82348;
-    font-family: "Futura Std";
+    font-family: "interM";
     font-size: 14px;
     overflow: auto;
     z-index: auto;
@@ -1357,7 +1364,7 @@ position: absolute;
     margin-right: auto;
     margin-top: -15px;
     color: #c82348;
-    font-family: "Futura Std";
+    font-family: "interM";
     font-size: 14px;
     overflow: auto;
     z-index: auto;
@@ -1372,7 +1379,7 @@ position: absolute;
     margin-left: 85px;
     text-align: center;
     width: 870px;
-    font-family: "Futura Std";
+    font-family: "interM";
     font-size: 17px;
     font-weight: bold;
     color: #000000;
@@ -1384,7 +1391,7 @@ position: absolute;
     text-align: justify;
     padding: 10px 30px 10px 30px;
     width: 870px;
-    font-family: "Futura Std";
+    font-family: "interM";
     font-size: 16px;
     font-weight: bold;
     color: #000000;
@@ -1394,7 +1401,7 @@ position: absolute;
 	margin-top: 20px;
     text-align: center;
     width: 870px;
-    font-family: "Futura Std";
+    font-family: "interM";
     font-size: 20px;
     font-weight: bold;
 }
@@ -1439,7 +1446,7 @@ position: absolute;
 }
 .textoCuestionario {
     text-align: right;
-    font-family: "Futura Std";
+    font-family: "interM";
     font-size: 14px;
     color: black;
     margin-left: 10px;
@@ -1448,7 +1455,7 @@ position: absolute;
 }
 .textoCuestionario2 {
     text-align: right;
-    font-family: "Futura Std";
+    font-family: "interM";
     font-size: 16px;
     color: black;
     margin-left: 10px;
@@ -1463,7 +1470,7 @@ position: absolute;
 
 #data {
     width: 850px;
-    font-family: "Futura Std";
+    font-family: "interM";
     font-size: 16px;
     margin-top: 30px; 
 }
