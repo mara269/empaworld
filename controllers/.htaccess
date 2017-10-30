@@ -1,0 +1,19 @@
+# Activar RewriteEngine
+RewriteEngine on
+ 
+# Reescribir la URL solicitada por el usuario
+#   Entrada:  clientes/NOMBRE/
+#   Salida: clientes.php?id=NOMBRE
+RewriteRule ^/$ login.php [L]
+RewriteRule ^home$ index.php [L]
+RewriteRule ^modulo$ module.php [L]
+RewriteRule ^functions$ controllers/controllers.php [L]
+RewriteRule ^functionsA$ controllers/controllersA.php [L]
+RewriteRule ^admin/$ admin/indexAdmin.php [L]
+RewriteRule ^admin/categoria$ admin/indexAdmin.php [L]
+RewriteRule ^admin/usuario$ admin/user.php [L]
+RewriteRule ^admin/producto$ admin/product.php [L]
+RewriteRule ^admin/noticias$ admin/news.php [L]
+RewriteRule ^admin/calendario$ admin/calendar.php [L]
+RewriteRule ^admin/modulos$ admin/module.php [L]
+RewriteRule ^admin/conjuntos$ admin/conjunto.php [L]

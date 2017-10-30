@@ -1,0 +1,183 @@
+<html>
+<head>
+	<title>Alertas</title>
+	<meta name="viewport" content="width = 1024, height=768, initial-scale=1.0, maximum-scale=1.0" />
+
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<style type="text/css">
+		body{
+			background: url(/../img/extras/fondo.jpg) center center no-repeat;
+		}
+		.oculto{
+			display: none;
+		}
+		.contenedores{
+			position: absolute;
+			width: 700px;
+			height: 550px;
+			  top: 135px;
+  left: 150px;
+  overflow-x: hidden;
+  overflow-y: auto;
+		}
+		#msg-notificacion{
+   width: 500px;
+  height: 260px;
+  resize: none;
+  position: absolute;
+  z-index: 10;
+  left: 122px;
+  font-size: 25px;
+		}
+		#botones{
+			position: absolute;
+		    top: 300px;
+		    left: 100px;
+  			z-index: 1000;
+		}
+		.btn-gral{
+			background: url(../img/notas/cuadroTxtNotas.png) center center no-repeat;
+		    background-size: 260px 70px;
+			width: 260px;
+			height: 70px;
+			color: black;
+			font-size: 20px;
+		}
+		#menus{
+			display: inline-flex;
+			position: absolute;
+			left: 13%;
+			top: 35px;
+		}
+		.txt-btn{
+			padding:10px; 
+		}
+		.pre-voteo{
+			font-size: 25px;
+			position: absolute;
+			  z-index: 1001;
+		}
+		.listo-preguntas{
+			padding-bottom: 30px;
+		}
+		.btn-reload{
+			border: 1px solid black;
+		    width: 190px;
+		    padding: 5px;
+		    font-size: 20px;
+		    border-radius: 4px;
+		    background: red;
+		    color: white;
+		}
+	</style>
+</head>
+<body>
+	<div class="btn-reload">
+		Recargar aplicación
+	</div>
+	<hr>
+
+	<div id="menus">
+		<input type="button"id="ver-alertas" class="btn-gral" value="ALERTAS"></input>
+		<input type="button"id="ver-votacion" class="btn-gral" value="VOTACIÓN"></input>
+		<input type="button"id="ver-preguntas" class="btn-gral" value="PREGUNTAS EXPERTO"></input>
+	</div>
+
+	
+	<div class="div-alertas contenedores">
+		<textarea id="msg-notificacion"></textarea>
+		<div id="botones">
+			<input type="button" id="mandonotificacion" class="btn-gral" value="Mandar Notificacion"></input>
+			<input type="button" id="cancelonotificacion" class="btn-gral" value="Cerrar Notificacion"></input>
+		</div>
+	</div>
+	<div class="div-votacion contenedores">
+		
+		<div class="pre-voteo">
+			
+		</div>
+		<!--<input type="button" id="mandovoteo" class="btn-gral" value="Mandar Voteo"></input>
+		<input type="button" id="cancelovoteo" class="btn-gral" value="Cerrar Voteo"></input>-->
+	</div>
+	<div class="div-preguntas contenedores"></div>
+
+
+	<script src="/js/jquery.js"></script>
+  <script src="/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript">
+	jQuery(function($){
+		$(".contenedores").hide();
+		$("#ver-alertas").click(function(){
+			$(".contenedores").hide();
+			$(".div-alertas").show();
+		});
+		$("#ver-votacion").click(function(){
+			$(".contenedores").hide();
+			$(".div-votacion").show();
+		});
+		$("#ver-preguntas").click(function(){
+			$(".contenedores").hide();
+			$(".div-preguntas").show();
+		});
+		var socket = io.connect();
+		$(".btn-reload").click(function () {
+			console.log("que pedo");
+			socket.emit('reloadApp');
+		});
+		socket.on("que voteo",function(data){
+			console.log(data);
+			$(".pre-voteo").html("");
+			for (var i = 0; i < data.length; i++) {
+				//$(".pre-voteo").append('<tr><td></td><td></td><td></td></tr>');
+				if (data[i].presentacion=='6') {
+					$(".pre-voteo").append('<div class="row listo-preguntas"><div class="col-sm-6">'+data[i].nombre+'</div><div class="col-sm-2"><a type="button" class="mandar-voteo" id="'+data[i].idvoto_pregunta+'">Mandar</a></div><div class="col-sm-2"><a type="button" class="mostrar-voteo" id="'+data[i].idvoto_pregunta+'">Mostrar</a></div><div class="col-sm-2"><a type="button" class="cerrar-voteo" id="'+data[i].idvoto_pregunta+'">Cerrar</a></div></div>');
+				};
+				
+			}
+			$(".mandar-voteo").click(function(e){
+				e.preventDefault();
+				var ide=$(this).attr("id");
+				socket.emit("mando voteo", {opp:2,op:true,estado:1,ide:ide},function(data){
+					
+					});
+			});
+			$(".cerrar-voteo").click(function(e){
+				e.preventDefault();
+				var ide=$(this).attr("id");	
+				console.log("cancelo la votacion");
+				socket.emit("mando voteo", {opp:2,op:false,estado:0,ide:ide},function(data){
+					
+					});
+			});
+		});
+		$("#mandonotificacion").click(function(e){
+			e.preventDefault();
+			console.log("mando alerta");
+			var mg=$("#msg-notificacion").val();
+			socket.emit("mando alerta", {opp:1,msg:mg,op:true},function(data){
+				
+				});
+		});
+		$("#cancelonotificacion").click(function(e){
+			e.preventDefault();
+			socket.emit("mando alerta", {opp:1,msg:"cierro el voteo",op:false},function(data){
+				
+				});
+		});
+		
+		$("#cancelovoteo").click(function(e){
+			e.preventDefault();
+			socket.emit("mando voteo", {opp:2,msg:"cierro el voteo",op:false},function(data){
+				
+				});
+		});
+		socket.on("voto",function(data){
+			console.log(data);
+		});
+		
+
+	});
+	</script>
+</body>
+</html>

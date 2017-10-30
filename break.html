@@ -1,0 +1,1265 @@
+<html>
+<head>
+	<title>2017</title>
+	<meta name="viewport" content="width = 1024, height=768, initial-scale=1.0, maximum-scale=1.0" />
+	<link href="/css/estilos2.css" rel="stylesheet">
+	<!----><link href="/css/paginas2.css" rel="stylesheet">
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/animate.css" rel="stylesheet">
+	
+	<link rel="stylesheet" href="/css/jquery-ui.css">
+	<style type="text/css">
+	.show-caso{
+		position: absolute;
+		left: 437px;
+		top: 109px;
+	}
+	.titulo-caso{
+		position: absolute;
+    left: 398px;
+    top: 468px;
+	}
+		</style>
+</head>
+<body>
+<div class="fondo-negro oculto"></div>
+
+<div id="notificacion" class="oculto">
+	<div class="txt-alerta"></div>
+</div>
+
+<div class="contiene-pregunta oculto">
+	<div class="icono-cerrar cierro-voto oculto"></div>
+	<p class="pregunta"></p>
+	<div class="respuestas">
+		
+	</div>
+	<p class="gracias oculto">Gracias por tu votación</p>
+	<div class="reloj">15</div>
+	<input type="hidden" id="reloj_cuenta" value="15">
+</div>
+<div class="tanger-live oculto">
+	<div class="icono-cerrar cierro-live"><img src="img/alertas/btnCerrar.png"></div>
+	<div class="frm-login">
+		<p class="titulo-live">Pregunte al Experto</p>
+	<textarea id="pregunta-ponente" cols="80" rows="10"></textarea>
+	<!--<div class="fondo-pregunta"></div>
+	<hr />-->
+	<div class="btn-envio-pregunta"></div>
+	</div>
+	<div class="mandando-pregunta oculto"><span class="txt-enviando txt-textos">Su pregunta se esta enviando. Espere por favor<img src="img/notas/loader.gif"></span><span class="txt-confirmado txt-textos oculto">Su pregunta se envio con exito.<div class="cerrar-pregunta">CERRAR</div></span></div>
+</div>
+<!--<div id="encuesta">Encuesta</div>-->
+
+<div id="contenedor">
+	<input type="hidden" id="queidioma" value="0">
+		<div class="paginas pag-inicio">
+			<div class="botones-show show-caso" id="1"><img src="img/grupos/icoGpoTrabajo.png"></div>
+			<div class="botones-show titulo-caso" id="1"><img src="img/grupos/txtGpo3.png"></div>
+		</div>
+		
+		<div class="paginas contiene-presentacion oculto">
+			<input type="hidden" id="visible-pre">
+			<div class="btn-back-break"><img src="img/presentaciones/btnRegresar.png"></div>
+			<input type="hidden" id="pag-pre-1" value="1"><input type="hidden" id="total-pre-1" value="17">
+			<div class="pase-pagina contiene-pre-1 todas-pres">
+				<!----><div class="pre-paginas-1 pag-1-1  pag-1 "></div>
+				<div class="pre-paginas-1 pag-1-2  pag-2 "></div>
+				<div class="pre-paginas-1 pag-1-3  pag-3 "></div>
+				<div class="pre-paginas-1 pag-1-4  pag-4 "></div>
+				<div class="pre-paginas-1 pag-1-5  pag-5 "></div>
+				<div class="pre-paginas-1 pag-1-6  pag-6 "></div>
+				<div class="pre-paginas-1 pag-1-7  pag-7 "></div>
+				<div class="pre-paginas-1 pag-1-8  pag-8 "></div>
+				<div class="pre-paginas-1 pag-1-9  pag-9 "></div>
+				<div class="pre-paginas-1 pag-1-10  pag-10 "></div>
+				<div class="pre-paginas-1 pag-1-11  pag-11 "></div>
+				<div class="pre-paginas-1 pag-1-12  pag-12 "></div>
+				<div class="pre-paginas-1 pag-1-13  pag-13 "></div>
+				<div class="pre-paginas-1 pag-1-14  pag-14 "></div>
+				<div class="pre-paginas-1 pag-1-15  pag-15 "></div>
+				<div class="pre-paginas-1 pag-1-16  pag-16 "></div>
+				<div class="pre-paginas-1 pag-1-17  pag-17 "></div>
+				<!--<div class="pre-paginas-1 pag-1-18  pag-18 "></div>
+				<div class="pre-paginas-1 pag-1-19  pag-19 "></div>
+				<div class="pre-paginas-1 pag-1-20  pag-20 "></div>
+				<div class="pre-paginas-1 pag-1-21  pag-21 "></div>
+				<div class="pre-paginas-1 pag-1-22  pag-22 "></div>
+				<div class="pre-paginas-1 pag-1-23  pag-23 "></div>
+				<div class="pre-paginas-1 pag-1-24  pag-24 "></div>
+				<div class="pre-paginas-1 pag-1-25  pag-25 "></div>
+				<div class="pre-paginas-1 pag-1-26  pag-26 "></div>
+				<div class="pre-paginas-1 pag-1-27  pag-27 "></div>
+				<div class="pre-paginas-1 pag-1-28  pag-28 "></div>-->
+				
+			</div>
+			<input type="hidden" id="pag-pre-2" value="1"><input type="hidden" id="total-pre-2" value="74">
+			<div class="pase-pagina contiene-pre-2 todas-pres">
+				<!--<div class="pre-paginas-2 pag-2-1  pag-1 "></div>
+				<div class="pre-paginas-2 pag-2-2  pag-2 " ></div>
+				<div class="pre-paginas-2 pag-2-3  pag-3 " ></div>
+				<div class="pre-paginas-2 pag-2-4  pag-4 " ></div>
+				<div class="pre-paginas-2 pag-2-5  pag-5 " ></div>
+				<div class="pre-paginas-2 pag-2-6  pag-6 " ></div>
+				<div class="pre-paginas-2 pag-2-7  pag-7 " ></div>
+				<div class="pre-paginas-2 pag-2-8  pag-8 " ></div>
+				<div class="pre-paginas-2 pag-2-9  pag-9 " ></div>
+				<div class="pre-paginas-2 pag-2-10  pag-10 " ></div>
+				<div class="pre-paginas-2 pag-2-11  pag-11 " ></div>
+				<div class="pre-paginas-2 pag-2-12  pag-12 " ></div>
+				<div class="pre-paginas-2 pag-2-13  pag-13 " ></div>
+				<div class="pre-paginas-2 pag-2-14  pag-14 " ></div>
+				<div class="pre-paginas-2 pag-2-15  pag-15 " ></div>
+				<div class="pre-paginas-2 pag-2-16  pag-16 " ></div>
+				<div class="pre-paginas-2 pag-2-17  pag-17 " ></div>
+				<div class="pre-paginas-2 pag-2-18  pag-18 " ></div>
+				<div class="pre-paginas-2 pag-2-19  pag-19 " ></div>
+				<div class="pre-paginas-2 pag-2-20  pag-20 " ></div>
+				<div class="pre-paginas-2 pag-2-21  pag-21 " ></div>
+				<div class="pre-paginas-2 pag-2-22  pag-22 " ></div>
+				<div class="pre-paginas-2 pag-2-23  pag-23 " ></div>
+				<div class="pre-paginas-2 pag-2-24  pag-24 " ></div>
+				<div class="pre-paginas-2 pag-2-25  pag-25 " ></div>
+				<div class="pre-paginas-2 pag-2-26  pag-26 " ></div>
+				<div class="pre-paginas-2 pag-2-27  pag-27 " ></div>
+				<div class="pre-paginas-2 pag-2-28  pag-28 " ></div>
+				<div class="pre-paginas-2 pag-2-29  pag-29 " ></div>
+				<div class="pre-paginas-2 pag-2-30  pag-30 " ></div>
+				<div class="pre-paginas-2 pag-2-31  pag-31 " ></div>
+				<div class="pre-paginas-2 pag-2-32  pag-32 " ></div>
+				<div class="pre-paginas-2 pag-2-33  pag-33 " ></div>
+				<div class="pre-paginas-2 pag-2-34  pag-34 " ></div>
+				<div class="pre-paginas-2 pag-2-35  pag-35 " ></div>
+				<div class="pre-paginas-2 pag-2-36  pag-36 " ></div>
+				<div class="pre-paginas-2 pag-2-37  pag-37 " ></div>
+				<div class="pre-paginas-2 pag-2-38  pag-38 " ></div>
+				<div class="pre-paginas-2 pag-2-39  pag-39 " ></div>
+				<div class="pre-paginas-2 pag-2-40  pag-40 " ></div>
+				<div class="pre-paginas-2 pag-2-41  pag-41 " ></div>
+				<div class="pre-paginas-2 pag-2-42  pag-42 " ></div>
+				<div class="pre-paginas-2 pag-2-43  pag-43 " ></div>
+				<div class="pre-paginas-2 pag-2-44  pag-44 " ></div>
+				<div class="pre-paginas-2 pag-2-45  pag-45 " ></div>
+				<div class="pre-paginas-2 pag-2-46  pag-46 " ></div>
+				<div class="pre-paginas-2 pag-2-47  pag-47 " ></div>
+				<div class="pre-paginas-2 pag-2-48  pag-48 " ></div>
+				<div class="pre-paginas-2 pag-2-49  pag-49 " ></div>
+				<div class="pre-paginas-2 pag-2-50  pag-50 " ></div>
+				<div class="pre-paginas-2 pag-2-51  pag-51 " ></div>
+				<div class="pre-paginas-2 pag-2-52  pag-52 " ></div>
+				<div class="pre-paginas-2 pag-2-53  pag-53 " ></div>
+				<div class="pre-paginas-2 pag-2-54  pag-54 " ></div>
+				<div class="pre-paginas-2 pag-2-55  pag-55 " ></div>
+				<div class="pre-paginas-2 pag-2-56  pag-56 " ></div>
+				<div class="pre-paginas-2 pag-2-57  pag-57 " ></div>
+				<div class="pre-paginas-2 pag-2-58  pag-58 " ></div>
+				<div class="pre-paginas-2 pag-2-59  pag-59 " ></div>
+				<div class="pre-paginas-2 pag-2-60  pag-60 " ></div>
+				<div class="pre-paginas-2 pag-2-61  pag-61 " ></div>
+				<div class="pre-paginas-2 pag-2-62  pag-62 " ></div>
+				<div class="pre-paginas-2 pag-2-63  pag-63 " ></div>
+				<div class="pre-paginas-2 pag-2-64  pag-64 " ></div>
+				<div class="pre-paginas-2 pag-2-65  pag-65 " ></div>
+				<div class="pre-paginas-2 pag-2-66  pag-66 " ></div>
+				<div class="pre-paginas-2 pag-2-67  pag-67 " ></div>
+				<div class="pre-paginas-2 pag-2-68  pag-68 " ></div>
+				<div class="pre-paginas-2 pag-2-69  pag-69 " ></div>
+				<div class="pre-paginas-2 pag-2-70  pag-70 " ></div>
+				<div class="pre-paginas-2 pag-2-71  pag-71 " ></div>
+				<div class="pre-paginas-2 pag-2-72  pag-72 " ></div>
+				<div class="pre-paginas-2 pag-2-73  pag-73 " ></div>
+				<div class="pre-paginas-2 pag-2-74  pag-74 " ></div>-->
+			</div>
+			<input type="hidden" id="pag-pre-3" value="1"><input type="hidden" id="total-pre-3" value="33">
+			<div class="pase-pagina contiene-pre-3 todas-pres">
+				<!--<div class="pre-paginas-3 pag-3-1  pag-1 "></div>
+				<div class="pre-paginas-3 pag-3-2  pag-2 "></div>
+				<div class="pre-paginas-3 pag-3-3  pag-3 "></div>
+				<div class="pre-paginas-3 pag-3-4  pag-4 "></div>
+				<div class="pre-paginas-3 pag-3-5  pag-5 "></div>
+				<div class="pre-paginas-3 pag-3-6  pag-6 "></div>
+				<div class="pre-paginas-3 pag-3-7  pag-7 "></div>
+				<div class="pre-paginas-3 pag-3-8  pag-8 "></div>
+				<div class="pre-paginas-3 pag-3-9  pag-9 "></div>
+				<div class="pre-paginas-3 pag-3-10  pag-10 "></div>
+				<div class="pre-paginas-3 pag-3-11  pag-11 "></div>
+				<div class="pre-paginas-3 pag-3-12  pag-12 "></div>
+				<div class="pre-paginas-3 pag-3-13  pag-13 "></div>
+				<div class="pre-paginas-3 pag-3-14  pag-14 "></div>
+				<div class="pre-paginas-3 pag-3-15  pag-15 "></div>
+				<div class="pre-paginas-3 pag-3-16  pag-16 "></div>
+				<div class="pre-paginas-3 pag-3-17  pag-17 "></div>
+				<div class="pre-paginas-3 pag-3-18  pag-18 "></div>
+				<div class="pre-paginas-3 pag-3-19  pag-19 "></div>
+				<div class="pre-paginas-3 pag-3-20  pag-20 "></div>
+				<div class="pre-paginas-3 pag-3-21  pag-21 "></div>
+				<div class="pre-paginas-3 pag-3-22  pag-22 "></div>
+				<div class="pre-paginas-3 pag-3-23  pag-23 "></div>
+				<div class="pre-paginas-3 pag-3-24  pag-24 "></div>
+				<div class="pre-paginas-3 pag-3-25  pag-25 "></div>
+				<div class="pre-paginas-3 pag-3-26  pag-26 "></div>
+				<div class="pre-paginas-3 pag-3-27  pag-27 "></div>
+				<div class="pre-paginas-3 pag-3-28  pag-28 "></div>
+				<div class="pre-paginas-3 pag-3-29  pag-29 "></div>
+				<div class="pre-paginas-3 pag-3-30  pag-30 "></div>
+				<div class="pre-paginas-3 pag-3-31  pag-31 "></div>
+				<div class="pre-paginas-3 pag-3-32  pag-32 "></div>
+				<div class="pre-paginas-3 pag-3-33  pag-33 "></div>-->
+			</div>
+			<input type="hidden" id="pag-pre-4" value="1"><input type="hidden" id="total-pre-4" value="81">
+			<div class="pase-pagina contiene-pre-4 todas-pres">
+				<!--<div class="pre-paginas-4 pag-4-1  pag-1 "></div>
+				<div class="pre-paginas-4 pag-4-2  pag-2 "></div>
+				<div class="pre-paginas-4 pag-4-3  pag-3 "></div>
+				<div class="pre-paginas-4 pag-4-4  pag-4 "></div>
+				<div class="pre-paginas-4 pag-4-5  pag-5 "></div>
+				<div class="pre-paginas-4 pag-4-6  pag-6 "></div>
+				<div class="pre-paginas-4 pag-4-7  pag-7 "></div>
+				<div class="pre-paginas-4 pag-4-8  pag-8 "></div>
+				<div class="pre-paginas-4 pag-4-9  pag-9 "></div>
+				<div class="pre-paginas-4 pag-4-10  pag-10 "></div>
+				<div class="pre-paginas-4 pag-4-11  pag-11 "></div>
+				<div class="pre-paginas-4 pag-4-12  pag-12 "></div>
+				<div class="pre-paginas-4 pag-4-13  pag-13 "></div>
+				<div class="pre-paginas-4 pag-4-14  pag-14 "></div>
+				<div class="pre-paginas-4 pag-4-15  pag-15 "></div>
+				<div class="pre-paginas-4 pag-4-16  pag-16 "></div>
+				<div class="pre-paginas-4 pag-4-17  pag-17 "></div>
+				<div class="pre-paginas-4 pag-4-18  pag-18 "></div>
+				<div class="pre-paginas-4 pag-4-19  pag-19 "></div>
+				<div class="pre-paginas-4 pag-4-20  pag-20 "></div>
+				<div class="pre-paginas-4 pag-4-21  pag-21 "></div>
+				<div class="pre-paginas-4 pag-4-22  pag-22 "></div>
+				<div class="pre-paginas-4 pag-4-23  pag-23 "></div>
+				<div class="pre-paginas-4 pag-4-24  pag-24 "></div>
+				<div class="pre-paginas-4 pag-4-25  pag-25 "></div>
+				<div class="pre-paginas-4 pag-4-26  pag-26 "></div>
+				<div class="pre-paginas-4 pag-4-27  pag-27 "></div>
+				<div class="pre-paginas-4 pag-4-28  pag-28 "></div>
+				<div class="pre-paginas-4 pag-4-29  pag-29 "></div>
+				<div class="pre-paginas-4 pag-4-30  pag-30 "></div>
+				<div class="pre-paginas-4 pag-4-31  pag-31 "></div>
+				<div class="pre-paginas-4 pag-4-32  pag-32 "></div>
+				<div class="pre-paginas-4 pag-4-33  pag-33 "></div>
+				<div class="pre-paginas-4 pag-4-34  pag-34 "></div>
+				<div class="pre-paginas-4 pag-4-35  pag-35 "></div>
+				<div class="pre-paginas-4 pag-4-36  pag-36 "></div>
+				<div class="pre-paginas-4 pag-4-37  pag-37 "></div>
+				<div class="pre-paginas-4 pag-4-38  pag-38 "></div>
+				<div class="pre-paginas-4 pag-4-39  pag-39 "></div>
+				<div class="pre-paginas-4 pag-4-40  pag-40 "></div>
+				<div class="pre-paginas-4 pag-4-41  pag-41 "></div>
+				<div class="pre-paginas-4 pag-4-42  pag-42 "></div>
+				<div class="pre-paginas-4 pag-4-43  pag-43 "></div>
+				<div class="pre-paginas-4 pag-4-44  pag-44 "></div>
+				<div class="pre-paginas-4 pag-4-45  pag-45 "></div>
+				<div class="pre-paginas-4 pag-4-46  pag-46 "></div>
+				<div class="pre-paginas-4 pag-4-47  pag-47 "></div>
+				<div class="pre-paginas-4 pag-4-48  pag-48 "></div>
+				<div class="pre-paginas-4 pag-4-49  pag-49 "></div>
+				<div class="pre-paginas-4 pag-4-50  pag-50 "></div>
+				<div class="pre-paginas-4 pag-4-51  pag-51 "></div>
+				<div class="pre-paginas-4 pag-4-52  pag-52 "></div>
+				<div class="pre-paginas-4 pag-4-53  pag-53 "></div>
+				<div class="pre-paginas-4 pag-4-54  pag-54 "></div>
+				<div class="pre-paginas-4 pag-4-55  pag-55 "></div>
+				<div class="pre-paginas-4 pag-4-56  pag-56 "></div>
+				<div class="pre-paginas-4 pag-4-57  pag-57 "></div>
+				<div class="pre-paginas-4 pag-4-58  pag-58 "></div>
+				<div class="pre-paginas-4 pag-4-59  pag-59 "></div>
+				<div class="pre-paginas-4 pag-4-60  pag-60 "></div>
+				<div class="pre-paginas-4 pag-4-61  pag-61 "></div>
+				<div class="pre-paginas-4 pag-4-62  pag-62 "></div>
+				<div class="pre-paginas-4 pag-4-63  pag-63 "></div>
+				<div class="pre-paginas-4 pag-4-64  pag-64 "></div>
+				<div class="pre-paginas-4 pag-4-65  pag-65 "></div>
+				<div class="pre-paginas-4 pag-4-66  pag-66 "></div>
+				<div class="pre-paginas-4 pag-4-67  pag-67 "></div>
+				<div class="pre-paginas-4 pag-4-68  pag-68 "></div>
+				<div class="pre-paginas-4 pag-4-69  pag-69 "></div>
+				<div class="pre-paginas-4 pag-4-70  pag-70 "></div>
+				<div class="pre-paginas-4 pag-4-71  pag-71 "></div>
+				<div class="pre-paginas-4 pag-4-72  pag-72 "></div>
+				<div class="pre-paginas-4 pag-4-73  pag-73 "></div>
+				<div class="pre-paginas-4 pag-4-74  pag-74 "></div>
+				<div class="pre-paginas-4 pag-4-75  pag-75 "></div>
+				<div class="pre-paginas-4 pag-4-76  pag-76 "></div>
+				<div class="pre-paginas-4 pag-4-77  pag-77 "></div>
+				<div class="pre-paginas-4 pag-4-78  pag-78 "></div>
+				<div class="pre-paginas-4 pag-4-79  pag-79 "></div>
+				<div class="pre-paginas-4 pag-4-80  pag-80 "></div>
+				<div class="pre-paginas-4 pag-4-81  pag-81 "></div>-->
+			</div>
+			<input type="hidden" id="pag-pre-5" value="1"><input type="hidden" id="total-pre-5" value="114">
+			<div class="pase-pagina contiene-pre-5 todas-pres">
+				<!--<div class="pre-paginas-5 pag-5-1  pag-1 "></div>
+				<div class="pre-paginas-5 pag-5-2  pag-2 "></div>
+				<div class="pre-paginas-5 pag-5-3  pag-3 "></div>
+				<div class="pre-paginas-5 pag-5-4  pag-4 "></div>
+				<div class="pre-paginas-5 pag-5-5  pag-5 "></div>
+				<div class="pre-paginas-5 pag-5-6  pag-6 "></div>
+				<div class="pre-paginas-5 pag-5-7  pag-7 "></div>
+				<div class="pre-paginas-5 pag-5-8  pag-8 "></div>
+				<div class="pre-paginas-5 pag-5-9  pag-9 "></div>
+				<div class="pre-paginas-5 pag-5-10  pag-10 "></div>
+				<div class="pre-paginas-5 pag-5-11  pag-11 "></div>
+				<div class="pre-paginas-5 pag-5-12  pag-12 "></div>
+				<div class="pre-paginas-5 pag-5-13  pag-13 "></div>
+				<div class="pre-paginas-5 pag-5-14  pag-14 "></div>
+				<div class="pre-paginas-5 pag-5-15  pag-15 "></div>
+				<div class="pre-paginas-5 pag-5-16  pag-16 "></div>
+				<div class="pre-paginas-5 pag-5-17  pag-17 "></div>
+				<div class="pre-paginas-5 pag-5-18  pag-18 "></div>
+				<div class="pre-paginas-5 pag-5-19  pag-19 "></div>
+				<div class="pre-paginas-5 pag-5-20  pag-20 "></div>
+				<div class="pre-paginas-5 pag-5-21  pag-21 "></div>
+				<div class="pre-paginas-5 pag-5-22  pag-22 "></div>
+				<div class="pre-paginas-5 pag-5-23  pag-23 "></div>
+				<div class="pre-paginas-5 pag-5-24  pag-24 "></div>
+				<div class="pre-paginas-5 pag-5-25  pag-25 "></div>
+				<div class="pre-paginas-5 pag-5-26  pag-26 "></div>
+				<div class="pre-paginas-5 pag-5-27  pag-27 "></div>
+				<div class="pre-paginas-5 pag-5-28  pag-28 "></div>
+				<div class="pre-paginas-5 pag-5-29  pag-29 "></div>
+				<div class="pre-paginas-5 pag-5-30  pag-30 "></div>
+				<div class="pre-paginas-5 pag-5-31  pag-31 "></div>
+				<div class="pre-paginas-5 pag-5-32  pag-32 "></div>
+				<div class="pre-paginas-5 pag-5-33  pag-33 "></div>
+				<div class="pre-paginas-5 pag-5-34  pag-34 "></div>
+				<div class="pre-paginas-5 pag-5-35  pag-35 "></div>
+				<div class="pre-paginas-5 pag-5-36  pag-36 "></div>
+				<div class="pre-paginas-5 pag-5-37  pag-37 "></div>
+				<div class="pre-paginas-5 pag-5-38  pag-38 "></div>
+				<div class="pre-paginas-5 pag-5-39  pag-39 "></div>
+				<div class="pre-paginas-5 pag-5-40  pag-40 "></div>
+				<div class="pre-paginas-5 pag-5-41  pag-41 "></div>
+				<div class="pre-paginas-5 pag-5-42  pag-42 "></div>
+				<div class="pre-paginas-5 pag-5-43  pag-43 "></div>
+				<div class="pre-paginas-5 pag-5-44  pag-44 "></div>
+				<div class="pre-paginas-5 pag-5-45  pag-45 "></div>
+				<div class="pre-paginas-5 pag-5-46  pag-46 "></div>
+				<div class="pre-paginas-5 pag-5-47  pag-47 "></div>
+				<div class="pre-paginas-5 pag-5-48  pag-48 "></div>
+				<div class="pre-paginas-5 pag-5-49  pag-49 "></div>
+				<div class="pre-paginas-5 pag-5-50  pag-50 "></div>
+				<div class="pre-paginas-5 pag-5-51  pag-51 "></div>
+				<div class="pre-paginas-5 pag-5-52  pag-52 "></div>
+				<div class="pre-paginas-5 pag-5-53  pag-53 "></div>
+				<div class="pre-paginas-5 pag-5-54  pag-54 "></div>
+				<div class="pre-paginas-5 pag-5-55  pag-55 "></div>
+				<div class="pre-paginas-5 pag-5-56  pag-56 "></div>
+				<div class="pre-paginas-5 pag-5-57  pag-57 "></div>
+				<div class="pre-paginas-5 pag-5-58  pag-58 "></div>
+				<div class="pre-paginas-5 pag-5-59  pag-59 "></div>
+				<div class="pre-paginas-5 pag-5-60  pag-60 "></div>
+				<div class="pre-paginas-5 pag-5-61  pag-61 "></div>
+				<div class="pre-paginas-5 pag-5-62  pag-62 "></div>
+				<div class="pre-paginas-5 pag-5-63  pag-63 "></div>
+				<div class="pre-paginas-5 pag-5-64  pag-64 "></div>
+				<div class="pre-paginas-5 pag-5-65  pag-65 "></div>
+				<div class="pre-paginas-5 pag-5-66  pag-66 "></div>
+				<div class="pre-paginas-5 pag-5-67  pag-67 "></div>
+				<div class="pre-paginas-5 pag-5-68  pag-68 "></div>
+				<div class="pre-paginas-5 pag-5-69  pag-69 "></div>
+				<div class="pre-paginas-5 pag-5-70  pag-70 "></div>
+				<div class="pre-paginas-5 pag-5-71  pag-71 "></div>
+				<div class="pre-paginas-5 pag-5-72  pag-72 "></div>
+				<div class="pre-paginas-5 pag-5-73  pag-73 "></div>
+				<div class="pre-paginas-5 pag-5-74  pag-74 "></div>
+				<div class="pre-paginas-5 pag-5-75  pag-75 "></div>
+				<div class="pre-paginas-5 pag-5-76  pag-76 "></div>
+				<div class="pre-paginas-5 pag-5-77  pag-77 "></div>
+				<div class="pre-paginas-5 pag-5-78  pag-78 "></div>
+				<div class="pre-paginas-5 pag-5-79  pag-79 "></div>
+				<div class="pre-paginas-5 pag-5-80  pag-80 "></div>
+				<div class="pre-paginas-5 pag-5-81  pag-81 "></div>
+				<div class="pre-paginas-5 pag-5-82  pag-82 "></div>
+				<div class="pre-paginas-5 pag-5-83  pag-83 "></div>
+				<div class="pre-paginas-5 pag-5-84  pag-84 "></div>
+				<div class="pre-paginas-5 pag-5-85  pag-85 "></div>
+				<div class="pre-paginas-5 pag-5-86  pag-86 "></div>
+				<div class="pre-paginas-5 pag-5-87  pag-87 "></div>
+				<div class="pre-paginas-5 pag-5-88  pag-88 "></div>
+				<div class="pre-paginas-5 pag-5-89  pag-89 "></div>
+				<div class="pre-paginas-5 pag-5-90  pag-90 "></div>
+				<div class="pre-paginas-5 pag-5-91  pag-91 "></div>
+				<div class="pre-paginas-5 pag-5-92  pag-92 "></div>
+				<div class="pre-paginas-5 pag-5-93  pag-93 "></div>
+				<div class="pre-paginas-5 pag-5-94  pag-94 "></div>
+				<div class="pre-paginas-5 pag-5-95  pag-95 "></div>
+				<div class="pre-paginas-5 pag-5-96  pag-96 "></div>
+				<div class="pre-paginas-5 pag-5-97  pag-97 "></div>
+				<div class="pre-paginas-5 pag-5-98  pag-98 "></div>
+				<div class="pre-paginas-5 pag-5-99  pag-99 "></div>
+				<div class="pre-paginas-5 pag-5-100  pag-100 "></div>
+				<div class="pre-paginas-5 pag-5-101  pag-101 "></div>
+				<div class="pre-paginas-5 pag-5-102  pag-102 "></div>
+				<div class="pre-paginas-5 pag-5-103  pag-103 "></div>
+				<div class="pre-paginas-5 pag-5-104  pag-104 "></div>
+				<div class="pre-paginas-5 pag-5-105  pag-105 "></div>
+				<div class="pre-paginas-5 pag-5-106  pag-106 "></div>
+				<div class="pre-paginas-5 pag-5-107  pag-107 "></div>
+				<div class="pre-paginas-5 pag-5-108  pag-108 "></div>
+				<div class="pre-paginas-5 pag-5-109  pag-109 "></div>
+				<div class="pre-paginas-5 pag-5-110  pag-110 "></div>
+				<div class="pre-paginas-5 pag-5-111  pag-111 "></div>
+				<div class="pre-paginas-5 pag-5-112  pag-112 "></div>
+				<div class="pre-paginas-5 pag-5-113  pag-113 "></div>
+				<div class="pre-paginas-5 pag-5-114  pag-114 "></div>-->
+			</div>
+			<input type="hidden" id="pag-pre-6" value="1"><input type="hidden" id="total-pre-6" value="63">
+			<div class="pase-pagina contiene-pre-6 todas-pres">
+				<!--<div class="pre-paginas-6 pag-6-1  pag-1 "></div>
+				<div class="pre-paginas-6 pag-6-2  pag-2 "></div>
+				<div class="pre-paginas-6 pag-6-3  pag-3 "></div>
+				<div class="pre-paginas-6 pag-6-4  pag-4 "></div>
+				<div class="pre-paginas-6 pag-6-5  pag-5 "></div>
+				<div class="pre-paginas-6 pag-6-6  pag-6 "></div>
+				<div class="pre-paginas-6 pag-6-7  pag-7 "></div>
+				<div class="pre-paginas-6 pag-6-8  pag-8 "></div>
+				<div class="pre-paginas-6 pag-6-9  pag-9 "></div>
+				<div class="pre-paginas-6 pag-6-10  pag-10 "></div>
+				<div class="pre-paginas-6 pag-6-11  pag-11 "></div>
+				<div class="pre-paginas-6 pag-6-12  pag-12 "></div>
+				<div class="pre-paginas-6 pag-6-13  pag-13 "></div>
+				<div class="pre-paginas-6 pag-6-14  pag-14 "></div>
+				<div class="pre-paginas-6 pag-6-15  pag-15 "></div>
+				<div class="pre-paginas-6 pag-6-16  pag-16 "></div>
+				<div class="pre-paginas-6 pag-6-17  pag-17 "></div>
+				<div class="pre-paginas-6 pag-6-18  pag-18 "></div>
+				<div class="pre-paginas-6 pag-6-19  pag-19 "></div>
+				<div class="pre-paginas-6 pag-6-20  pag-20 "></div>
+				<div class="pre-paginas-6 pag-6-21  pag-21 "></div>
+				<div class="pre-paginas-6 pag-6-22  pag-22 "></div>
+				<div class="pre-paginas-6 pag-6-23  pag-23 "></div>
+				<div class="pre-paginas-6 pag-6-24  pag-24 "></div>
+				<div class="pre-paginas-6 pag-6-25  pag-25 "></div>
+				<div class="pre-paginas-6 pag-6-26  pag-26 "></div>
+				<div class="pre-paginas-6 pag-6-27  pag-27 "></div>
+				<div class="pre-paginas-6 pag-6-28  pag-28 "></div>
+				<div class="pre-paginas-6 pag-6-29  pag-29 "></div>
+				<div class="pre-paginas-6 pag-6-30  pag-30 "></div>
+				<div class="pre-paginas-6 pag-6-31  pag-31 "></div>
+				<div class="pre-paginas-6 pag-6-32  pag-32 "></div>
+				<div class="pre-paginas-6 pag-6-33  pag-33 "></div>
+				<div class="pre-paginas-6 pag-6-34  pag-34 "></div>
+				<div class="pre-paginas-6 pag-6-35  pag-35 "></div>
+				<div class="pre-paginas-6 pag-6-36  pag-36 "></div>
+				<div class="pre-paginas-6 pag-6-37  pag-37 "></div>
+				<div class="pre-paginas-6 pag-6-38  pag-38 "></div>
+				<div class="pre-paginas-6 pag-6-39  pag-39 "></div>
+				<div class="pre-paginas-6 pag-6-40  pag-40 "></div>
+				<div class="pre-paginas-6 pag-6-41  pag-41 "></div>
+				<div class="pre-paginas-6 pag-6-42  pag-42 "></div>
+				<div class="pre-paginas-6 pag-6-43  pag-43 "></div>
+				<div class="pre-paginas-6 pag-6-44  pag-44 "></div>
+				<div class="pre-paginas-6 pag-6-45  pag-45 "></div>
+				<div class="pre-paginas-6 pag-6-46  pag-46 "></div>
+				<div class="pre-paginas-6 pag-6-47  pag-47 "></div>
+				<div class="pre-paginas-6 pag-6-48  pag-48 "></div>
+				<div class="pre-paginas-6 pag-6-49  pag-49 "></div>
+				<div class="pre-paginas-6 pag-6-50  pag-50 "></div>
+				<div class="pre-paginas-6 pag-6-51  pag-51 "></div>
+				<div class="pre-paginas-6 pag-6-52  pag-52 "></div>
+				<div class="pre-paginas-6 pag-6-53  pag-53 "></div>
+				<div class="pre-paginas-6 pag-6-54  pag-54 "></div>
+				<div class="pre-paginas-6 pag-6-55  pag-55 "></div>
+				<div class="pre-paginas-6 pag-6-56  pag-56 "></div>
+				<div class="pre-paginas-6 pag-6-57  pag-57 "></div>
+				<div class="pre-paginas-6 pag-6-58  pag-58 "></div>
+				<div class="pre-paginas-6 pag-6-59  pag-59 "></div>
+				<div class="pre-paginas-6 pag-6-60  pag-60 "></div>
+				<div class="pre-paginas-6 pag-6-61  pag-61 "></div>
+				<div class="pre-paginas-6 pag-6-62  pag-62 "></div>
+				<div class="pre-paginas-6 pag-6-63  pag-63 "></div>-->
+			</div>
+			<input type="hidden" id="pag-pre-7" value="1"><input type="hidden" id="total-pre-7" value="57">
+			<div class="pase-pagina contiene-pre-7 todas-pres">
+				<!--<div class="pre-paginas-7 pag-7-1  pag-1 "></div>
+				<div class="pre-paginas-7 pag-7-2  pag-2 "></div>
+				<div class="pre-paginas-7 pag-7-3  pag-3 "></div>
+				<div class="pre-paginas-7 pag-7-4  pag-4 "></div>
+				<div class="pre-paginas-7 pag-7-5  pag-5 "></div>
+				<div class="pre-paginas-7 pag-7-6  pag-6 "></div>
+				<div class="pre-paginas-7 pag-7-7  pag-7 "></div>
+				<div class="pre-paginas-7 pag-7-8  pag-8 "></div>
+				<div class="pre-paginas-7 pag-7-9  pag-9 "></div>
+				<div class="pre-paginas-7 pag-7-10  pag-10 "></div>
+				<div class="pre-paginas-7 pag-7-11  pag-11 "></div>
+				<div class="pre-paginas-7 pag-7-12  pag-12 "></div>
+				<div class="pre-paginas-7 pag-7-13  pag-13 "></div>
+				<div class="pre-paginas-7 pag-7-14  pag-14 "></div>
+				<div class="pre-paginas-7 pag-7-15  pag-15 "></div>
+				<div class="pre-paginas-7 pag-7-16  pag-16 "></div>
+				<div class="pre-paginas-7 pag-7-17  pag-17 "></div>
+				<div class="pre-paginas-7 pag-7-18  pag-18 "></div>
+				<div class="pre-paginas-7 pag-7-19  pag-19 "></div>
+				<div class="pre-paginas-7 pag-7-20  pag-20 "></div>
+				<div class="pre-paginas-7 pag-7-21  pag-21 "></div>
+				<div class="pre-paginas-7 pag-7-22  pag-22 "></div>
+				<div class="pre-paginas-7 pag-7-23  pag-23 "></div>
+				<div class="pre-paginas-7 pag-7-24  pag-24 "></div>
+				<div class="pre-paginas-7 pag-7-25  pag-25 "></div>
+				<div class="pre-paginas-7 pag-7-26  pag-26 "></div>
+				<div class="pre-paginas-7 pag-7-27  pag-27 "></div>
+				<div class="pre-paginas-7 pag-7-28  pag-28 "></div>
+				<div class="pre-paginas-7 pag-7-29  pag-29 "></div>
+				<div class="pre-paginas-7 pag-7-30  pag-30 "></div>
+				<div class="pre-paginas-7 pag-7-31  pag-31 "></div>
+				<div class="pre-paginas-7 pag-7-32  pag-32 "></div>
+				<div class="pre-paginas-7 pag-7-33  pag-33 "></div>
+				<div class="pre-paginas-7 pag-7-34  pag-34 "></div>
+				<div class="pre-paginas-7 pag-7-35  pag-35 "></div>
+				<div class="pre-paginas-7 pag-7-36  pag-36 "></div>
+				<div class="pre-paginas-7 pag-7-37  pag-37 "></div>
+				<div class="pre-paginas-7 pag-7-38  pag-38 "></div>
+				<div class="pre-paginas-7 pag-7-39  pag-39 "></div>
+				<div class="pre-paginas-7 pag-7-40  pag-40 "></div>
+				<div class="pre-paginas-7 pag-7-41  pag-41 "></div>
+				<div class="pre-paginas-7 pag-7-42  pag-42 "></div>
+				<div class="pre-paginas-7 pag-7-43  pag-43 "></div>
+				<div class="pre-paginas-7 pag-7-44  pag-44 "></div>
+				<div class="pre-paginas-7 pag-7-45  pag-45 "></div>
+				<div class="pre-paginas-7 pag-7-46  pag-46 "></div>
+				<div class="pre-paginas-7 pag-7-47  pag-47 "></div>
+				<div class="pre-paginas-7 pag-7-48  pag-48 "></div>
+				<div class="pre-paginas-7 pag-7-49  pag-49 "></div>
+				<div class="pre-paginas-7 pag-7-50  pag-50 "></div>
+				<div class="pre-paginas-7 pag-7-51  pag-51 "></div>
+				<div class="pre-paginas-7 pag-7-52  pag-52 "></div>
+				<div class="pre-paginas-7 pag-7-53  pag-53 "></div>
+				<div class="pre-paginas-7 pag-7-54  pag-54 "></div>
+				<div class="pre-paginas-7 pag-7-55  pag-55 "></div>
+				<div class="pre-paginas-7 pag-7-56  pag-56 "></div>
+				<div class="pre-paginas-7 pag-7-57  pag-57 "></div>-->
+				
+			</div>
+			
+			
+			
+		</div>
+		<div class="paginas interiores int-encuestas mismo-fondo oculto pag-int-encuestas">
+			<!--<div class="muestro-encuestas muestro-1 oculto" id="1">Evaluación Académica</div>-->
+			<div class="muestro-encuestas muestro-2" id="2">Encuesta de Satisfacción</div>
+			<!--<div class="muestro-encuestas muestro-3 oculto" id="3">Encuesta Boehringer</div>-->
+			<div class="msg-encuesta oculto">Su encuesta ha sido guardada, Gracias por su participación</div>
+			<div class="encuestas-grales encuesta-1 oculto"><!--Se manda a las 14:20 a 14:30-->
+				<div id="title">
+            Evaluación Academica de UROBI Expertos en Urología 2015
+Hotel Secrets Huatulco 19-20 Septiembre 2015
+        </div>
+        <div id="title2">En  Boehringer Ingelheim estamos comprometidos con  la  Educación Médica Continúa  para los profesionales de la salud, por  tal motivo para nosotros  es muy importante su retroalimentación.</div>
+        <div id="evaluacion">
+        <form id="mando-encuesta-1">
+				<p class="sub-titulo-int">Por favor evalúe todo el evento en general:</p>
+	        	<table border="0" id="pre1">
+				    <tr>
+				    	<td colspan="5">1.- La calidad de los ponentes fue la esperada, fueron claros y ofrecieron información de importancia:</td>
+				    </tr>
+				    <tr>
+				    	<th align="left" style="text-align:center;"><label><input type="radio" name="res1" value="5" />5<br>Totalmente de acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res1" value="4" />4<br>De Acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res1" value="3" />3<br>Ni acuerdo, ni en desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res1" value="2" />2<br>En desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res1" value="1" />1<br>Totalmente en desacuerdo</label></th>
+				    </tr>
+				</table>
+        	
+        		<table border="0" id="pre2">
+				    <tr>
+				    	<td colspan="5">2.-  ¿Fueron claros los contenidos de las presentaciones? </td>
+				    </tr>
+				    <tr>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res2" value="5" />5<br>Totalmente de acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res2" value="4" />4<br>De Acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res2" value="3" />3<br>Ni acuerdo, ni en desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res2" value="2" />2<br>En desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res2" value="1" />1<br>Totalmente en desacuerdo</label></th>
+				    </tr>
+				</table>
+				
+				<table border="0" id="pre3">
+				    <tr>
+				    	<td colspan="5">3.-  ¿Aportaron valor a su práctica diaria?</td>
+				    </tr>
+				    <tr>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res3" value="5" />5<br>Totalmente de acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res3" value="4" />4<br>De Acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res3" value="3" />3<br>Ni acuerdo, ni en desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res3" value="2" />2<br>En desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res3" value="1" />1<br>Totalmente en desacuerdo</label></th>
+				    </tr>
+				</table>
+				
+				<table border="0" id="pre4">
+				    <tr>
+				    	<td colspan="5">4.- En general, ¿se cumplieron sus expectativas? </td>
+				    </tr>
+				    <tr>
+				       <th align="left" style="text-align:center;"><label><input type="radio" name="res4" value="5" />5<br>Totalmente de acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res4" value="4" />4<br>De Acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res4" value="3" />3<br>Ni acuerdo, ni en desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res4" value="2" />2<br>En desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res4" value="1" />1<br>Totalmente en desacuerdo</label></th>
+				    </tr>
+				</table>
+				<p class="sub-titulo-int">Por favor  evalúe a los ponentes de nuestro evento:</p>
+				<div class="titulo-pre-enc">Dr. Félix Santaella Torres : “ Video- Buenas Prácticas en Cirugía Laparoscópica”</div>
+				<table border="0" id="pre5">
+				    <tr>
+				    	<td colspan="5">1.- La ponencia  fue de utilidad para su práctica clínica:</td>
+				    </tr>
+				    <tr>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res5" value="5" />5<br>Totalmente de acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res5" value="4" />4<br>De Acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res5" value="3" />3<br>Ni acuerdo, ni en desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res5" value="2" />2<br>En desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res5" value="1" />1<br>Totalmente en desacuerdo</label></th>
+				    </tr>
+				</table>
+
+				<table border="0" id="pre6">
+				    <tr>
+				    	<td colspan="5">2.- ¿Qué calificación final otorgaría  a  los ponentes de acuerdo a su presentación? (Escala 1-10)</td>
+				    </tr>
+
+				    <tr>
+				        <th align="left"><input type="number" name="cal-1"></th>
+				    </tr>
+				</table>
+
+				<div class="titulo-pre-enc">Dra. Delia Pérez Montiel Gómez: “Actualidades en la Escala de Gleason”</div>
+				<table border="0" id="pre5">
+				    <tr>
+				    	<td colspan="5">1.- La ponencia  fue de utilidad para su práctica clínica:</td>
+				    </tr>
+				    <tr>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res6" value="5" />5<br>Totalmente de acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res6" value="4" />4<br>De Acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res6" value="3" />3<br>Ni acuerdo, ni en desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res6" value="2" />2<br>En desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res6" value="1" />1<br>Totalmente en desacuerdo</label></th>
+				    </tr>
+				</table>
+				<table border="0" id="pre6">
+				    <tr>
+				    	<td colspan="5">2.- ¿Qué calificación final otorgaría  a  los ponentes de acuerdo a su presentación? (Escala 1-10)</td>
+				    </tr>
+
+				    <tr>
+				        <th align="left"><input type="number" name="cal-2"></th>
+				    </tr>
+				</table>
+
+				<div class="titulo-pre-enc">Dr: José Gadú Campos:  “ Indicaciones Terapéuticas en el Cáncer de Próstata Localizado ”</div>
+				<table border="0" id="pre5">
+				    <tr>
+				    	<td colspan="5">1.- La ponencia  fue de utilidad para su práctica clínica:</td>
+				    </tr>
+				    <tr>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res7" value="5" />5<br>Totalmente de acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res7" value="4" />4<br>De Acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res7" value="3" />3<br>Ni acuerdo, ni en desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res7" value="2" />2<br>En desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res7" value="1" />1<br>Totalmente en desacuerdo</label></th>
+				    </tr>
+				</table>
+
+				<table border="0" id="pre6">
+				    <tr>
+				    	<td colspan="5">2.- ¿Qué calificación final otorgaría  a  los ponentes de acuerdo a su presentación? (Escala 1-10)</td>
+				    </tr>
+
+				    <tr>
+				        <th align="left"><input type="number" name="cal-3"></th>
+				    </tr>
+				</table>
+
+				<div class="titulo-pre-enc">Dr.Zael Santana Ríos : “ Manejo de Cáncer de Próstata  Hormono Resistente”</div>
+				<table border="0" id="pre5">
+				    <tr>
+				    	<td colspan="5">1.- La ponencia  fue de utilidad para su práctica clínica:</td>
+				    </tr>
+				    <tr>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res8" value="5" />5<br>Totalmente de acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res8" value="4" />4<br>De Acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res8" value="3" />3<br>Ni acuerdo, ni en desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res8" value="2" />2<br>En desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res8" value="1" />1<br>Totalmente en desacuerdo</label></th>
+				    </tr>
+				</table>
+
+				<table border="0" id="pre6">
+				    <tr>
+				    	<td colspan="5">2.- ¿Qué calificación final otorgaría  a  los ponentes de acuerdo a su presentación? (Escala 1-10)</td>
+				    </tr>
+
+				    <tr>
+				        <th align="left"><input type="number" name="cal-4"></th>
+				    </tr>
+				</table>
+
+				<div class="titulo-pre-enc">Dr.Sergio Durán Ortiz: “LUTS”</div>
+				<table border="0" id="pre5">
+				    <tr>
+				    	<td colspan="5">1.- La ponencia  fue de utilidad para su práctica clínica:</td>
+				    </tr>
+				    <tr>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res9" value="5" />5<br>Totalmente de acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res9" value="4" />4<br>De Acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res9" value="3" />3<br>Ni acuerdo, ni en desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res9" value="2" />2<br>En desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res9" value="1" />1<br>Totalmente en desacuerdo</label></th>
+				    </tr>
+				</table>
+
+				<table border="0" id="pre6">
+				    <tr>
+				    	<td colspan="5">2.- ¿Qué calificación final otorgaría  a  los ponentes de acuerdo a su presentación? (Escala 1-10)</td>
+				    </tr>
+
+				    <tr>
+				        <th align="left"><input type="number" name="cal-5"></th>
+				    </tr>
+				</table>
+
+				<div class="titulo-pre-enc">Dr. Jorge Moreno Palacios: “Preservación de la función vesical en HPB”</div>
+				<table border="0" id="pre5">
+				    <tr>
+				    	<td colspan="5">1.- La ponencia  fue de utilidad para su práctica clínica:</td>
+				    </tr>
+				    <tr>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res10" value="5" />5<br>Totalmente de acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res10" value="4" />4<br>De Acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res10" value="3" />3<br>Ni acuerdo, ni en desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res10" value="2" />2<br>En desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res10" value="1" />1<br>Totalmente en desacuerdo</label></th>
+				    </tr>
+				</table>
+
+				<table border="0" id="pre6">
+				    <tr>
+				    	<td colspan="5">2.- ¿Qué calificación final otorgaría  a  los ponentes de acuerdo a su presentación? (Escala 1-10)</td>
+				    </tr>
+
+				    <tr>
+				        <th align="left"><input type="number" name="cal-6"></th>
+				    </tr>
+				</table>
+
+				<div class="titulo-pre-enc">Dr.Carlos Amabile Cuevas: “¿Es la orina totalmente estéril?”</div>
+				<table border="0" id="pre5">
+				    <tr>
+				    	<td colspan="5">1.- La ponencia  fue de utilidad para su práctica clínica:</td>
+				    </tr>
+				    <tr>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res11" value="5" />5<br>Totalmente de acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res11" value="4" />4<br>De Acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res11" value="3" />3<br>Ni acuerdo, ni en desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res11" value="2" />2<br>En desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res11" value="1" />1<br>Totalmente en desacuerdo</label></th>
+				    </tr>
+				</table>
+
+				<table border="0" id="pre6">
+				    <tr>
+				    	<td colspan="5">2.- ¿Qué calificación final otorgaría  a  los ponentes de acuerdo a su presentación? (Escala 1-10)</td>
+				    </tr>
+
+				    <tr>
+				        <th align="left"><input type="number" name="cal-7"></th>
+				    </tr>
+				</table>
+
+				<div class="titulo-pre-enc">Dr. Ismael Sedano Portillo: “Optimizando la Ureteroscopia”</div>
+				<table border="0" id="pre5">
+				    <tr>
+				    	<td colspan="5">1.- La ponencia  fue de utilidad para su práctica clínica:</td>
+				    </tr>
+				    <tr>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res12" value="5" />5<br>Totalmente de acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res12" value="4" />4<br>De Acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res12" value="3" />3<br>Ni acuerdo, ni en desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res12" value="2" />2<br>En desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res12" value="1" />1<br>Totalmente en desacuerdo</label></th>
+				    </tr>
+				</table>
+
+				<table border="0" id="pre6">
+				    <tr>
+				    	<td colspan="5">2.- ¿Qué calificación final otorgaría  a  los ponentes de acuerdo a su presentación? (Escala 1-10)</td>
+				    </tr>
+
+				    <tr>
+				        <th align="left"><input type="number" name="cal-8"></th>
+				    </tr>
+				</table>
+
+				<div class="titulo-pre-enc">Dr.Paúl Escovar de la Riva: “Manejo Percutáneo de la Litiasis Urinaria”</div>
+				<table border="0" id="pre5">
+				    <tr>
+				    	<td colspan="5">1.- La ponencia  fue de utilidad para su práctica clínica:</td>
+				    </tr>
+				    <tr>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res13" value="5" />5<br>Totalmente de acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res13" value="4" />4<br>De Acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res13" value="3" />3<br>Ni acuerdo, ni en desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res13" value="2" />2<br>En desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res13" value="1" />1<br>Totalmente en desacuerdo</label></th>
+				    </tr>
+				</table>
+
+				<table border="0" id="pre6">
+				    <tr>
+				    	<td colspan="5">2.- ¿Qué calificación final otorgaría  a  los ponentes de acuerdo a su presentación? (Escala 1-10)</td>
+				    </tr>
+
+				    <tr>
+				        <th align="left"><input type="number" name="cal-9"></th>
+				    </tr>
+				</table>
+				<table border="0" id="pre7">
+				    <tr>
+				    	<td colspan="5">Comentarios </td>
+				    </tr>
+				    <tr>
+				        <th align="left"><textarea rows="4" cols="85" name="comentario" id="14"></textarea></th>
+				    </tr>
+				</table>
+				<table width="46" border="0" align="center" id="send">
+              <tr>
+              	<!--<input type="hidden" name="numero-e" value="1">-->
+                <td width="41"><input type="button" name="enviar" id="enviar" value="Enviar" class="btn btn-default btn-lg btn-envio-1"></td>
+              </tr>
+            </table>
+
+			</form>	
+        </div>
+			</div><!--fin encuesta 1-->
+			<div class="encuestas-grales encuesta-2 oculto"><!--Se manda a las 14:20 a 14:30-->
+        <div id="title2">Estimado Doctor queremos medir su nivel de satisfacción del servicio recibido antes y durante el evento, le pedimos unos minutos de su valioso tiempo para contestar esta breve encuesta "SU EVALUACIÓN ES MUY IMPORTANTE PARA NOSOTROS".</div>
+        <div id="evaluacion">
+        		<form id="mando-encuesta-2">
+				<p class="sub-titulo-int">Programa Científico:</p>
+	        	<table border="0" id="pre1">
+				    <tr>
+				    	<td colspan="5">1.- Las sesiones fueron interesantes y de gran aportacion académica</td>
+				    </tr>
+				    <tr>
+				    	<th align="left" style="text-align:center;"><label><input type="radio" name="res1" value="5" />5<br>Totalmente de acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res1" value="4" />4<br>De Acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res1" value="3" />3<br>Ni acuerdo, ni en desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res1" value="2" />2<br>En desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res1" value="1" />1<br>Totalmente en desacuerdo</label></th>
+				    </tr>
+				</table>
+        	
+        		<table border="0" id="pre2">
+				    <tr>
+				    	<td colspan="5">2.-  El programa cientifico cubrió sus expectativas </td>
+				    </tr>
+				    <tr>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res2" value="5" />5<br>Totalmente de acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res2" value="4" />4<br>De Acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res2" value="3" />3<br>Ni acuerdo, ni en desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res2" value="2" />2<br>En desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res2" value="1" />1<br>Totalmente en desacuerdo</label></th>
+				    </tr>
+				</table>
+				
+				<table border="0" id="pre3">
+				    <tr>
+				    	<td colspan="5">3.-  El ponente fue claro y preciso para explicar el tema de la conferencia</td>
+				    </tr>
+				    <tr>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res3" value="5" />5<br>Totalmente de acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res3" value="4" />4<br>De Acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res3" value="3" />3<br>Ni acuerdo, ni en desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res3" value="2" />2<br>En desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res3" value="1" />1<br>Totalmente en desacuerdo</label></th>
+				    </tr>
+				</table>
+				
+				<table border="0" id="pre4">
+				    <tr>
+				    	<td colspan="5">4.- ¿Cómo evaluaría a los ponentes del evento? Favor de mencionar los nombres </td>
+				    </tr>
+				    <tr>
+				       <th align="left"><textarea rows="4" cols="85" name="14" id="14"></textarea></th>
+				    </tr>
+				</table>
+				<p class="sub-titulo-int">Confirmación del evento</p>
+				<table border="0" id="pre5">
+				    <tr>
+				    	<td colspan="5">1.- La atención del ejecutivo previa al evento cubrió sus necesidades</td>
+				    </tr>
+				    <tr>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res4" value="5" />5<br>Totalmente de acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res4" value="4" />4<br>De Acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res4" value="3" />3<br>Ni acuerdo, ni en desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res4" value="2" />2<br>En desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res4" value="1" />1<br>Totalmente en desacuerdo</label></th>
+				    </tr>
+				</table>
+<table border="0" id="pre5">
+				    <tr>
+				    	<td colspan="5">2.- Las opciones que recibió fueron las que solicitó a la agencia</td>
+				    </tr>
+				    <tr>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res5" value="5" />5<br>Totalmente de acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res5" value="4" />4<br>De Acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res5" value="3" />3<br>Ni acuerdo, ni en desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res5" value="2" />2<br>En desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res5" value="1" />1<br>Totalmente en desacuerdo</label></th>
+				    </tr>
+				</table>
+				<table border="0" id="pre5">
+				    <tr>
+						<td colspan="5">3.- El ejecutivo fue atento y dio respuesta oportuna a todas sus solicitudes</td>
+				    </tr>
+				    <tr>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res6" value="5" />5<br>Totalmente de acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res6" value="4" />4<br>De Acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res6" value="3" />3<br>Ni acuerdo, ni en desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res6" value="2" />2<br>En desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res6" value="1" />1<br>Totalmente en desacuerdo</label></th>
+				    </tr>
+				</table>
+
+				<p class="sub-titulo-int">Traslados</p>
+				<table border="0" id="pre5">
+				    <tr>
+				    	<td colspan="5">1.- Al llegar al aeropuerto lo estaban esperando con el logo de BI</td>
+				    </tr>
+				    <tr>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res7" value="5" />5<br>Totalmente de acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res7" value="4" />4<br>De Acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res7" value="3" />3<br>Ni acuerdo, ni en desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res7" value="2" />2<br>En desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res7" value="1" />1<br>Totalmente en desacuerdo</label></th>
+				    </tr>
+				</table>
+				<table border="0" id="pre5">
+				    <tr>
+				    	<td colspan="5">2.- A su salida el transporte estuvo en el horario confirmado</td>
+				    </tr>
+				    <tr>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res8" value="5" />5<br>Totalmente de acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res8" value="4" />4<br>De Acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res8" value="3" />3<br>Ni acuerdo, ni en desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res8" value="2" />2<br>En desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res8" value="1" />1<br>Totalmente en desacuerdo</label></th>
+				    </tr>
+				</table>
+				<table border="0" id="pre5">
+				    <tr>
+				    	<td colspan="5">3.- Los choferes fueron amables y le apoyaron con su equipaje</td>
+				    </tr>
+				    <tr>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res9" value="5" />5<br>Totalmente de acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res9" value="4" />4<br>De Acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res9" value="3" />3<br>Ni acuerdo, ni en desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res9" value="2" />2<br>En desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res9" value="1" />1<br>Totalmente en desacuerdo</label></th>
+				    </tr>
+				</table>
+				<p class="sub-titulo-int">Hospedaje</p>
+				<table border="0" id="pre5">
+				    <tr>
+				    	<td colspan="5">1.- Encontró todo en orden con su reservación a su llegada</td>
+				    </tr>
+				    <tr>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res10" value="5" />5<br>Totalmente de acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res10" value="4" />4<br>De Acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res10" value="3" />3<br>Ni acuerdo, ni en desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res10" value="2" />2<br>En desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res10" value="1" />1<br>Totalmente en desacuerdo</label></th>
+				    </tr>
+				</table>
+				<table border="0" id="pre5">
+				    <tr>
+				    	<td colspan="5">2.- Las intalaciones del hotel están en buenas condiciones</td>
+				    </tr>
+				    <tr>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res11" value="5" />5<br>Totalmente de acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res11" value="4" />4<br>De Acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res11" value="3" />3<br>Ni acuerdo, ni en desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res11" value="2" />2<br>En desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res11" value="1" />1<br>Totalmente en desacuerdo</label></th>
+				    </tr>
+				</table>
+				<table border="0" id="pre5">
+				    <tr>
+				    	<td colspan="5">3.- El check out del hotel se realizó in ningún inconveniente a su salida</td>
+				    </tr>
+				    <tr>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res12" value="5" />5<br>Totalmente de acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res12" value="4" />4<br>De Acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res12" value="3" />3<br>Ni acuerdo, ni en desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res12" value="2" />2<br>En desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res12" value="1" />1<br>Totalmente en desacuerdo</label></th>
+				    </tr>
+				</table>
+				<p class="sub-titulo-int">Atención de la agencia durante el evento</p>
+				<table border="0" id="pre5">
+				    <tr>
+				    	<td colspan="5">1.- El servicio y horarios de la mesa de hospitalidad fue el adecuado</td>
+				    </tr>
+				    <tr>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res13" value="5" />5<br>Totalmente de acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res13" value="4" />4<br>De Acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res13" value="3" />3<br>Ni acuerdo, ni en desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res13" value="2" />2<br>En desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res13" value="1" />1<br>Totalmente en desacuerdo</label></th>
+				    </tr>
+				</table>
+				<table border="0" id="pre5">
+				    <tr>
+				    	<td colspan="5">2.- El coordinador de la agencia atendió y dio respuesta a sus solicitudes</td>
+				    </tr>
+				    <tr>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res14" value="5" />5<br>Totalmente de acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res14" value="4" />4<br>De Acuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res14" value="3" />3<br>Ni acuerdo, ni en desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res14" value="2" />2<br>En desacuerdo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res14" value="1" />1<br>Totalmente en desacuerdo</label></th>
+				    </tr>
+				</table>
+				<p class="sub-titulo-int">Evaluación General</p>
+				<table border="0" id="pre5">
+				    <tr>
+				    	<td colspan="5">¿Cuál sería su evaluación del evento en general</td>
+				    </tr>
+				    <tr>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res15" value="Totalmente de acuerdo" />5<br>Excelente</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res15" value="De Acuerdo" />4<br>Bueno</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res15" value="Ni acuerdo, ni en desacuerdo" />3<br>Regular</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res15" value="En desacuerdo" />2<br>Malo</label></th>
+				        <th align="left" style="text-align:center;"><label><input type="radio" name="res15" value="Totalmente en desacuerdo" />1<br>Muy Malo</label></th>
+				    </tr>
+				</table>
+				<!--Comentarios-->
+				<table border="0" id="pre7">
+				    <tr>
+				    	<td colspan="5">Comentarios </td>
+				    </tr>
+				    <tr>
+				        <th align="left"><textarea rows="4" cols="85" name="comentario-2" id="14"></textarea></th>
+				    </tr>
+				</table>
+				<table width="46" border="0" align="center" id="send">
+              <tr>
+                <td width="41"><input type="button" name="enviar" id="enviar" value="Enviar" class="btn btn-default btn-lg btn-envio-2"></td>
+              </tr>
+            </table>
+
+			</form>	
+        </div>
+			</div><!--fin encuesta 2-->
+			<div class="encuestas-grales encuesta-3 oculto">
+				<div id="evaluacion">
+	        		<form id="mando-encuesta-3">
+						<div class="title2">Estimado Doctor, los invitamos a contestar una breve encuesta "SU EVALUACIÓN ES MUY IMPORTANTE PARA NOSOTROS"</div>
+			        	<table border="0" id="pre1">
+						    <tr>
+						    	<td colspan="5">¿Cuál es el   factor  más importante que está impactando para no prescribir  Secotex® Ocas?</td>
+						    </tr>
+						    <tr>
+						    	<th align="left" style="text-align:center;"><label><input type="radio" name="res1" class="res1-3" value="1" />Falta de visita promocional  y comunicación en consultorio.</label></th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res1" class="res1-3" value="2" />Aparición de nuevas moléculas para HPB</label></th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res1" class="res1-3" value="3" />Apoyo de Educación médica continua y eventos académicos por otros Laboratorios.</th>
+						    </tr>
+						</table>
+						<table border="0" id="pre1">
+						    <tr>
+						    	<td colspan="5">¿Qué herramientas considera de mayor valor agregado  para su práctica clínica?  (Enumerar en orden de importancia) Del 1 al 6, siendo el uno el más importante </td>
+						    </tr>
+						    <tr>
+						    	<th align="left">
+						    		<ul>
+						    			<li><label>Material bibliográfico impreso<input type="number" id="pre2-1" name="pre2-1"></label></li>
+						    			<li><label>Suscripciones a portales médicos<input type="number" id="pre2-2" name="pre2-2"></label></li>
+						    			<li><label>Material bibliográfico digital<input type="number" id="pre2-3" name="pre2-3"></label></li>
+						    			<li><label>Becas de educación médica continúa<input type="number" id="pre2-4" name="pre2-4"></label></li>
+						    			<li><label>Congresos<input type="number" id="pre2-5" name="pre2-5"></label></li>
+						    			<li><label>Mesas de discusión<input type="number" id="pre2-6" name="pre2-6"></label></li>
+						    			<li><label>Otros<input type="text" id="pre2-otro" name="pre2-otro"><input type="number" id="pre2-7" name="pre2-7"></label></li>
+						    		</ul>
+						    	</th>
+						    </tr>
+						</table>
+						<table border="0" id="pre1">
+						    <tr>
+						    	<td colspan="5">¿Considera el sistema OCAS un diferenciador clave del resto de las Tamsulosinas?</td>
+						    </tr>
+						    <tr>
+						    	<th align="left" style="text-align:center;"><label><input type="radio" name="res3" class="res3-3" value="1" />Si</label></th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res3" class="res3-3" value="2" />No</label></th>
+						    </tr>
+						</table>
+						<table border="0" id="pre1">
+						    <tr>
+						    	<td colspan="5">¿Cuál de los siguientes  factores considera claves en su prescripción al utilizar el Sistema OCAS? (Enumerar en orden de importancia) </td>
+						    </tr>
+						    <tr>
+						    	<th align="left">
+						    		<ul>
+						    			<li><label>Menos eventos adversos a nivel cardiovascular (hipotensión ortostática)<input type="number" id="pre4-1"></label></li>
+						    			<li><label>Perfil de seguridad <input type="number" id="pre4-2"></label></li>
+						    			<li><label>Toma con o sin alimentos y a cualquier hora del día<input type="number" id="pre4-3"></label></li>
+						    		</ul>
+						    	</th>
+						    </tr>
+						</table>
+						<table border="0" id="pre1">
+						    <tr>
+						    	<td colspan="5">¿En  qué porcentaje de su consulta prescribe lo siguiente Alfabloqueadores? </td>
+						    </tr>
+						    <tr>
+						    	<th align="left" style="text-align:center;"><label><input type="radio" name="res5-3" class="res5-3" value="1" />100%</label></th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res5-3" class="res5-3" value="2" />80%</label></th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res5-3" class="res5-3" value="3" />Mayor a 50%</th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res5-3" class="res5-3" value="3" />Menor a 50%</th>
+						    </tr>
+						</table>
+						<table border="0" id="pre1">
+						    <tr>
+						    	<td colspan="5">¿En  qué porcentaje de su consulta prescribe Alfabloqueador + finasteride?  </td>
+						    </tr>
+						    <tr>
+						    	<th align="left" style="text-align:center;"><label><input type="radio" name="res6-3" class="res6-3" value="1" />100%</label></th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res6-3" class="res6-3" value="2" />80%</label></th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res6-3" class="res6-3" value="3" />Mayor a 50%</th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res6-3" class="res6-3" value="3" />Menor a 50%</th>
+						    </tr>
+						</table>
+						<table border="0" id="pre1">
+						    <tr>
+						    	<td colspan="5">¿En  qué porcentaje de su consulta prescribe Alfabloqueador + anticolinergico?   </td>
+						    </tr>
+						    <tr>
+						    	<th align="left" style="text-align:center;"><label><input type="radio" name="res7-3" class="res7-3" value="1" />100%</label></th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res7-3" class="res7-3" value="2" />80%</label></th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res7-3" class="res7-3" value="3" />Mayor a 50%</th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res7-3" class="res7-3" value="3" />Menor a 50%</th>
+						    </tr>
+						</table>
+						<table border="0" id="pre1">
+						    <tr>
+						    	<td colspan="5">¿Considera a tadalafil  una opción eficaz para todos sus pacientes  con Hiperplasia Prostática Benigna? </td>
+						    </tr>
+						    <tr>
+						    	<th align="left" style="text-align:center;"><label><input type="radio" name="res8-3" class="res8-3" value="1" />Si</label></th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res8-3" class="res8-3" value="2" />No</label></th>
+						    </tr>
+						</table>
+						<table border="0" id="pre1">
+						    <tr>
+						    	<td colspan="5">¿Cuál es el porcentaje de riesgo de RAO al utilizar un anticolinérgico en un paciente con HPB?  </td>
+						    </tr>
+						    <tr>
+						    	<th align="left" style="text-align:center;"><label><input type="radio" name="res9-3" class="res9-3" value="1" />100%</label></th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res9-3" class="res9-3" value="2" />80%</label></th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res9-3" class="res9-3" value="3" />Mayor a 50%</th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res9-3" class="res9-3" value="3" />Menor a 50%</th>
+						    </tr>
+						</table>
+						<table border="0" id="pre1">
+						    <tr>
+						    	<td colspan="5">¿En su práctica clínica en qué porcentaje de sus pacientes  con Litiasis Renal utiliza Tamsulosina? </td>
+						    </tr>
+						    <tr>
+						    	<th align="left" style="text-align:center;"><label><input type="radio" name="res10-3" class="res10-3" value="1" />Menor a 10%</label></th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res10-3" class="res10-3" value="2" />De 10% a 20%</label></th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res10-3" class="res10-3" value="3" />De 20% a 30%</th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res10-3" class="res10-3" value="3" />Mayor a 30%</th>
+						    </tr>
+						</table>
+						<table border="0" id="pre1">
+						    <tr>
+						    	<td colspan="5">¿De 0 a 10 (siendo 10 el más importante) el factor precio que tan relevante se vuelve al momento de prescribir? </td>
+						    </tr>
+						    <tr>
+						    	<th align="left" style="text-align:center;"><input type="number" id="pre11-1"></th>
+						    </tr>
+						</table>
+						<table width="46" border="0" align="center" id="send">
+              <tr>
+                <td width="41"><input type="button" name="enviar" id="enviar" value="Enviar" class="btn btn-default btn-lg btn-envio-3"></td>
+              </tr>
+            </table>
+					</form>
+				</div>
+			</div><!--fin encuesta 3-->
+			<div class="encuestas-grales encuesta-4 oculto">
+				<div id="evaluacion">
+	        		<form id="mando-encuesta-4">
+						
+<div> 1. Please indicate the extent of your agreement with the 
+following statements:
+</div>
+			        	
+						<div></div>
+						<table border="0" id="pre1">
+						    <tr>
+						    	<td colspan="5">Content of presentation </td>
+						    </tr>
+						    <tr>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res7" value="5" checked="" />5<br>Excellent</label></th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res7" value="4" />4</label></th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res7" value="3" />3<br>Good</label></th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res7" value="2" />2</label></th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res7" value="1" />1<br>Poor</label></th>
+						    </tr>
+						</table>
+						<table border="0" id="pre1">
+						    <tr>
+						    	<td colspan="5">Ability to convey the subject matter clearly</td>
+						    </tr>
+						    <tr>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res8" value="5" checked="" />5<br>Excellent</label></th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res8" value="4" />4</label></th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res8" value="3" />3<br>Good</label></th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res8" value="2" />2</label></th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res8" value="1" />1<br>Poor</label></th>
+						    </tr>
+						</table>
+						<table border="0" id="pre1">
+						    <tr>
+						    	<td colspan="5">Have you learned anything new from the presentation?</td>
+						    </tr>
+						    <tr>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res9" value="1" checked="" />Yes</label></th>
+						        <th align="left" style="text-align:center;"><label><input type="radio" name="res9" value="0" />No</label></th>
+						        
+						    </tr>
+						</table>
+						<table width="46" border="0" align="center" id="send">
+			              <tr>
+			                <td width="41"><input type="button" name="enviar" id="enviar" value="Enviar" class="btn btn-default btn-lg btn-envio-5"></td>
+			              </tr>
+			            </table>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="barra-menu oculto">
+				<div class="btns-menu btn-menu"></div>
+				<!--<div class="btns-menu btn-voto"></div>
+				<div class="btns-menu btn-pregunta"></div>-->
+		</div>
+		<!--<div class="ir-home">
+			<img src="img/gral/icoInicio.png">
+		</div>
+		<div class="cuento-img oculto"></div>-->
+</div>
+<input type="hidden" id="usuario">
+	
+	<script src="/js/jquery.js"></script>
+  <script src="/js/jquery-ui.js"></script>
+  <script type="text/javascript" src="/js/jquerytouch.js"></script>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="js/touch.js"></script>
+	<script type="text/javascript" src="js/gral.js"></script>
+</body>
+</html>
