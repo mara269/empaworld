@@ -9,20 +9,29 @@
 	border-radius: @radius;
 }
 
+.century(@size: 30px, @top: 25px, @lineHeight: 30px, @color: #ffffff) {
+	font-family: century;
+	font-size: @size;
+	color: @color;
+	line-height: @lineHeight;
+	top: @top;
+}
+
 @font-face {
   font-family: interB;
   src: url("/fonts/Interstate-Mono-Bold.otf");
 }
 
 @font-face {
-  font-family: interM;
-  src: url("/fonts/Interstate-Mono.otf");
+  font-family: century;
+  src: url("/fonts/century_gothic.otf");
 }
 
 body{
 	width: 1024px;
 	height: 768px;
 	border: solid 1px;
+	font-family: century;
 }
 
 .btn-menu {
@@ -75,4 +84,16 @@ body{
 .sub-pregunta-experto:after {
     background-size: 220px;
     background-position: -146px 12px;
+}
+
+.txt-btn-menu {
+    position: absolute;
+    width: 165px;
+    left: 105px;
+    text-transform: uppercase;
+    .century;
+}
+
+.sub-pregunta-experto > .txt-btn-menu {
+	.century(25px, 10px);
 }
