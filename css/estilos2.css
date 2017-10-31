@@ -61,36 +61,7 @@ th {
     background: #FFFFFF url(/../img/home/espiral.png) center center no-repeat;
     background-size: 100%;
 }
-.logo1 {
-    background: url(/../img/home/logoAngels.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    top: 10px;
-    left: 50px;
-    width: 400px;
-    height: 183px;
-    /* border: 1px solid; */
-    position: absolute;
-}
-.logo2 {
-    background: url(/../img/home/logoBo.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    top: 15px;
-    left: 815px;
-    width: 200px;
-    height: 63px;
-    /* border: 1px solid; */
-    position: absolute;
-}
-.contiene-presentacion{
-	background: url(/../img/gral/fondo.png) center center no-repeat;
-	background-size: 100%;
-}
-.contiene-preGrupo{
-    background: url(/../img/gral/fondo.png) center center no-repeat;
-    background-size: 100%;
-}
+
 .mismo-fondo{
     /*background: url(/../img/agenda/fondoAgenda.jpg) center center no-repeat;*/
    background-size: 100%;
@@ -104,106 +75,7 @@ th {
 	/*top: -77px;*/
 	left: 0px;
 }
-.sub-menus{
-	position: absolute;
-    width: 226px;
-    height: 122px;
-    right: 122px;
-    cursor: pointer;
 
-}
-.logo-home{
-	position: absolute;
-	background: url(/../img/home/logoHome.jpg) no-repeat;
-	width: 546px;
-    height: 324px;
-    top: 159px;
-    left: 31px;
-}
-
-.   sub-grupos {
-    top: 535px;
-    left: 505px;
-    width: 300px;
-    height: 80px;
-    background: #d31e21 url(/../img/home/plenaria.png);
-    background-repeat: no-repeat;
-    background-position: 15px 6px;
-    background-size: 20%;
-    border: 4px solid #e5e5e5;
-    border-radius: 7px;
-    padding: 5px 5px 5px 75px;
-}
-.sub-grupos:before {
-    position: absolute;
-    white-space: pre;
-    content: "Break Out";
-    font-size: 40px;
-    font-family: "interM";
-    /* text-align: left; */
-    line-height: 30px;
-    color: #000;
-    padding: 10px;
-    z-index: 5;
-    top: 14px;
-    left: 90px;
-    /* height: 61px; */
-    /* width: 595px; */
-}
-
-/*.sub-encuestas {
-    top: 410px;
-    left: 362px;
-    width: 300px;
-    height: 80px;
-    background: #d31e21 url(/../img/home/encuesta.png);
-    background-repeat: no-repeat;
-    background-position: 15px 4px;
-    background-size: 20%;
-    border: 4px solid #e5e5e5;
-    border-radius: 7px;
-    padding: 5px 5px 5px 75px;
-}
-.sub-encuestas:before {
-    position: absolute;
-    white-space: pre;
-    content: "Encuesta";
-    font-size: 40px;
-    font-family: "interM";
-    line-height: 30px;
-    color: #000;
-    padding: 10px;
-    z-index: 5;
-    top: 14px;
-    left: 90px;
-    
-}*/
-/*.sub-pregunta-experto {
-    position: absolute;
-    top: 410px;
-    left: 690px;
-    width: 300px;
-    height: 80px;
-    background: #d31e21 url(/../img/home/experto.png);
-    background-repeat: no-repeat;
-    background-position: 15px 6px;
-    background-size: 20%;
-    border: 4px solid #e5e5e5;
-    border-radius: 7px;
-    padding: 5px 5px 5px 75px;
-}
-.sub-pregunta-experto:before {
-    position: absolute;
-    content: "Pregunta al experto";
-    font-size: 32px;
-    font-family: "interM";
-    line-height: 30px;
-    color: #000;
-    padding: 10px;
-    z-index: 5;
-    top: 0px;
-    left: 92px;
-}*/
 
 .btn-back-encuesta {
     position: absolute;
@@ -340,301 +212,7 @@ th {
     font-weight: bold;
     /* box-shadow: #bdbdbd 0px 0px 5px -1px; */
 }
-.logoPlenaria {
-    top: 625px;
-    left: 306px;
-    width: 148px;
-    height: 148px;
-    background: url(/../img/home/plenariaG.png)center center no-repeat;
-    background-size: 62%;
-    position: absolute;
-}
-.veo-pre {
-    position: absolute;
-    width: 850px;
-    height: 50px;
-    left: 60px;
-    cursor: pointer;
-    background: #edecec;
-    border-radius: 6px;
-    border: 1px solid #c1c1c1;
-    z-index: 1;
-}
-.veo-preGrande {
-    position: absolute;
-    width: 850px;
-    height: 75px;
-    left: 60px;
-    cursor: pointer;
-    background: #edecec;
-    border-radius: 6px;
-    border: 1px solid #c1c1c1;
-    z-index: 1;
-}
-.pre1:before {
-    white-space: pre;
-    content: "Iniciativa Angels - Lic. Ricardo Burgos";
-    position: absolute;
-    height: 61px;
-    width: 595px;
-    font-size: 22px;
-    font-family: "interM";
-    text-align: left;
-    line-height: 30px;
-    color: #000000;
-    padding: 10px;
-    left: 30px;
-    top: 0px;
-    z-index: 5;
-}
-.pre2:before {
-    white-space: pre;
-    content: "Experiencia Internacional - Dra. Sheila Martins";
-    position: absolute;
-    height: 61px;
-    width: 595px;
-    font-size: 22px;
-    font-family: "interM";
-    text-align: left;
-    line-height: 30px;
-    color: #000000;
-    padding: 10px;
-    left: 30px;
-    top: 0px;
-    z-index: 5;
-}
-.pre3:before {
-    white-space: pre;
-    content: "Neurología y urgencias en sinergia - Dr. Fernando Góngora | Dr. Daniel López Tapia";
-    position: absolute;
-    height: 61px;
-    width: 595px;
-    font-size: 22px;
-    font-family: "interM";
-    text-align: left;
-    line-height: 30px;
-    color: #000000;
-    padding: 10px;
-    left: 30px;
-    top: 0px;
-    z-index: 5;
-}
-.pre4:before {
-    white-space: pre;
-    content: "Responsabilidad social y acciones coordinadas - Dr. Fernando Góngora";
-    position: absolute;
-    height: 61px;
-    width: 595px;
-    font-size: 22px;
-    font-family: "interM";
-    text-align: left;
-    line-height: 30px;
-    color: #000000;
-    padding: 10px;
-    left: 30px;
-    top: 0px;
-    z-index: 5;
-}
-.pre5:before {
-    white-space: pre;
-    content: "Relevancia de los registros médicos - Dr. Luis Murillo Bonilla";
-    position: absolute;
-    height: 61px;
-    width: 595px;
-    font-size: 22px;
-    font-family: "interM";
-    text-align: left;
-    line-height: 30px;
-    color: #000000;
-    padding: 10px;
-    left: 30px;
-    top: 0px;
-    z-index: 5;
-}
-.pre6:before {
-    white-space: pre;
-    content: "Impacto de las guías de práctica clínica internacional - Dr. Juan Manuel Calleja"; /* Día SABADO*/
-    position: absolute;
-    height: 61px;
-    width: 595px;
-    font-size: 22px;
-    font-family: "interM";
-    text-align: left;
-    line-height: 30px;
-    color: #000000;
-    padding: 10px;
-    left: 30px;
-    top: 0px;
-    z-index: 5;
-}
-.pre7:before {
-    white-space: pre;
-    content: "Hacia la certificación de la Trombólisis en México - Dr. Carlos Espinosa";
-    position: absolute;
-    height: 61px;
-    width: 595px;
-    font-size: 22px;
-    font-family: "interM";
-    text-align: left;
-    line-height: 30px;
-    color: #000000;
-    padding: 10px;
-    left: 30px;
-    top: 0px;
-    z-index: 5;
-}
-.pre8:before {
-    white-space: pre;
-    content: "Consolidación del Stroke Team - Dr. Juan Manuel Márquez-Romero";
-    position: absolute;
-    height: 74px;
-    width: 595px;
-    font-size: 22px;
-    font-family: "interM";
-    text-align: left;
-    line-height: 30px;
-    color: #000000;
-    padding: 10px;
-    left: 30px;
-    top: 0px;
-    z-index: 5;
-}
-.pre9:before {
-    white-space: pre;
-    content: "Rol del Urgenciólogo en el Stroke Team - Dr. Ricardo Ascencio";
-    position: absolute;
-    height: 61px;
-    width: 595px;
-    font-size: 22px;
-    font-family: "interM";
-    text-align: left;
-    line-height: 30px;
-    color: #000000;
-    padding: 10px;
-    left: 30px;
-    top: 0px;
-    z-index: 5;
-}
-.pre10:before {
-    white-space: pre;
-    content: "Experiencias mexicanas en hospitales \a Dr. Daniel López Tapia y Dr. Refugio Luquin | Dr. Fernando Góngora | Dr. Juan Manuel Calleja";
-    position: absolute;
-    height: 83px;
-    width: 770px;
-    font-size: 20px;
-    font-family: "interM";
-    text-align: left;
-    line-height: 30px;
-    color: #000000;
-    padding: 10px;
-    left: 20px;
-    top: 0px;
-    z-index: 5;
-}
-.pre11:before {
-    white-space: pre;
-    content: "Importancia del 9-1-1 - Dr. Daniel Sánchez Arreola";
-    position: absolute;
-    height: 61px;
-    width: 573px;
-    font-size: 22px;
-    font-family: "interM";
-    text-align: left;
-    line-height: 30px;
-    color: #000000;
-    padding: 11px;
-    left: 30px;
-    top: 0px;
-    z-index: 5;
-}
-.pre12:before {
-    white-space: pre;
-    content: "¿Qué sigue después de un EVC? - Dr. José Santos";
-    position: absolute;
-    height: 61px;
-    width: 595px;
-    font-size: 22px;
-    font-family: "interM";
-    text-align: left;
-    line-height: 30px;
-    color: #000000;
-    padding: 10px;
-    left: 30px;
-    top: 0px;
-    z-index: 5;
-}
-.cont-pre-1{
-	background: url(/../img/ponencias/ponencias1.png) center center no-repeat;
-	background-size: 100%;
-	position: absolute;
-    top: 146px;
-    left: 66px;
-    width: 802px;
-    height: 465px;
-}
-.cont-pre-2{
-	background: url(/../img/ponencias/ponencias2.png) center center no-repeat;
-	background-size: 100%;
-	position: absolute;
-    top: 146px;
-    left: 66px;
-    width: 802px;
-    height: 465px;
-}
-.btn-siguiente-pre{
-    position: absolute;
-    width: 155px;
-    height: 43px;
-    top: 580px;
-    left: 742px;
-    background: url(/../img/ponencias/btnSiguiente.png) center center no-repeat;
-	background-size: 100%;
-}
-.btn-anterior-pre{
-    position: absolute;
-    width: 155px;
-    height: 43px;
-    top: 580px;
-    left: 33px;
-    background: url(/../img/ponencias/btnAtras.png) center center no-repeat;
-	background-size: 100%;
-}
-.pre1{
-	margin-top: 15px;
-}
-.pre2{
-	margin-top: 85px;
-}
-.pre3{
-	margin-top: 155px;
-}
-.pre4{
-	margin-top: 225px;
-}
-.pre5{
-	margin-top: 295px;
-}
-.pre6{
-	margin-top: 367px;
-}
-.pre7{
-	margin-top: 440px;
-}
-.pre8{
-	margin-top: 515px;
-}
-.pre9{
-	margin-top: 590px;
-}
-.pre10{
-    margin-top: 665px;
-}
-.pre11{
-    margin-top: 765px;
-}
-.pre12{
-    margin-top: 915px;
-}
+
 .fecha-presentacion{
 	position: absolute;
 	    top: 127px;
@@ -751,30 +329,7 @@ th {
 			text-align: center;
 		}
 
-		#encuesta{
-			position: absolute;
-			z-index: 1;
-			background: red;
-			border-radius: 25px;
-			width: 160px;
-			height: 100px;
-			top: 88%;
-			left: 20%;
-			  font-size: 42px;
-  text-align: center;
-
-		}
-		#notas{
-			position: absolute;
-			z-index: 1;
-			border-radius: 25px;
-			width: 78px;
-		  	height: 87px;
-		  	top: 29px;
-  			left: 918px;
-		  	font-size: 42px;
-		  	text-align: center;
-		}
+	
 		.progressbar .ui-progressbar-value {
 			background: rgb(255, 169, 22);
   }
@@ -817,77 +372,7 @@ th {
   padding-top: 20px;
   padding-left: 24px;
 }
-.pag-agenda{
-	margin-left: 22px;
-	background: url(/../img/agenda/cuadroAgenda.png) center center no-repeat;
-	background-size: 845px 542px;
-	width: 845px;
-	height: 537px;
-	
-}
-.btn-dia1{
-	background: url(/../img/agenda/btndia1.png) center center no-repeat;
-	width: 145px;
-	height: 76px;
-	position: absolute;
-	right: -38px;
-	top: 0px;
-}
-.btn-dia2{
-	background: url(/../img/agenda/btndia2.png) center center no-repeat;
-	width: 145px;
-	height: 76px;
-	position: absolute;
-	right: -38px;
-	top: 70px;
-}
-.pag-ponentes{
-	padding-left: 67px;
-}
-.pag-ponentes2{
-  padding-left: 67px;
-}
-.menu-agenda{
-	  position: absolute;
-  top: 70px;
-  left: 142px;
-  background: url(/img/barramenu/texto.png) center center no-repeat;
-  width: 208px;
-  height: 54px;
-}
-.dia1{
-	  
-}
-.dia2{
-	 
-}
-.ir-notas{
-	  position: absolute;
-  right: 27px;
-  top: 2px;
-}
-.ir-live{
-	  position: absolute;
-  top: 8px;
-  right: 344px;
-}
-.ir-voteo{
-	  position: absolute;
-  top: 8px;
-  left: 330px;
-}
-.ir-agenda{
-	  position: absolute;
-  top: 8px;
-  left: 155px;
-    height: 65px;
-  width: 180px;
-}
-.ir-inicio{
-	position: absolute;
-	margin-left: 22px;
-	margin-top: 8px;
-}
+
 .fondo-descripcion{
 	background: url(/../img/ponentes/cuadroTxt.png) center center no-repeat;
 	background-size: 746px 436px;
@@ -902,59 +387,7 @@ opacity: 0.8;
   overflow-y: auto;
   padding: 25px;
 }
-.titulo-regreso{
-	position: absolute;
-  right: 10px;
-}
 
-.jugadores img{
-	width: 176px;
-}
-.pirata1{
-	left: 117px;
-  top: 421px;
-}
-.pirata2{
-	left: 731px;
-  top: 421px;
-}
-.pirata3{
-	  left: 424px;
-  top: 150px;
-}
-.pirata4{
-	left: 424px;
-  top: 421px;
-}
-.pirata5{
-	  left: 117px;
-  top: 150px;
-}
-.pirata6{
-	  left: 731px;
-  top: 150px;
-}
-.pirata-select{
-	position: absolute;
-	left: 79px;
-  top: 79px;
-}
-.pirata-select img{
-	width: 176px;
-}
-#setNick{
-	position: absolute;
-  top: 599px;
-  left: 351px;
-}
-#nickname{
-	  height: 50px;
-  font-size: 38px;
-  width: 291px;
-  text-align: center;
-  font-family: Pirata;
-  border: white;
-}
 .btn-envio{
 	width: 50px;
   position: absolute;
@@ -974,63 +407,17 @@ opacity: 0.8;
   margin-right: 25%;
     color: #7E4E12;
 }
+
 .titulo-bienvenido{
 	font-family: Pirata;
   font-size: 40px;
   text-align: center;
-}
-#leyenda{
-	  position: absolute;
-  font-family: Pirata;
-  font-size: 40px;
-  text-align: center;
-  right: 4px;
-  top: 62px;
 }
 .btn-continua{
 	  width: 50px;
   position: absolute;
   right: 210px;
   top: 112px;
-}
-#titulo-nombre{
-	position: absolute;
-  top: -28px;
-  left: 47px;
-}
-#mapas{
-	display: inline-block;
-	width: 600px;
-	height: 600px;
-	  margin-left: 40px;
-  margin-top: 60px;
-}
-#mapa-enemigo{
-	display: inline-block;
-	width: 600px;
-	height: 600px;
-	margin-left: 278px;
-	margin-top: 50px;
-}
-#mini-mapa{
-	width: 200px;
-height: 200px;
-position: absolute;
-  top: 60px;
-  left: 40px;
-  
-}
-.leyenda-tuposicion{
-	  position: absolute;
-  font-family: Pirata;
-  font-size: 30px;
-  left: 80px;
-}
-.leyenda-suposicion{
-	  position: absolute;
-  font-family: Pirata;
-  font-size: 30px;
-  right: 360px;
 }
 .fondo-negro{
 	background: rgba(0,0,0,0.8);
@@ -1039,64 +426,7 @@ position: absolute;
 	height: 100%;
 	z-index: 9;
 }
-.fondo-blanco{
-    background: rgb(242, 222, 222);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 9;
-}
-.fondo-infos {
-    background: #FFFFFF url(../img/gral/pleca.png) 0px 0px;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 1024px;
-    height: 768px;
-    z-index: 9;
-}
-.fondo-pregunta{
-	    background: url(../img/pregunta/recuadrotexto.png) center center no-repeat;
-  position: absolute;
-  width: 642px;
-  height: 278px;
-  top: 177px;
-  left: 110px;
-}
-.muestro-notas{
-	background: url(/../img/notas/fondoNotas.png) center center no-repeat;
-	background-size: auto;
-    position: absolute;
-    width: 87%;
-    height: 595px;
-    z-index: 10;
-    margin: 7%;
-    border-radius: 40px;
-}
-.listar-notas{
-	position: absolute;
-	top: 51px;
-	left: 12px;
-	height: 487px;
-	overflow-x: hidden;
-    overflow-y: auto;
-}
-.view-nota{
-	/*background: url(../img/notas/cuadroTxtNotas.png) center center no-repeat;*/
-	background-size: 180px 33px;
-	width: 180px;
-	height: 33px;
-	color: white;
-	font-size: 16px;
-	padding-left: 8px;
-	padding-top: 4px;
-}
-.btn-borro-nota{
-	position: absolute;
-	bottom: 88px;
-	left: 216px;
-}
+
 .tanger-live {
     background: #FFFFFF url(/../img/gral/pleca.png) 0px 1px; 
     background-repeat: no-repeat;
@@ -1107,20 +437,7 @@ position: absolute;
     z-index: 10;
     /*margin: 120px 2px 2px 80px;*/
 }
-.contiene-pregunta {
-    background: #FFFFFF url(/../img/gral/fondoSuperior3.png) 0px 0px no-repeat;
-    /* background-size: auto; */
-    position: absolute;
-    width: 1024px;
-    height: 768px;
-    z-index: 100;
-    /* margin: 7%; */
-    /* border-radius: 40px; */
-    background-color: white;
-    top: 0px;
-    left: 0px;
-    border: 1px solid red;
-}
+
 .reloj {
     position: absolute;
     font-size: 55px;
@@ -1164,22 +481,7 @@ position: absolute;
     background-size: 60%;
     position: absolute;
 }
-#pregunta-ponente {
-    position: absolute;
-    background: #e0e0e0;
-    font-size: 25px;
-    font-family: "interM";
-    padding-left: 15px;
-    padding-top: 15px;
-    border-radius: 25px;
-    border: 2px solid #cd3336;
-    resize: none;
-    z-index: 10;
-    top: 110px;
-    left: 117px;
-    width: 800px;
-    height: 415px;
-}
+
 .btn-envio-pregunta {
     position: absolute;
     width: 160px;

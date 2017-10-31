@@ -30,7 +30,7 @@ jQuery(function($){
 		$(".manita").hide();
 	});	
 	
-	$(".sub-menus").click(function(){
+	$(".btn-menu").click(function(){
 		$(".interiores").hide();
 		var ide=$(this).attr("id");
 		if (ide=='encuestas') {
