@@ -96,7 +96,7 @@ th {
    background-size: 100%;
 }
 .paginas{
-	width: 1024px;
+	width: 400px;
 	height: 768px;
 }
 .contiene-paginas{
@@ -151,7 +151,7 @@ th {
     /* width: 595px; */
 }
 
-.sub-encuestas {
+/*.sub-encuestas {
     top: 410px;
     left: 362px;
     width: 300px;
@@ -170,17 +170,15 @@ th {
     content: "Encuesta";
     font-size: 40px;
     font-family: "interM";
-    /* text-align: left; */
     line-height: 30px;
     color: #000;
     padding: 10px;
     z-index: 5;
     top: 14px;
     left: 90px;
-    /* height: 61px; */
-    /* width: 595px; */
-}
-.sub-pregunta-experto {
+    
+}*/
+/*.sub-pregunta-experto {
     position: absolute;
     top: 410px;
     left: 690px;
@@ -196,20 +194,16 @@ th {
 }
 .sub-pregunta-experto:before {
     position: absolute;
-    /* white-space: pre; */
     content: "Pregunta al experto";
     font-size: 32px;
     font-family: "interM";
-    /* text-align: left; */
     line-height: 30px;
     color: #000;
     padding: 10px;
     z-index: 5;
     top: 0px;
     left: 92px;
-    /* height: 61px; */
-    /* width: 595px; */
-}
+}*/
 
 .btn-back-encuesta {
     position: absolute;

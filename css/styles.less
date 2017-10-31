@@ -1,4 +1,14 @@
 @color-button: #000000;
+@green_ligth: #50b2ac;
+@green_dark: #0f3b3c;
+@yellow_light: #f3d00e;
+@yellow_dark: #dfa427;
+
+.border-radius(@radius: 50px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
 
 @font-face {
   font-family: interB;
@@ -22,4 +32,57 @@ body{
 
 .sub-menus {
 	color: @color-button;	
+}
+
+.btn-menu {
+	background: linear-gradient( 180deg, @green_ligth, @green_dark 185px);
+	.border-radius;
+	position: absolute;
+	top: 100px;
+	left: 500px;
+	width: 300px;
+	height: 80px;
+	cursor: pointer;
+
+	&:before {
+		content: "";
+		background: linear-gradient( 0deg, @yellow_light, @yellow_dark);
+		/*background: linear-gradient( to bottom, @yellow_light, @yellow_dark 185px);*/
+		position: absolute;
+		top: -5px;
+		.border-radius(100%);
+		width: 90px;
+		height: 90px;
+    }	
+
+    &:after {
+	    content: "";
+	    position: absolute;
+	    left: 5px;
+
+	    background-image: url(../img/home/icon-bar.png);
+	    background-repeat: no-repeat;
+	    background-position: 8px 5px;
+	    background-size: 235px;
+
+	    width: 80px;
+	    height: 80px;
+	}
+}
+
+.sub-encuestas {
+	top: 250px;
+}
+
+.sub-encuestas:after {
+    background-position: -78px 5px;
+}
+
+.sub-pregunta-experto {
+	top: 450px;
+}
+
+.sub-pregunta-experto:after {
+    background-size: 220px;
+    background-position: -146px 12px;
 }
