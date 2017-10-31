@@ -1,9 +1,15 @@
 jQuery(function($){
 	$(".ir-home").hide();
-	$(".btn-pregunta,.sub-pregunta-experto").click(function(){
-		$(".fondo-negro").show();
-		$(".tanger-live").show();
+	
+	$('.sub-pregunta-experto').click(function() {
+		$('.pag-inicio').hide();
 	});
+	
+
+	// $(".btn-pregunta,.sub-pregunta-experto").click(function(){
+	// 	$(".fondo-negro").show();
+	// 	$(".tanger-live").show();
+	// });
 
 	$(".btn-voto").click(function(){
 		$(".fondo-negro").show();
@@ -44,6 +50,8 @@ jQuery(function($){
 		$(".btn-"+ide).addClass("agrego-top");
 		$(".btn-"+ide).addClass("slideInDown");
 	});
+
+
 	
 	
 	$(".btn-menu").click(function(){

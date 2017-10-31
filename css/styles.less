@@ -1,3 +1,4 @@
+@app: #52acb3;
 @green_ligth: #50b2ac;
 @green_dark: #0f3b3c;
 @yellow_light: #f3d00e;
@@ -17,9 +18,32 @@
 	top: @top;
 }
 
+.background(@url: '../img/gral/background.jpg',@size: 414px, @width: 414px, @height: 736px) {
+	background-image: url(@url);
+	background-repeat: no-repeat;
+	background-size: @size;
+	width: @width;
+    height: @height;
+}
+
+.sizeElement(@width: 414px, @height: 736px, @top: 0px, @left: 0px) {
+	width: @width;
+	height: @height;
+	top: @top;
+	left: @left;
+	font-family: century;	
+}
+
+.title(@size: 28px, @color: #4c423c) {
+	text-transform: uppercase;
+	font-family: centuryB !important;
+	font-size: @size;
+	color: @color;
+}
+
 @font-face {
-  font-family: interB;
-  src: url("/fonts/Interstate-Mono-Bold.otf");
+  font-family: centuryB;
+  src: url("/fonts/century_gothic_bold.otf");
 }
 
 @font-face {
@@ -27,31 +51,47 @@
   src: url("/fonts/century_gothic.otf");
 }
 
-body{
-	width: 1024px;
-	height: 768px;
-	border: solid 1px;
-	font-family: century;
+body {
+	.sizeElement;
+}
+
+#contenedor {
+	.sizeElement;
+}
+
+.paginas {
+	.background;
+	border: solid 1px red;   
+}
+
+.logo-empa {
+	.background('../img/home/logo_empa.png', 110px, 120px, 85px );
+    position: absolute;
+    top: 37px;
+    left: 278px;
+}
+
+.menu {
+	.background('../img/home/menu.png', 70px, 71px, 55px );
+	position: absolute;
+    top: 37px;
+    left: 32px;
+    cursor: pointer;
 }
 
 .btn-menu {
 	background: linear-gradient( 180deg, @green_ligth, @green_dark 185px);
 	.border-radius;
 	position: absolute;
-	top: 100px;
-	left: 500px;
-	width: 300px;
-	height: 80px;
+	.sizeElement(300px, 80px, 185px, 57px);
 	cursor: pointer;
 
 	&:before {
 		content: "";
 		background: linear-gradient( 0deg, @yellow_light, @yellow_dark);
 		position: absolute;
-		top: -5px;
+		.sizeElement(90px, 90px, -5px, 0px);
 		.border-radius(100%);
-		width: 90px;
-		height: 90px;
     }	
 
     &:after {
@@ -59,18 +99,13 @@ body{
 	    position: absolute;
 	    left: 5px;
 
-	    background-image: url(../img/home/icon-bar.png);
-	    background-repeat: no-repeat;
+	    .background('../img/home/icon-bar.png', 235px, 80px, 80px );
 	    background-position: 8px 5px;
-	    background-size: 235px;
-
-	    width: 80px;
-	    height: 80px;
 	}
 }
 
 .sub-encuestas {
-	top: 250px;
+	top: 325px;
 }
 
 .sub-encuestas:after {
@@ -78,7 +113,7 @@ body{
 }
 
 .sub-pregunta-experto {
-	top: 450px;
+	top: 465px;
 }
 
 .sub-pregunta-experto:after {
@@ -96,4 +131,27 @@ body{
 
 .sub-pregunta-experto > .txt-btn-menu {
 	.century(25px, 10px);
+}
+
+/****************** styles experto *************************/
+
+.title-app {
+	position: absolute;
+	.title;	
+	.sizeElement(350px, 30px, 130px, 32px);
+	    
+	&:first-letter {
+		.title(28px, @app);
+	}
+}
+
+#pregunta-ponente {
+	position: absolute;
+	.sizeElement(356px, 360px, 210px, 29px);
+	border: solid 4px @app;
+	.border-radius(10px);
+}
+
+.tanger-live {
+	background-image: url(../img/gral/background-internas.jpg);	
 }

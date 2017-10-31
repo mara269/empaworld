@@ -1,10 +1,3 @@
-body{
-	width: 1024px;
-	height: 768px !important;
-}
-
-
-
 table, th, td {
     border: 1px solid #ececec;
     border-collapse: collapse;
@@ -56,24 +49,11 @@ th {
     left: 130px;
     bottom: 14px;
 }
-#contenedor {
-    width: 1024px;
-    background: #FFFFFF url(/../img/home/espiral.png) center center no-repeat;
-    background-size: 100%;
-}
+
 
 .mismo-fondo{
     /*background: url(/../img/agenda/fondoAgenda.jpg) center center no-repeat;*/
    background-size: 100%;
-}
-.paginas{
-	width: 400px;
-	height: 768px;
-}
-.contiene-paginas{
-	position: absolute;
-	/*top: -77px;*/
-	left: 0px;
 }
 
 
@@ -480,18 +460,6 @@ opacity: 0.8;
     background: url(/../img/home/expertoG.png)center center no-repeat;
     background-size: 60%;
     position: absolute;
-}
-
-.btn-envio-pregunta {
-    position: absolute;
-    width: 160px;
-    height: 58px;
-    top: 565px;
-    right: 470px;
-    font-size: 35px;
-    /* background-color: #82B068; */
-    text-align: center;
-    border-radius: 10px;
 }
 .icono-cerrar-experto {
     top: 595px;
