@@ -1,7 +1,8 @@
 var express = require('express');
 	app = express();
 	server = require('http').createServer(app);
-	io = require('socket.io').listen(server);
+	io = require('socket.io').listen(server)
+	voteo = new Array();
 	
 var mime_types = {
    'js' : 'text/javascript',
@@ -170,6 +171,50 @@ io.sockets.on('connection', function(socket){
 		});
 	});
 	
+	socket.on('voto',function(datas){
+		var data=datas.ide;
+		var otro=data.split("-");
+		var pregunta=datas.pregunta;
+		var user=datas.user;
+		var voto = {};
+		var miarray=new Array();
+		
+		var sql='insert into voto_respondieron(idvoto_pregunta,idrespuesta) values(?,?)';
+		var info=new Array(pregunta,otro[1]);
+		//console.log("votan");
+		guardo(sql,info,function(res){
+			//console.log(res);
+			
+			if (res.affectedRows=="1") {
+				/**///var sql="SELECT * from voto_usuario where idvoto_pregunta=?";
+				var sql="SELECT * from voto_respondieron where idvoto_pregunta=?";
+				//console.log(sql+" "+pregunta);
+				selecciono(sql,pregunta,function(res){
+					console.log(res);
+					for (var i = 0,p=1; i < res.length; i++,p++) {
+						var algo="u-"+res[i].idrespuesta;
+						console.log(algo);
+						if (algo in voto) {
+							var q=voto[algo];
+							q++;
+							voto[algo]=q;
+							voteo[algo]=q;
+						}else{
+							voteo[algo]=1;
+							voto[algo]=1;
+						}
+						console.log(voto);
+						//voto["u-"+res[0].idrespuesta]=p;
+					}
+					//console.log(voto);
+
+					io.sockets.emit("calculando", voto);
+				});
+			}
+			
+		});
+	});
+
 	socket.on("guardo encuesta",function(data,callback){
 		var info=data["datos"];
 		var num=Math.random();

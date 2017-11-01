@@ -1,20 +1,20 @@
 jQuery(function($){
-	$(".ir-home").hide();
-	
-	$('.sub-pregunta-experto').click(function() {
-		$('.pag-inicio').hide();
+	$('.menu, .b-none').click(function() {
+		$(".menu-option").slideToggle("slow","swing");
 	});
 	
+	$('.opt').click(function() {
+		var id = $(this).attr("id");
+		var current = $('#current').val();
 
-	// $(".btn-pregunta,.sub-pregunta-experto").click(function(){
-	// 	$(".fondo-negro").show();
-	// 	$(".tanger-live").show();
-	// });
+		$(".menu-option").hide();
 
-	$(".btn-voto").click(function(){
-		$(".fondo-negro").show();
-		$(".contiene-pregunta").show();
-	});
+		$("." + current).hide();
+		$("." + id).show();
+		
+		$('#current').val(id);
+	}); 
+	
 
 	var socket = io.connect();
 	$(".ir-home,.btn-regreso-menu").click(function(){
@@ -35,32 +35,7 @@ jQuery(function($){
 		$(".chirikahua").show();
 		$(".manita").hide();
 	});	
-	
-	$(".btn-menu").click(function(){
-		$(".interiores").hide();
-		var ide=$(this).attr("id");
-		if (ide=='encuestas') {
-			$(".chirikahua").show();
-		};
-		$(".pag-inicio").hide();
-		$(".in-"+ide).show();
-		$(".barra-menu-top").show();
-		$(".btns-menu-top").removeClass("slideInDown");
-		$(".btns-menu-top").removeClass("agrego-top");
-		$(".btn-"+ide).addClass("agrego-top");
-		$(".btn-"+ide).addClass("slideInDown");
-	});
 
-
-	
-	
-	$(".btn-menu").click(function(){
-		$(".paginas").hide();
-		$(".barra-menu-top").show();
-		$(".in-presentaciones").show();
-		$(".barra-menu").hide();
-		$(".ir-home").show();
-	});
 	
 	$(".btn-encuestas").click(function(){
 		$(".todas-pres").hide();
@@ -122,7 +97,6 @@ jQuery(function($){
 		console.log(data);
 		if (data.opp=="1") {
 			if (data.op) {
-				//$(".muestro_voteo").hide();
 				$(".fondo-negro").show();
 				$(".txt-alerta").html(data.msg);
 				$("#notificacion").show();
@@ -150,10 +124,8 @@ jQuery(function($){
 				for (var i = 0; i < data.infos.length; i++) {
 					pregunta=data.infos[0].nombre;
 					idepregunta=data.infos[0].idvoto_pregunta;
-					$(".respuestas").append('<div class="row preguntas-voteo-muestro">'
-					+'<div class="col-lg-12 col-md-12 col-sm-12">'
+					$(".respuestas").append('<div class="preguntas-voteo-muestro">'
 					+'<input type="radio" name="radiog_lite" id="radio'+data.infos[i].idvoto_respuesta+'" class="css-checkbox" value="u-'+data.infos[i].idvoto_respuesta+'"><label for="radio'+data.infos[i].idvoto_respuesta+'" class="css-label">'+data.infos[i].opcion+'</label>'
-					+'</div>'
 					+'</div>'
 					+'<hr />');
 				};
@@ -208,7 +180,8 @@ jQuery(function($){
 
 		for (var i = 0,p=1; i < algo.length; i++,p++) {
 			var num=(parseInt(data[algo[i]])*100)/total;
-			console.log(num)
+			// console.log(total);
+			// console.log(num)
 			var otro=algo[i].split("-");
 			//$("#progressbar"+i).css({"width":num+"%"},1000);
 			$("#progressbar"+otro[1]).animate({ width: num+"%" }, 1000 );
@@ -216,28 +189,34 @@ jQuery(function($){
 		}
 	});
 
+
 	$(".cerrar-alerta").click(function(){
 		$(".alerta-login").hide();
 	});
 	
 	
 	function envio_pregunta(){
-		$(".txt-textos").hide();
-		$(".txt-enviando").show();
-		$(".mandando-pregunta").show();
-		var pregunta=$("#pregunta-ponente").val();
-		var user=$("#usuario").val();
-		console.log(user);
-		socket.emit("pregunta live",{user:user,pregunta:pregunta},function(data){
-			console.log(data);
-			if (data) {
-				$(".txt-textos").hide();
-				$(".txt-confirmado").show();
-				$("#pregunta-ponente").val("");
-			
-				setTimeout(function(){$(".mandando-pregunta").hide();},2000);
-			};
-		});
+		$(".mandando-pregunta").removeClass('oculto');
+		$(".txt-enviando").removeClass('oculto');
+
+		var pregunta = $("#pregunta-ponente").val();
+		
+		setTimeout(function(){
+			socket.emit("pregunta live",{pregunta:pregunta},function(data){
+				if (data) {
+					$("#pregunta-ponente").val("");
+					$(".txt-enviando").addClass('oculto');
+					$(".txt-confirmado").removeClass('oculto');
+
+					setTimeout(function(){
+						$(".mandando-pregunta").addClass('oculto');
+						$(".txt-confirmado").addClass('oculto');
+						$('.tanger-live').hide();
+						$('.pag-inicio').show();
+					},2000);
+				};
+			});
+		}, 2000);
 	}	
 	
 	var settime="";

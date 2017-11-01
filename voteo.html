@@ -3,12 +3,11 @@
 	<title>VOTEO</title>
 	<meta name="viewport" content="width = 1024, height=768, initial-scale=1.0, maximum-scale=1.0" />
 
-	<link href="/css/bootstrap.css" rel="stylesheet">
-	<link rel="stylesheet" href="/css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 	<link href="/css/estilos2.css" rel="stylesheet">
+	<link href="/css/jquery-ui.css" rel="stylesheet">
 	<style type="text/css">
 		body {
-		    background: url(/../img/gral/fondoSuperior3.png) no-repeat;
 		    background-size: 100%;
 		    width: 1024px;
 		    max-width: 1024px;
@@ -138,9 +137,9 @@
 			}
 			
 		});
-socket.on("calculando",function(data){
-			console.log("aqui");
-			console.log(data);
+		socket.on("calculando",function(data){
+			// console.log("aqui");
+			// console.log(data);
 			var algo=Object.keys(data);
 
 			var total=0;
@@ -148,16 +147,21 @@ socket.on("calculando",function(data){
 				total+=data[algo[i]];
 			}
 
+			// console.log(total);
 			for (var i = 0,p=1; i < algo.length; i++,p++) {
+				console.log(i + " - " + data[algo[i]]);
+				
 				var num=(parseInt(data[algo[i]])*100)/total;
-				console.log(num)
+				// console.log(total);
+				// console.log(num);
 				var otro=algo[i].split("-");
-				console.log(otro);
+				// console.log(otro);
 				//$("#progressbar"+i).css({"width":num+"%"},1000);
 				$("#progressbar"+otro[1]).animate({ width: num+"%" }, 1000 );
 				$(".porcentaje"+otro[1]).html(Math.round(num)+"%");
 			}
 		});
+
 var settime="";
 	function cuenta_regresiva(){
 			var i=20;

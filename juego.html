@@ -6,537 +6,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>.:: Empaworld ::.</title>
 	
-	
-
-	<link rel="stylesheet" type="text/css" href="/css/estilos2.css">
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/animate.css">
 	<link rel="stylesheet/less" type="text/css" href="/css/styles.less">
 </head>
 
 <body>
-<div class="fondo-negro oculto"></div>
+<!-- <div class="fondo-negro oculto"></div>
 <div id="notificacion" class="oculto">
 	<span class="txt-alerta"></span>
-</div>
-
-<div class="contiene-pregunta oculto">
-	<div class="icono-cerrar cierro-voto oculto"></div>
-	<div class="pregunta"></div>
-	<div class="respuestas"></div>
-	<p class="gracias oculto">Gracias por tu votación</p>
-	<div class="reloj">15</div>
-	<input type="hidden" id="reloj_cuenta" value="15">
-</div>
+</div> -->
 
 <div id="contenedor">
-	<div class="paginas tanger-live">
-		<div class="logo-empa"></div>
-        <div class="menu"></div>
+	<div class="menu"></div>
+	<div class="logo-empa"></div>
 
-        <div class="title-app">Preguntale al experto</div>
-
-		<div class="icono-cerrar-experto cierro-live"><img src="img/gral/back.png"></div>
-
-		<textarea id="pregunta-ponente"></textarea>
-		<div class="btn-envio-pregunta">Enviar</div>
-
-		<div class="mandando-pregunta oculto">
-			<span class="txt-enviando txt-textos">Su pregunta se esta enviando. Espere por favor<img src="img/notas/loader.gif"></span>
-			<span class="txt-confirmado txt-textos oculto">Su pregunta se envio con exito.</span>
-			<!-- <div class="cerrar-pregunta">CERRAR</div> -->
-		</div>
+	<div class="menu-option oculto">
+		<div class="option opt" id="pag-inicio">Home</div>
+		<div class="option opt" id="breakouts">Breakouts</div>
+		<div class="option opt" id="encuestas">Encuestas</div>
+		<div class="option opt" id="tanger-live">Preguntale al experto</div>
+		<div class="option b-none">Salir</div>
 	</div>
 
-		<div class="paginas pag-inicio oculto">
-            <div class="logo-empa"></div>
-            <div class="menu"></div>
-
-			<div class="btn-menu sub-breakouts" id="breakouts">
-				<div class="txt-btn-menu">Breakout</div>
+	<!-- start pag-inicio -->
+	<div class="paginas pag-inicio">
+		<div class="position-menu">
+			<div class="btn-menu sub-breakouts opt" id="breakouts">
+				<div class="txt-btn-menu">Breakouts</div>
 			</div>
 			
-			<div class="btn-menu sub-encuestas" id="encuesta">
+			<div class="btn-menu sub-encuestas opt" id="encuestas">
 				<div class="txt-btn-menu">Encuestas</div>
 			</div>
 
-			<div class="btn-menu sub-pregunta-experto">
+			<div class="btn-menu sub-pregunta-experto opt" id="tanger-live">
 				<div class="txt-btn-menu">Preguntale al experto</div>
 			</div>
 		</div>
+	</div>
+	<!-- end pag-inicio -->
 
-    	<div class="paginas interiores in-grupos oculto">
-			<div class="btn-regreso-menu btn-back-ponente"><img src="img/gral/back.png"></div>
-			<div class="tituloGrupos"></div>
-			<div class="contiene-grupos">
-				<div class="contiene-grupo grupo1 veo-grupo" id="1"></div>
-				<div class="contiene-grupo grupo2 veo-grupo" id="2"></div>
-				<div class="contiene-grupo2 grupo3 veo-grupo" id="3"></div>
+	<!-- start breakouts -->
+	<div class="paginas breakouts oculto">
+		<div class="title-app">Breakouts</div>
+
+		<div class="position-breakout">
+			<div class="btn-menu-b breakout-1">
+				<div class="txt-btn-menu">Breakout 1</div>
+			</div>
+			
+			<div class="btn-menu-b breakout-2">
+				<div class="txt-btn-menu">Breakout 2</div>
+			</div>
+
+			<div class="btn-menu-b breakout-3">
+				<div class="txt-btn-menu">Breakout 3</div>
 			</div>
 		</div>
-		<div class="paginas interiores in-encuestas oculto">
-			<div class="btn-regreso-menu btn-back-ponente btn-che"><img src="img/gral/back.png"></div>
-			<div class="btn-back-encuesta oculto"><img src="img/gral/back.png"></div>
-			<div class="muestro-encuestas muestro-1" id="1">Encuesta Inicio</div>
-			<div class="muestro-encuestas muestro-2" id="2">Encuesta Final</div>
-			<!--<div class="manita"><img src="img/home/manita.png"></div>-->
-			<div class="tituloEncuesta"></div>
-			<div class="msg-encuesta oculto">Su encuesta ha sido guardada, Gracias por su participación</div>
-			<div class="encuestas-grales encuesta-1 oculto">
-				<div id="title">
-            		 Agradecemos sus comentarios y sugerencias, las cuales serán
-        			consideradas para una mejora continua.
-        		</div>
-        <div id="evaluacion">
-        <form id="mando-encuesta-1">
-				<table id="pre1">
-					<tr>
-				    	<td colspan="5" style="border: none;">Nombre Completo:</td>
-				    	<td style="border: none;"><input type="text" id="res1" name="res1" class="res1" style="width:500px;" /></td>
-				    </tr>
-				</table>
-				<table id="pre2">
-					<tr>
-						<td colspan="5" style="border: none;">1. La calidad de los ponentes fue la esperada, fueron claros y ofrecieron información de importancia:</td>
-					</tr>
-					<tr>
-						<th align="left" style="text-align:center; background-color: #FFF">
-							<label class="textoCuestionario">
-								<input type="radio" id="res2" name="res2" class="radioStyle res2" value="De acuerdo" />De acuerdo
-							</label>
-						</th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="res2" name="res2" class="radioStyle res2" value="Neutral" />Neutral
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="res2" name="res2" class="radioStyle res2" value="En Desacuerdo" />En Desacuerdo
-				        	</label>
-				        </th>
-				    </tr>
-				</table>
-				<table id="pre3">
-					<tr>
-						<td colspan="5" style="border: none;">2. ¿Fueron claros los contenidos de las presentaciones?</td>
-					</tr>
-					<tr>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="res3" name="res3" class="radioStyle res3" value="De acuerdo" />De acuerdo
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="res3" name="res3" class="radioStyle res3" value="Neutral" />Neutral
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="res3" name="res3" class="radioStyle res3" value="En Desacuerdo" />En Desacuerdo
-				        	</label>
-				        </th>
-				    </tr>
-				</table>
-				<table id="pre4">
-					<tr>
-						<td colspan="5" style="border: none;">3. ¿Aportaron valor a su práctica diaria?</td>
-					</tr>
-					<tr>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="res4" name="res4" class="radioStyle res4" value="De acuerdo" />De acuerdo
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="res4" name="res4" class="radioStyle res4" value="Neutral" />Neutral
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="res4" name="res4" class="radioStyle res4" value="En Desacuerdo" />En Desacuerdo
-				        	</label>
-				        </th>
-				    </tr>
-				</table>
-				<table id="pre5">
-					<tr>
-						<td colspan="5" style="border: none;">4. En general, ¿se cumplieron sus expectativas?</td>
-					</tr>
-					<tr>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="res5" name="res5" class="radioStyle res5" value="De acuerdo" />De acuerdo
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="res5" name="res5" class="radioStyle res5" value="Neutral" />Neutral
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="res5" name="res5" class="radioStyle res5" value="En Desacuerdo" />En Desacuerdo
-				        	</label>
-				        </th>
-				    </tr>
-				</table>
-				<table id="pre6">
-					<tr>
-						<td colspan="5" style="border: none;">5. Asistiría a otro evento organizado por Boehringer-Ingelheim:</td>
-					</tr>
-					<tr>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="res6" name="res6" class="radioStyle res6" value="Si" />Si
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="res6" name="res6" class="radioStyle res6" value="No" />No
-				        	</label>
-				        </th>
-				    </tr>
-				</table>
-				<div class="title2">¡Muchas gracias por tomarse el tiempo de responder, seguimos trabajando para usted!</div>
-			</form>	
-        </div>
-        	<input type="button" name="enviar" id="enviar" value="Enviar" class="btn btn-default btn-lg btn-envio-1">
-			</div><!--fin encuesta 1-->
+	</div>
+	<!-- end breakouts -->
 
-		<div class="encuestas-grales encuestas-grales2 encuesta-2 oculto"><!--Se manda a las 14:20 a 14:30-->
-        <div id="title2">Estimado asistente, queremos medir su nivel de satisfacción del servicio recibido antes y durante el evento, le pedimos unos minutos de su valioso tiempo para contestar esta breve encuesta "SU EVALUACIÓN ES MUY IMPORTANTE PARA NOSOTROS".</div>
-        <div id="evaluacion">
-        		<form id="mando-encuesta-2">
-        		<div class="title2">Evaluación General</div>
-        		<table id="pre1">
-					<tr>
-				    	<td colspan="5" style="border: none;">Nombre Completo:</td>
-				    	<td style="border: none;"><input type="text" id="e2-res1" name="e2-res1" class="e2-res1" style="width:500px;" /></td>
-				    </tr>
-				</table>
-				<table id="pre2">
-					<tr>
-						<td colspan="5" style="border: none;">1. ¿Qué tan probable es que usted recomiende un evento de Boehringer-Ingelheim a sus colegas donde 6 es "Definitivamente lo recomendaría" y 1 "No lo recomendaría"?</td>
-					</tr>
-					<tr>
-						<th style="text-align:center; background-color: #FFF">
-							<label class="textoCuestionario">
-								<input type="radio" id="e2-res2" name="e2-res2" class="e2-res2" value="1" />
-								No lo recomendaría(1)
-							</label>
-						</th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res2" name="e2-res2" class="e2-res2" value="2" />
-				        		(2)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res2" name="e2-res2" class="e2-res2" value="3" />
-				        		(3)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res2" name="e2-res2" class="e2-res2" value="4" />
-				        		(4)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res2" name="e2-res2" class="e2-res2" value="5" />
-				        		(5)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res2" name="e2-res2" class="e2-res2" value="6" />
-				        		Definitivamente lo recomendaría(6)
-				        	</label>
-				        </th>
-				    </tr>
-				</table>
-				<table id="pre3">
-				    <tr>
-				    	<td colspan="5" style="border: none;">2.- ¿El programa científico cubrió sus expectativas?</td>
-				    </tr>
-				    <tr>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res3" name="e2-res3" class="e2-res3" value="1" />
-				        		En desacuerdo(1)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res3" name="e2-res3" class="e2-res3" value="2" />
-				        		(2)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res3" name="e2-res3" class="e2-res3" value="3" />
-				        		(3)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res3" name="e2-res3" class="e2-res3" value="4" />
-				        		(4)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res3" name="e2-res3" class="e2-res3" value="5" />
-				        		(5)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res3" name="e2-res3" class="e2-res3" value="6" />
-				        		Totalmente de acuerdo(6)
-				        	</label>
-				        </th>
-				    </tr>
-				</table>
-				<table id="pre4">
-				    <tr>
-				    	<td colspan="5" style="border: none;">3.- ¿Al llegar al aeropuerto lo estaban esperando con el logo de Boehringer-Ingelheim México?</td>
-				    </tr>
-				    <tr>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res4" name="e2-res4" class="e2-res4" value="1" />
-				        		En desacuerdo(1)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res4" name="e2-res4" class="e2-res4" value="2" />
-				        		(2)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res4" name="e2-res4" class="e2-res4" value="3" />
-				        		(3)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res4" name="e2-res4" class="e2-res4" value="4" />
-				        		(4)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res4" name="e2-res4" class="e2-res4" value="5" />
-				        		(5)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res4" name="e2-res4" class="e2-res4" value="6" />
-				        		Totalmente de acuerdo(6)
-				        	</label>
-				        </th>
-				    </tr>
-				</table>
-				<table id="pre5">
-				    <tr>
-				    	<td colspan="5" style="border: none;">4.- A su llegada / salida ¿el transporte estuvo en el horario confirmado?</td>
-				    </tr>
-				    <tr>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res5" name="e2-res5" class="e2-res5" value="1" />
-				        		En desacuerdo(1)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res5" name="e2-res5" class="e2-res5" value="2" />
-				        		(2)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res5" name="e2-res5" class="e2-res5" value="3" />
-				        		(3)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res5" name="e2-res5" class="e2-res5" value="4" />
-				        		(4)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res5" name="e2-res5" class="e2-res5" value="5" />
-				        		(5)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res5" name="e2-res5" class="e2-res5" value="6" />
-				        		Totalmente de acuerdo(6)
-				        	</label>
-				        </th>
-				    </tr>
-				</table>
-				<table id="pre6">
-				    <tr>
-				    	<td colspan="5" style="border: none;">5.- ¿Encontro todo en orden con su reservación en el hotel a su llegada y con el check out a su salida?</td>
-				    </tr>
-				    <tr>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res6" name="e2-res6" class="e2-res6" value="1" />
-				        		En desacuerdo(1)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res6" name="e2-res6" class="e2-res6" value="2" />
-				        		(2)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res6" name="e2-res6" class="e2-res6" value="3" />
-				        		(3)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res6" name="e2-res6" class="e2-res6" value="4" />
-				        		(4)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res6" name="e2-res6" class="e2-res6" value="5" />
-				        		(5)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res6" name="e2-res6" class="e2-res6" value="6" />
-				        		Totalmente de acuerdo(6)
-				        	</label>
-				        </th>
-				    </tr>
-				</table>
-				<table id="pre7">
-				    <tr>
-				    	<td colspan="5" style="border: none;">6.- ¿Las instalaciones del hotel están en buenas condiciones?</td>
-				    </tr>
-				    <tr>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res7" name="e2-res7" class="e2-res7" value="1" />
-				        		En desacuerdo(1)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res7" name="e2-res7" class="e2-res7" value="2" />
-				        		(2)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res7" name="e2-res7" class="e2-res7" value="3" />
-				        		(3)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res7" name="e2-res7" class="e2-res7" value="4" />
-				        		(4)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res7" name="e2-res7" class="e2-res7" value="5" />
-				        		(5)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res7" name="e2-res7" class="e2-res7" value="6" />
-				        		Totalmente de acuerdo(6)
-				        	</label>
-				        </th>
-				    </tr>
-				</table>
-				<table id="pre8">
-				    <tr>
-						<td colspan="5" style="border: none;">7.- ¿La agencia Destinos atendió y dio repuesta a sus solicitudes?</td>
-				    </tr>
-				    <tr>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res8" name="e2-res8" class="e2-res8" value="1" />
-				        		En desacuerdo(1)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res8" name="e2-res8" class="e2-res8" value="2" />
-				        		(2)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res8" name="e2-res8" class="e2-res8" value="3" />
-				        		(3)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res8" name="e2-res8" class="e2-res8" value="4" />
-				        		(4)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res8" name="e2-res8" class="e2-res8" value="5" />
-				        		(5)
-				        	</label>
-				        </th>
-				        <th align="left" style="text-align:center; background-color: #FFF">
-				        	<label class="textoCuestionario">
-				        		<input type="radio" id="e2-res8" name="e2-res8" class="e2-res8" value="6" />
-				        		Totalmente de acuerdo(6)
-				        	</label>
-				        </th>
-				    </tr>
-				</table>
-				<table id="pre9">
-				    <tr>
-				    	<td colspan="5" style="border: none;">8.- ¿Por favor nos podría compratir sus comentarios del evento en general? </td>
-				    </tr>
-				    <tr>
-				        <th align="left" style="text-align:center; background-color: #FFF"><textarea rows="4" cols="85" class="e2-res9" id="e2-res9" name="e2-res9"></textarea></th>
-				    </tr>
-				</table>
-			</form>	
-        	</div><input type="button" name="enviar" id="enviar" value="Enviar" class="btn btn-default btn-lg btn-envio-2">
-			</div><!--fin encuesta 2-->
 
+	<!-- start encuestas  -->
+	<div class="paginas encuestas oculto">
+		<div class="title-app">Encuestas</div>
+	</div>
+	<!-- end encuestas  -->
+
+	<!-- start pregunta-experto  -->
+	<div class="paginas tanger-live oculto">
+		<div class="title-app">Preguntale al experto</div>
+
+		<textarea id="pregunta-ponente" placeholder="Escriba su pregunta..."></textarea>
+		<div class="btn-envio-pregunta">Enviar</div>
+
+		<div class="mandando-pregunta oculto">
+			<div class="txt-enviando txt-textos">
+				Su pregunta se esta enviando<br /> Espere por favor...
+				<div id="preloader6"><span></span><span></span><span></span><span></span></div>
+			</div>
+			
+			<div class="txt-confirmado oculto">
+				Su pregunta se envio con exito.
+			</div>
 		</div>
+	</div>
+	<!-- end pregunta-experto  -->
+
+	<div class="contiene-pregunta oculto">
+		<div class="icono-cerrar cierro-voto oculto"></div>
+		<div class="pregunta"></div>
+		<div class="respuestas"></div>
+		<p class="gracias oculto">Gracias por tu votación</p>
+		<div class="reloj">15</div>
+		<input type="hidden" id="reloj_cuenta" value="15">
+	</div>
+    
 </div>
+	
+	<input type="hidden" id="current" value="pag-inicio">
 	<input type="hidden" id="usuario">
 	
 	<!-- JS Files Import -->
-	<script src="/js/jquery.js"></script>
 	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script src="/js/jquery.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/gral.js"></script>
 	<script type="text/javascript" src="js/less.min.js"></script>

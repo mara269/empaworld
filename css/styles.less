@@ -1,14 +1,23 @@
+@textApp: #4c423c;
 @app: #52acb3;
 @green_ligth: #50b2ac;
 @green_dark: #0f3b3c;
 @yellow_light: #f3d00e;
 @yellow_dark: #dfa427;
 
+.box-shadow(@shadow: 1px 1px 5px 0px rgba(77, 67, 61, 0.5)) {
+	-webkit-box-shadow: @shadow;
+	-moz-box-shadow: @shadow;
+	-o-box-shadow: @shadow;
+	box-shadow: @shadow;
+}
+
 .border-radius(@radius: 50px) {
 	-webkit-border-radius: @radius;
 	-moz-border-radius: @radius;
 	border-radius: @radius;
 }
+
 
 .century(@size: 30px, @top: 25px, @lineHeight: 30px, @color: #ffffff) {
 	font-family: century;
@@ -26,6 +35,12 @@
     height: @height;
 }
 
+.backgroundLoader(@color: #018645, @top: 0px, @left: 0px) {
+	background: @color;
+	top: @top;
+	left: @left;
+}
+
 .sizeElement(@width: 414px, @height: 736px, @top: 0px, @left: 0px) {
 	width: @width;
 	height: @height;
@@ -34,11 +49,23 @@
 	font-family: century;	
 }
 
-.title(@size: 28px, @color: #4c423c) {
+.title(@size: 28px, @color: @textApp) {
 	text-transform: uppercase;
 	font-family: centuryB !important;
 	font-size: @size;
 	color: @color;
+}
+
+.placeholder(@color: @app) {
+  &:-moz-placeholder {
+    color: @color;
+  }
+  &:-ms-input-placeholder {
+    color: @color;
+  }
+  &::-webkit-input-placeholder {
+    color: @color;
+  }
 }
 
 @font-face {
@@ -53,6 +80,11 @@
 
 body {
 	.sizeElement;
+	background-color: red;
+}
+
+.oculto{
+	display: none;
 }
 
 #contenedor {
@@ -61,7 +93,6 @@ body {
 
 .paginas {
 	.background;
-	border: solid 1px red;   
 }
 
 .logo-empa {
@@ -69,6 +100,7 @@ body {
     position: absolute;
     top: 37px;
     left: 278px;
+    z-index: 15;
 }
 
 .menu {
@@ -77,21 +109,65 @@ body {
     top: 37px;
     left: 32px;
     cursor: pointer;
+    z-index: 15;
 }
 
-.btn-menu {
+.menu-option {
+    position: absolute;
+    .sizeElement(414px, 736px, 0px, 0px);
+    background: rgba(0, 0, 0, 0.7);
+	z-index: 20;
+}
+
+.option {
+	border-right: none;
+	border-left: none;
+	border-top: none;
+	border-bottom: solid 2px;
+	height: 70px;
+	font-family: centuryB;
+	font-size: 32px;
+	text-align: center;
+	line-height: 70px;
+	background: @green_ligth;
+	color: #ffffff;
+}
+
+.b-none {
+	border-bottom: none;
+	cursor: pointer;
+}
+
+.position-menu, .position-breakout {
+    position: absolute;
+    .sizeElement(302px, 365px, 184px, 56px);
+}
+
+.position-breakout {
+	top: 250px;
+}
+
+.button() {
+	.sizeElement(300px, 80px, 0px, 0px);
 	background: linear-gradient( 180deg, @green_ligth, @green_dark 185px);
 	.border-radius;
 	position: absolute;
-	.sizeElement(300px, 80px, 185px, 57px);
 	cursor: pointer;
+}
 
+.before() {
+	content: "";
+	background: linear-gradient( 0deg, @yellow_light, @yellow_dark);
+	position: absolute;
+	.sizeElement(90px, 90px, -5px, 0px);
+	.border-radius(100%);
+}
+
+.btn-menu {
+	.button;
+	
 	&:before {
-		content: "";
-		background: linear-gradient( 0deg, @yellow_light, @yellow_dark);
-		position: absolute;
-		.sizeElement(90px, 90px, -5px, 0px);
-		.border-radius(100%);
+		.before;
     }	
 
     &:after {
@@ -104,16 +180,37 @@ body {
 	}
 }
 
-.sub-encuestas {
-	top: 325px;
+.btn-menu-b {
+	.button;
+	
+	&:before {
+		.before;
+    }	
+
+    &:after {
+	    content: "1";
+	    position: absolute;
+	    text-align: center;
+	    .century(35px, 0px, 75px, @textApp);
+	    font-family: centuryB !important;
+	    .sizeElement(90px, 90px, 0px, 0px);
+	}
+}
+
+.sub-encuestas, .breakout-2 {
+	top: 140px;
 }
 
 .sub-encuestas:after {
     background-position: -78px 5px;
 }
 
-.sub-pregunta-experto {
-	top: 465px;
+.breakout-2:after {
+	content: "2";
+}
+
+.sub-pregunta-experto, .breakout-3 {
+	top: 280px;
 }
 
 .sub-pregunta-experto:after {
@@ -121,6 +218,9 @@ body {
     background-position: -146px 12px;
 }
 
+.breakout-3:after {
+	content: "3";
+}
 .txt-btn-menu {
     position: absolute;
     width: 165px;
@@ -133,12 +233,15 @@ body {
 	.century(25px, 10px);
 }
 
+.btn-menu-b > .txt-btn-menu {
+	.century(25px, 25px);	
+}
 /****************** styles experto *************************/
 
 .title-app {
 	position: absolute;
 	.title;	
-	.sizeElement(350px, 30px, 130px, 32px);
+	.sizeElement(350px, 30px, 135px, 32px);
 	    
 	&:first-letter {
 		.title(28px, @app);
@@ -148,10 +251,122 @@ body {
 #pregunta-ponente {
 	position: absolute;
 	.sizeElement(356px, 360px, 210px, 29px);
+	padding: 10px 15px 0px 15px;
+	font-size: 27px;
+	color: @textApp;
 	border: solid 4px @app;
+	.placeholder;
 	.border-radius(10px);
 }
 
-.tanger-live {
+.tanger-live, .encuestas, .breakouts {
 	background-image: url(../img/gral/background-internas.jpg);	
+}
+
+.btn-envio-pregunta {
+	background: linear-gradient( 0deg, @yellow_light, @yellow_dark);
+	position: absolute;
+	.sizeElement(356px, 60px, 610px, 29px);
+	.title(30px, @textApp);
+	.border-radius(5px);
+	.box-shadow;
+	line-height: 60px;
+	font-family: century !important;
+	text-align: center;
+}
+
+.icono-cerrar-experto {
+	display: none;
+}
+
+.mandando-pregunta {
+	position: absolute;
+	.sizeElement(100%, 100%, 0px, 0px);
+	background-color: rgba(0,0,0, 0.8);
+	z-index: 100;
+}
+
+.txt-enviando {
+	position: absolute;
+	.title(25px, #ffffff);
+	text-align: center;
+	.sizeElement(414px, 75px, 270px, 0px);
+}
+
+.txt-confirmado {
+	position: absolute;
+	.title(38px, #ffffff);
+	text-align: center;
+	.sizeElement(414px, 75px, 290px, 0px);
+}
+
+/********************** votacion ******************************/
+.contiene-pregunta {
+    position: absolute;
+    background-color: #ffffff;
+    .sizeElement(414px, 736px, 0px, 0px);
+    z-index: 20;
+
+    border: solid 1px;
+}
+
+.pregunta {
+    height: auto;
+    font-size: 25px;
+    text-align: center;
+    
+    color: @textApp;
+
+    border: solid 1px;
+}
+
+.respuestas {
+    margin-top: 40px;
+}
+
+.css-label {
+	font-size: 18px;
+	padding-left: 10px;
+}
+
+.css-checkbox {
+	margin-left: 10px !important;
+}
+/********************** loader css ******************************/
+#preloader6 {
+    position: relative;
+    .sizeElement(92px, 92px, 25px, 150px);
+    animation: preloader_6 5s infinite linear;
+	
+	span{
+	    position:absolute;
+	    .sizeElement(53px,53px, 0px, 0px);
+	    animation: preloader_6_span 1s infinite linear;
+	    display:block;
+
+	    &:nth-child(1){
+			.backgroundLoader;
+		}
+
+		&:nth-child(2){
+			.backgroundLoader(#d62d20, 0px, 52px);
+			animation-delay: .2s;
+		}
+
+		&:nth-child(3){
+			.backgroundLoader(#0057e8, 52px, 0px);
+			animation-delay: .4s;
+		}
+
+		&:nth-child(4){
+			.backgroundLoader(#ffa700, 52px, 52px);
+			animation-delay: .6s;
+		}
+	}    
+}
+
+@keyframes preloader_6_span {
+   0% { transform:scale(1); }
+   50% { transform:scale(0.5); }
+   100% { transform:scale(1); }
 }
