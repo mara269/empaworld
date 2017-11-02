@@ -9,12 +9,32 @@ jQuery(function($){
 
 		$(".menu-option").hide();
 
-		$("." + current).hide();
-		$("." + id).show();
+		$("." + current).addClass('oculto');
+		$("." + id).removeClass('oculto');
 		
 		$('#current').val(id);
-	}); 
-	
+	});
+
+	$('.opt-en').click(function() {
+		var id = $(this).attr("id");
+
+		$( ".opt-en" ).each(function( index ) {
+			$(this).removeClass('active');		  
+		});
+
+		$(this).addClass('active');
+
+		$('#pregunta_1').val(id);
+	});
+
+	$(".btn-envio-next").click(function() {
+		var id = $(this).attr("id");
+
+		console.log(id);
+		console.log((id + 1));
+		$(".step-"+id).addClass('oculto');
+		$(".step-"+(parseInt(id) + 1)).removeClass('oculto');
+	});
 
 	var socket = io.connect();
 	$(".ir-home,.btn-regreso-menu").click(function(){
@@ -211,8 +231,9 @@ jQuery(function($){
 					setTimeout(function(){
 						$(".mandando-pregunta").addClass('oculto');
 						$(".txt-confirmado").addClass('oculto');
-						$('.tanger-live').hide();
-						$('.pag-inicio').show();
+						$('.tanger-live').addClass('oculto');
+						$('.pag-inicio').removeClass('oculto');
+						$('#current').val('pag-inicio');
 					},2000);
 				};
 			});

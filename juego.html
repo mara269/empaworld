@@ -30,7 +30,7 @@
 	</div>
 
 	<!-- start pag-inicio -->
-	<div class="paginas pag-inicio">
+	<div class="paginas pag-inicio oculto">
 		<div class="position-menu">
 			<div class="btn-menu sub-breakouts opt" id="breakouts">
 				<div class="txt-btn-menu">Breakouts</div>
@@ -71,17 +71,254 @@
 	<!-- start encuestas  -->
 	<div class="paginas encuestas oculto">
 		<div class="title-app">Encuestas</div>
+
+		<div class="position-breakout">
+			<div class="btn-menu sub-encuestas encuesta-1 opt" id="encuestas_satisfaccion">
+				<div class="txt-btn-menu-encuesta">Encuesta de satisfacción</div>
+			</div>
+			
+			<div class="btn-menu sub-encuestas encuesta-2 opt" id="encuestas_satisfaccion">
+				<div class="txt-btn-menu-encuesta">Encuesta Científica</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="paginas encuestas_satisfaccion oculto">
+		<div class="title-app ensat">Encuesta de satisfacción</div>
+		
+		<div class="container-encuesta">
+			<div class="step-1">	
+				<div class="row-encuesta">
+					1.- ¿Qué tan probable es que usted recomiende un evento de Boehringer Ingelheim a sus colegas
+					donde 5 es “Definitivamente lo recomendaría” y 1 “No lo recomendaría”?
+				</div>
+
+				<div class="row-encuesta bottom-encuesta">
+					<div class="opt-encuesta">
+						<div class="opt-en opt-1" id="1">1</div>
+						<div class="opt-en" id="2">2</div>
+						<div class="opt-en" id="3">3</div>
+						<div class="opt-en" id="4">4</div>
+						<div class="opt-en opt-5" id="5">5</div>
+						<input type="hidden" id="pregunta_1">
+					</div>
+				</div>
+
+				<div class="row-encuesta">
+					2.- ¿La calidad de los ponentes fue la esperada, fueron claros y ofrecieron información de importancia?
+				</div>
+
+				<div class="row-encuesta bottom-encuesta">
+					<div class="radioD">
+	                    <input type="radio" name="radiog_lite" id="radio1" class="css-checkbox" />
+	                    <label for="radio1" class="css-label radGroup1">En desacuerdo</label>
+	                </div>
+	                <div class="radioD">
+	                    <input type="radio" name="radiog_lite" id="radio2" class="css-checkbox" checked="checked" />
+	                    <label for="radio2" class="css-label radGroup1">Neutral</label>
+	                </div>
+	                <div class="radioD">
+	                    <input type="radio" name="radiog_lite" id="radio3" class="css-checkbox" />
+	                    <label for="radio3" class="css-label radGroup1">De acuerdo</label>
+	                </div>
+				</div>	
+
+				<div class="btn-envio-next" id="1">Siguiente</div>							
+			</div>
+			<!-- end step 1 -->
+
+			<div class="step-2 oculto">	
+				<div class="row-encuesta">
+					3.- ¿Fueron claros los contenidos de las presentaciones?
+				</div>
+
+				<div class="row-encuesta bottom-encuestas">
+					<div class="radioD">
+	                    <input type="radio" name="radiog_lite" id="radio1" class="css-checkbox" />
+	                    <label for="radio1" class="css-label radGroup1">En desacuerdo</label>
+	                </div>
+	                <div class="radioD">
+	                    <input type="radio" name="radiog_lite" id="radio2" class="css-checkbox" checked="checked" />
+	                    <label for="radio2" class="css-label radGroup1">Neutral</label>
+	                </div>
+	                <div class="radioD">
+	                    <input type="radio" name="radiog_lite" id="radio3" class="css-checkbox" />
+	                    <label for="radio3" class="css-label radGroup1">De acuerdo</label>
+	                </div>
+				</div>
+
+				<div class="row-encuesta">
+					4.- ¿Aportaron valor a su práctica diaria?
+				</div>
+
+				<div class="row-encuesta bottom-encuesta">
+					<div class="radioD">
+	                    <input type="radio" name="radiog_lite" id="radio1" class="css-checkbox" />
+	                    <label for="radio1" class="css-label radGroup1">En desacuerdo</label>
+	                </div>
+	                <div class="radioD">
+	                    <input type="radio" name="radiog_lite" id="radio2" class="css-checkbox" checked="checked" />
+	                    <label for="radio2" class="css-label radGroup1">Neutral</label>
+	                </div>
+	                <div class="radioD">
+	                    <input type="radio" name="radiog_lite" id="radio3" class="css-checkbox" />
+	                    <label for="radio3" class="css-label radGroup1">De acuerdo</label>
+	                </div>
+				</div>
+
+				<div class="btn-envio-next" id="2">Siguiente</div>
+			</div>
+
+			<div class="step-3 oculto">
+				<div class="row-encuesta">
+					5.- ¿Al llegar al aeropuerto lo estaban esperando con el logo de Boehringer Ingelheim México?
+				</div>
+
+				<div class="row-encuesta bottom-encuesta">
+					<div class="radioD">
+	                    <input type="radio" name="radiog_lite" id="radio1" class="css-checkbox" />
+	                    <label for="radio1" class="css-label radGroup1">Si</label>
+	                </div>
+	                <div class="radioD">
+	                    <input type="radio" name="radiog_lite" id="radio2" class="css-checkbox" checked="checked" />
+	                    <label for="radio2" class="css-label radGroup1">No</label>
+	                </div>
+	                <div class="radioD">
+	                    <input type="radio" name="radiog_lite" id="radio3" class="css-checkbox" />
+	                    <label for="radio3" class="css-label radGroup1">No aplica</label>
+	                </div>
+				</div>
+
+				<div class="row-encuesta">
+					6.- A su llegada / salida, ¿el transporte estuvo en el horario confirmado?
+				</div>
+
+				<div class="row-encuesta bottom-encuesta">
+					<div class="radioD">
+	                    <input type="radio" name="radiog_lite" id="radio1" class="css-checkbox" />
+	                    <label for="radio1" class="css-label radGroup1">Si</label>
+	                </div>
+	                <div class="radioD">
+	                    <input type="radio" name="radiog_lite" id="radio2" class="css-checkbox" checked="checked" />
+	                    <label for="radio2" class="css-label radGroup1">No</label>
+	                </div>
+	                <div class="radioD">
+	                    <input type="radio" name="radiog_lite" id="radio3" class="css-checkbox" />
+	                    <label for="radio3" class="css-label radGroup1">No aplica</label>
+	                </div>
+				</div>
+
+				<div class="btn-envio-next" id="3">Siguiente</div>
+			</div>
+
+
+			<div class="step-4 oculto">	
+				<div class="row-encuesta">
+					7.- ¿Las instalaciones del hotel están en buenas condiciones?
+				</div>
+
+				<div class="row-encuesta bottom-encuesta">
+					<div class="radioD">
+	                    <input type="radio" name="radiog_lite" id="radio1" class="css-checkbox" />
+	                    <label for="radio1" class="css-label radGroup1">Si</label>
+	                </div>
+	                <div class="radioD">
+	                    <input type="radio" name="radiog_lite" id="radio2" class="css-checkbox" checked="checked" />
+	                    <label for="radio2" class="css-label radGroup1">No</label>
+	                </div>
+	                <div class="radioD">
+	                    <input type="radio" name="radiog_lite" id="radio3" class="css-checkbox" />
+	                    <label for="radio3" class="css-label radGroup1">No aplica</label>
+	                </div>
+				</div>
+
+				<div class="row-encuesta">
+					8.- ¿La calidad de los alimentos le pareció adecuada?
+				</div>
+
+				<div class="row-encuesta bottom-encuesta">
+					<div class="radioD">
+	                    <input type="radio" name="radiog_lite" id="radio1" class="css-checkbox" />
+	                    <label for="radio1" class="css-label radGroup1">Si</label>
+	                </div>
+	                <div class="radioD">
+	                    <input type="radio" name="radiog_lite" id="radio2" class="css-checkbox" checked="checked" />
+	                    <label for="radio2" class="css-label radGroup1">No</label>
+	                </div>
+	                <div class="radioD">
+	                    <input type="radio" name="radiog_lite" id="radio3" class="css-checkbox" />
+	                    <label for="radio3" class="css-label radGroup1">No aplica</label>
+	                </div>
+				</div>
+
+				<div class="btn-envio-next" id="4">Siguiente</div>
+			</div>
+
+			<div class="step-5 oculto">	
+				<div class="row-encuesta">
+					9.- En general, ¿se cumplieron sus expectativas?
+				</div>
+
+				<div class="row-encuesta bottom-encuesta">
+					<div class="radioD">
+	                    <input type="radio" name="radiog_lite" id="radio1" class="css-checkbox" />
+	                    <label for="radio1" class="css-label radGroup1">En desacuerdo</label>
+	                </div>
+	                <div class="radioD">
+	                    <input type="radio" name="radiog_lite" id="radio2" class="css-checkbox" checked="checked" />
+	                    <label for="radio2" class="css-label radGroup1">Neutral</label>
+	                </div>
+	                <div class="radioD">
+	                    <input type="radio" name="radiog_lite" id="radio3" class="css-checkbox" />
+	                    <label for="radio3" class="css-label radGroup1">De acuerdo</label>
+	                </div>
+				</div>
+
+				<div class="row-encuesta">
+					10.- ¿Asistiría a otro evento organizado por Boehringer-Ingelheim y Lilly?
+				</div>
+
+				<div class="row-encuesta bottom-encuesta">
+					<div class="radioD">
+	                    <input type="radio" name="radiog_lite" id="radio1" class="css-checkbox" />
+	                    <label for="radio1" class="css-label radGroup1">En desacuerdo</label>
+	                </div>
+	                <div class="radioD">
+	                    <input type="radio" name="radiog_lite" id="radio2" class="css-checkbox" checked="checked" />
+	                    <label for="radio2" class="css-label radGroup1">Neutral</label>
+	                </div>
+	                <div class="radioD">
+	                    <input type="radio" name="radiog_lite" id="radio3" class="css-checkbox" />
+	                    <label for="radio3" class="css-label radGroup1">De acuerdo</label>
+	                </div>
+				</div>
+
+				<div class="btn-envio-next" id="5">Siguiente</div>
+			</div>	
+
+			<div class="step-6 oculto">	
+				<div class="row-encuesta">
+					11.- ¿Por favor nos podría compartir sus comentarios del evento en general?
+				</div>
+
+				<div class="row-encuesta">
+					<textarea id="pregunta-6"></textarea>
+				</div>
+
+				<div class="btn-envio-next save">Aceptar</div>
+			</div>
+		</div>
 	</div>
 	<!-- end encuestas  -->
 
 	<!-- start pregunta-experto  -->
-	<div class="paginas tanger-live oculto">
+	<div class="paginas tanger-live">
 		<div class="title-app">Preguntale al experto</div>
 
 		<textarea id="pregunta-ponente" placeholder="Escriba su pregunta..."></textarea>
 		<div class="btn-envio-pregunta">Enviar</div>
 
-		<div class="mandando-pregunta oculto">
+		<div class="mandando-pregunta">
 			<div class="txt-enviando txt-textos">
 				Su pregunta se esta enviando<br /> Espere por favor...
 				<div id="preloader6"><span></span><span></span><span></span><span></span></div>
@@ -95,17 +332,16 @@
 	<!-- end pregunta-experto  -->
 
 	<div class="contiene-pregunta oculto">
-		<div class="icono-cerrar cierro-voto oculto"></div>
 		<div class="pregunta"></div>
 		<div class="respuestas"></div>
-		<p class="gracias oculto">Gracias por tu votación</p>
+		<p class="gracias oculto">Gracias por tu voto</p>
 		<div class="reloj">15</div>
 		<input type="hidden" id="reloj_cuenta" value="15">
 	</div>
     
 </div>
 	
-	<input type="hidden" id="current" value="pag-inicio">
+	<input type="hidden" id="current" value="encuestas_satisfaccion">
 	<input type="hidden" id="usuario">
 	
 	<!-- JS Files Import -->

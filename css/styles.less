@@ -35,7 +35,7 @@
     height: @height;
 }
 
-.backgroundLoader(@color: #018645, @top: 0px, @left: 0px) {
+.backgroundLoader(@color: @yellow_dark, @top: 0px, @left: 0px) {
 	background: @color;
 	top: @top;
 	left: @left;
@@ -66,6 +66,15 @@
   &::-webkit-input-placeholder {
     color: @color;
   }
+}
+
+.textarea(@size: 27px) {
+	padding: 10px 15px 0px 15px;
+	font-size: @size;
+	color: @textApp;
+	border: solid 4px @app;
+	.placeholder;
+	.border-radius(10px);
 }
 
 @font-face {
@@ -104,7 +113,7 @@ body {
 }
 
 .menu {
-	.background('../img/home/menu.png', 70px, 71px, 55px );
+	.background('../img/home/menu.png', 70px, 71px, 60px );
 	position: absolute;
     top: 37px;
     left: 32px;
@@ -197,7 +206,11 @@ body {
 	}
 }
 
-.sub-encuestas, .breakout-2 {
+.encuesta-1 {
+	top: 0px !important;
+}
+
+.sub-encuestas, .breakout-2, .encuesta-2 {
 	top: 140px;
 }
 
@@ -221,12 +234,24 @@ body {
 .breakout-3:after {
 	content: "3";
 }
+
 .txt-btn-menu {
     position: absolute;
     width: 165px;
     left: 105px;
     text-transform: uppercase;
     .century;
+}
+
+.txt-btn-menu-encuesta {
+    position: absolute;
+    .sizeElement(165px, 50px, 17px, 105px);
+    text-transform: uppercase;
+    font-family: century;
+    font-size: 22px;
+    color: #ffffff;
+    line-height: 25px;
+    text-align: center;
 }
 
 .sub-pregunta-experto > .txt-btn-menu {
@@ -251,15 +276,15 @@ body {
 #pregunta-ponente {
 	position: absolute;
 	.sizeElement(356px, 360px, 210px, 29px);
-	padding: 10px 15px 0px 15px;
-	font-size: 27px;
-	color: @textApp;
-	border: solid 4px @app;
-	.placeholder;
-	.border-radius(10px);
+	.textarea;
 }
 
-.tanger-live, .encuestas, .breakouts {
+#pregunta-6 {
+	.sizeElement(356px, 150px, 0px, 0px);
+	.textarea(18px);
+}
+
+.tanger-live, .encuestas, .breakouts, .encuestas_satisfaccion, .encuestas_cientifica {
 	background-image: url(../img/gral/background-internas.jpg);	
 }
 
@@ -271,8 +296,26 @@ body {
 	.border-radius(5px);
 	.box-shadow;
 	line-height: 60px;
-	font-family: century !important;
 	text-align: center;
+}
+
+.btn-envio-next {
+	background: linear-gradient( 0deg, @yellow_light, @yellow_dark);
+	position: absolute;
+	.sizeElement(356px, 60px, 475px, 0px);
+	.title(30px, @textApp);
+	.border-radius(5px);
+	.box-shadow;
+	line-height: 60px;
+	text-align: center;	
+
+	&:before {
+		content: "";
+		position: absolute;
+		.background('../img/gral/next.png', 20px, 35px, 32px );
+		top: 15px;
+    	left: 270px;
+	}
 }
 
 .icono-cerrar-experto {
@@ -281,7 +324,7 @@ body {
 
 .mandando-pregunta {
 	position: absolute;
-	.sizeElement(100%, 100%, 0px, 0px);
+	.sizeElement(414px, 736px, 0px, 0px);
 	background-color: rgba(0,0,0, 0.8);
 	z-index: 100;
 }
@@ -306,18 +349,14 @@ body {
     background-color: #ffffff;
     .sizeElement(414px, 736px, 0px, 0px);
     z-index: 20;
-
-    border: solid 1px;
 }
 
 .pregunta {
     height: auto;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     
     color: @textApp;
-
-    border: solid 1px;
 }
 
 .respuestas {
@@ -331,6 +370,33 @@ body {
 
 .css-checkbox {
 	margin-left: 10px !important;
+}
+
+hr {
+	border-bottom: solid 2px @app;
+}
+
+.reloj {
+    border-radius: 100%;
+   	text-align: center;    
+    font-size: 20px;
+    line-height: 50px;
+    background-color: #52acb3;
+    color: #ffffff;
+    position: absolute;
+
+    .sizeElement(50px, 50px, 640px, 340px);
+}
+
+.gracias {
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    line-height: 40px;
+    background-color: #52acb3;
+    color: #ffffff;
+
+    .sizeElement(210px, 40px, 645px, 0px);
 }
 /********************** loader css ******************************/
 #preloader6 {
@@ -349,17 +415,17 @@ body {
 		}
 
 		&:nth-child(2){
-			.backgroundLoader(#d62d20, 0px, 52px);
+			.backgroundLoader(@green_ligth, 0px, 52px);
 			animation-delay: .2s;
 		}
 
 		&:nth-child(3){
-			.backgroundLoader(#0057e8, 52px, 0px);
+			.backgroundLoader(@green_ligth, 52px, 0px);
 			animation-delay: .4s;
 		}
 
 		&:nth-child(4){
-			.backgroundLoader(#ffa700, 52px, 52px);
+			.backgroundLoader(@yellow_dark, 52px, 52px);
 			animation-delay: .6s;
 		}
 	}    
@@ -369,4 +435,98 @@ body {
    0% { transform:scale(1); }
    50% { transform:scale(0.5); }
    100% { transform:scale(1); }
+}
+
+
+/********************* encuestas **********************************/
+
+.ensat {
+    width: 360px;
+    font-size: 25px;
+    top: 115px;
+}
+
+.row-encuesta {
+    margin-bottom: 10px;
+    /*border: solid 1px red;*/
+}
+
+.container-encuesta {
+	text-align: justify;
+	font-size: 18px;
+    /*border: solid 1px;*/
+    font-family: centuryB;
+    color: rgba(77, 67, 61, 0.95);
+    position: absolute;
+    width: 356px;
+    top: 170px;
+    left: 33px;
+}
+
+.bottom-encuesta {
+    margin-bottom: 30px;
+}
+
+.opt-en {
+	background-color: @green_ligth;
+	opacity: 0.6;
+	color: #ffffff;
+	.sizeElement(50px, 50px, 0px, 0px);
+    line-height: 50px;
+    text-align: center;
+    border-radius: 100%;
+    display: inline-block;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.active {
+	opacity: 1;
+}
+
+.opt-1 {
+	margin-left: 10px;
+}
+
+.opt-5 {
+	margin-right: 0px;
+}
+
+.radioD {
+    margin-bottom: 10px;
+}
+
+/****************** css styles checkbox ************************/
+
+input[type=radio].css-checkbox {
+	position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+}
+
+input[type=radio].css-checkbox + label.css-label {
+	padding-left:40px;
+	height:35px; 
+	display:inline-block;
+	line-height:30px;
+	background-repeat:no-repeat;
+	font-family: century;
+	font-size:18px;
+	vertical-align:middle;
+	cursor:pointer;
+
+}
+
+input[type=radio].css-checkbox:checked + label.css-label {
+	background-position: 0 -36px;
+}
+
+label.css-label {
+	background-image: url(../img/gral/checkbox.png);
+    background-size: 33px;
+    background-position: 0px 0px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
