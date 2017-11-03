@@ -89,7 +89,6 @@
 
 body {
 	.sizeElement;
-	background-color: red;
 }
 
 .oculto{
@@ -279,7 +278,7 @@ body {
 	.textarea;
 }
 
-#pregunta-6 {
+#pregunta-11 {
 	.sizeElement(356px, 150px, 0px, 0px);
 	.textarea(18px);
 }
@@ -302,7 +301,7 @@ body {
 .btn-envio-next {
 	background: linear-gradient( 0deg, @yellow_light, @yellow_dark);
 	position: absolute;
-	.sizeElement(356px, 60px, 475px, 0px);
+	.sizeElement(356px, 60px, 520px, 0px);
 	.title(30px, @textApp);
 	.border-radius(5px);
 	.box-shadow;
@@ -318,16 +317,63 @@ body {
 	}
 }
 
+.save:before {
+	.background('../img/gral/save.png', 35px, 38px, 40px );
+	top: 12px;
+}
+
 .icono-cerrar-experto {
 	display: none;
 }
 
-.mandando-pregunta {
+.mandando-pregunta, .msg-alert {
 	position: absolute;
 	.sizeElement(414px, 736px, 0px, 0px);
 	background-color: rgba(0,0,0, 0.8);
 	z-index: 100;
 }
+
+.msg-box {
+	position: absolute;
+	.sizeElement(350px, 250px, 243px, 32px);
+	background-color: rgba(255,255,255,0.8);
+	.textarea;
+	.border-radius(20px);
+	border-width: 8px;
+
+	&:before {
+		content: "?";
+		position: absolute;
+		.sizeElement(90px, 90px, -50px, 270px);
+		text-align: center;
+	    border-radius: 100%;
+	    line-height: 90px;
+	    font-family: centuryB;
+	    font-size: 60px;
+	    background-color: #53abb3;
+	    color: #ffffff;
+	}
+}
+
+.msg-txt {
+	position: absolute;
+	.sizeElement(100%, auto, 40px, 0px);
+
+	font-family: centuryB;
+	padding: 0px 10px 0px 10px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.msg-close {
+    position: absolute;
+    .sizeElement(100%, 60px, 170px, 0px);
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 60px;
+    border-top: solid 1px #53abb3;
+}
+
 
 .txt-enviando {
 	position: absolute;
@@ -353,7 +399,7 @@ body {
 
 .pregunta {
     height: auto;
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
     
     color: @textApp;
@@ -439,6 +485,22 @@ hr {
 
 
 /********************* encuestas **********************************/
+.logos_encuesta {
+	top: 20px;
+}
+
+#nombre {
+    width: 100%;
+    text-align: center;
+    height: 55px;
+    .placeholder;
+
+    border: solid 2px @app;
+    margin-bottom: 10px;
+
+    font-size: 25px;
+    font-family: century;
+}
 
 .ensat {
     width: 360px;
@@ -453,18 +515,22 @@ hr {
 
 .container-encuesta {
 	text-align: justify;
-	font-size: 18px;
+	font-size: 16px;
     /*border: solid 1px;*/
     font-family: centuryB;
     color: rgba(77, 67, 61, 0.95);
     position: absolute;
     width: 356px;
-    top: 170px;
+    top: 120px;
     left: 33px;
 }
 
 .bottom-encuesta {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+}
+
+.top-encuesta {
+    margin-top: 25px;
 }
 
 .opt-en {

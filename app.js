@@ -52,7 +52,7 @@ var selecciono  = function (sql,info,callback) {
     });
 }
 var guardo  = function (sql,info,callback) {
-    pool.getConnection(function(err,connection){
+	pool.getConnection(function(err,connection){
         if (err) {
           connection.release();
           callback(false);
@@ -171,6 +171,20 @@ io.sockets.on('connection', function(socket){
 		});
 	});
 	
+
+	socket.on("save survey", function( data, callback ) {
+		var sql = "INSERT INTO surveys (name, p_1, p_2, p_3, p_4, p_5, p_6, p_7, p_8, p_9, p_10, p_11) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		var dataSource = data["data"];
+
+		guardo(sql, dataSource, function( res ){
+			if( res.affectedRows == "1" ) {
+				callback(true);
+			}else {
+				callback(false);
+			}
+		});
+	});
+
 	socket.on('voto',function(datas){
 		var data=datas.ide;
 		var otro=data.split("-");
@@ -193,7 +207,7 @@ io.sockets.on('connection', function(socket){
 					console.log(res);
 					for (var i = 0,p=1; i < res.length; i++,p++) {
 						var algo="u-"+res[i].idrespuesta;
-						console.log(algo);
+						// console.log(algo);
 						if (algo in voto) {
 							var q=voto[algo];
 							q++;
@@ -203,7 +217,7 @@ io.sockets.on('connection', function(socket){
 							voteo[algo]=1;
 							voto[algo]=1;
 						}
-						console.log(voto);
+						// console.log(voto);
 						//voto["u-"+res[0].idrespuesta]=p;
 					}
 					//console.log(voto);
@@ -213,25 +227,6 @@ io.sockets.on('connection', function(socket){
 			}
 			
 		});
-	});
-
-	socket.on("guardo encuesta",function(data,callback){
-		var info=data["datos"];
-		var num=Math.random();
-		for (var i = 0,ques=1; i < info.length; i++,ques++) {
-			var sql="insert into encuesta_respondio(idencuesta_pregunta,nombre,opcion) values(?,?,?)";
-			var mirespuesta=info[i];
-			if (i==0 && info[i]=='6') {
-				mirespuesta=data["otro"];
-			};
-			var info2=new Array(ques,num,mirespuesta);
-			guardo(sql,info2,function(res){		
-				if (res.affectedRows=="1") {
-					callback(true);
-				}
-			});
-		};
-		var sql="insert into encuesta_respondio(idencuesta_pregunta,nombre,opcion) values()";
 	});
 
 	socket.on('reloadApp',function () {
@@ -245,7 +240,7 @@ io.sockets.on('connection', function(socket){
 		var state = parseInt(div[1]);
 		var state2 = state = !state;
 		var sql="update tanger_live set estado=? where idtanger_live=?";
-		//console.log("cancelo: "+data.estado+" "+data.ide);
+		
 		var info=new Array(state2, id);
 		guardo(sql,info,function(response){
 			console.log(response);
