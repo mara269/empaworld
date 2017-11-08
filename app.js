@@ -75,15 +75,23 @@ var guardo  = function (sql,info,callback) {
 }
 
 app.get('/',function(req, res){
-	res.sendFile(__dirname+'/juego.html');
-});
-
-app.get('/alertas',function(req, res){
 	res.sendFile(__dirname+'/index.html');
 });
 
-app.get('/voteo',function(req, res){
-	res.sendFile(__dirname+'/voteo.html');
+app.get('/dashboard',function(req, res){
+	res.sendFile(__dirname+'/panel.html');
+});
+
+app.get('/votacion_1',function(req, res){
+	res.sendFile(__dirname+'/voteo-1.html');
+});
+
+app.get('/votacion_2',function(req, res){
+	res.sendFile(__dirname+'/voteo-2.html');
+});
+
+app.get('/votacion_3',function(req, res){
+	res.sendFile(__dirname+'/voteo-3.html');
 });
 
 app.get('/experto',function(req, res){
@@ -131,26 +139,29 @@ io.sockets.on('connection', function(socket){
 	});
 	
 	socket.on('mando voteo', function(data,callback){
-			if (data.estado=="1") {
-				var sql="update voto_pregunta set estado=? and idvoto_pregunta=?";
-				var info=new Array(data.estado,data.ide);
-				guardo(sql,info,function(){
-					sql="SELECT vp.idvoto_pregunta,vp.nombre,vr.idvoto_respuesta,vr.opcion FROM voto_pregunta vp inner join voto_respuesta vr on vr.idvoto_pregunta=vp.idvoto_pregunta where estado=1 and vp.idvoto_pregunta=?";
-					
-					selecciono(sql,data.ide,function(res){					
-						io.sockets.emit('hay voteo', {op: data.op,opp:data.opp,infos:res,yavoto:false});
-					});
+		//ESTE IF ES PARA MANDAR LA VOTACION		
+		if (data.estado=="1") {
+			var sql="update voto_pregunta set estado=? and idvoto_pregunta=?";
+			var info=new Array(data.estado,data.ide);
+			guardo(sql,info,function(){
+				sql="SELECT vp.idvoto_pregunta,vp.nombre,vr.idvoto_respuesta,vr.opcion FROM voto_pregunta vp inner join voto_respuesta vr on vr.idvoto_pregunta=vp.idvoto_pregunta where estado=1 and vp.idvoto_pregunta=?";
+				//console.log(sql);
+				selecciono(sql,data.ide,function(res){
+					//console.log("selecciono pregunta: "+data.op);
+					io.sockets.emit('hay voteo', {op: data.op,breakout: data.breakout,opp:data.opp,infos:res,yavoto:false});
 				});
-			}else
-			if (data.estado=="0") {
-				var sql="update voto_pregunta set estado=? and idvoto_pregunta=?";
+			});
+		}else if (data.estado=="0") { // ESTE OTRO IF ES PARA CERRAR LA VOTACION
+			var sql="update voto_pregunta set estado=? and idvoto_pregunta=?";
+			//console.log("cancelo: "+data.estado+" "+data.ide);
+			var info=new Array(data.estado,data.ide);
+			guardo(sql,info,function(){
+
+					//console.log("cancelo pregunta: "+data.op);
+					io.sockets.emit('hay voteo', {op: data.op, breakout: data.breakout, opp:data.opp,yavoto:false});
 				
-				var info=new Array(data.estado,data.ide);
-				
-				guardo(sql,info,function(){
-					io.sockets.emit('hay voteo', {op: data.op,opp:data.opp,yavoto:false});					
-				});
-			}			
+			});
+		}	
 	});
 
 	socket.on('mando alerta', function(data,callback){
@@ -171,6 +182,35 @@ io.sockets.on('connection', function(socket){
 		});
 	});
 	
+	socket.on("add question", function( data, callback ) {
+		var sql = "INSERT INTO voto_pregunta ( nombre, breakout) VALUES (?, ?)";
+		var question = data["question"];
+		var array = new Array();
+		var centinel = 0;
+
+		guardo(sql, question, function( res ){
+			if( res.affectedRows == "1" ) {
+				var sql = "SELECT MAX(idvoto_pregunta) AS id FROM voto_pregunta";
+				
+				selecciono( sql,"" ,function(res) {
+					var id = res[0].id;
+					var sql = "INSERT INTO voto_respuesta ( idvoto_pregunta, opcion ) VALUES (?, ?)";
+
+					for(var i = 0; i < data.answers.length; i++) {
+						array = [id, data.answers[i]];
+
+						guardo(sql,array, function( res ){});
+					}
+
+					callback(true);
+				});
+			}else {
+				callback(false);
+			}
+		});
+
+	});
+
 
 	socket.on("save survey", function( data, callback ) {
 		var sql = "INSERT INTO surveys (name, p_1, p_2, p_3, p_4, p_5, p_6, p_7, p_8, p_9, p_10, p_11) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";

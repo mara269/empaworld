@@ -1,120 +1,38 @@
+<!doctype html>
 <html>
 <head>
-	<title>Experto</title>
-	<meta name="viewport" content="width = 1024, height=768, initial-scale=1.0, maximum-scale=1.0" />
-
-	<link href="/css/bootstrap.css" rel="stylesheet">
-	<style type="text/css">
-		body {
-		    background: url(/../img/gral/fondo.jpg)no-repeat;
-		    background-size: 100%;
-		    width: 1024px;
-		    max-width: 1024px;
-		    height: 768px !important;
-		}
-		.oculto{
-			display: none;
-		}
-		.contenedores {
-		    position: absolute;
-		    top: 135px;
-		    left: 150px;
-		    overflow-x: hidden;
-		    overflow-y: auto;
-		}
-		#msg-notificacion{
-   			width: 500px;
-			height: 260px;
-		    resize: none;
-	    	position: absolute;
-			z-index: 10;
-			left: 122px;
-			font-size: 25px;
-		}
-		#botones{
-			position: absolute;
-		    top: 300px;
-		    left: 100px;
-            z-index: 1000;
-		}
-		.btn-gral{
-			background: url(../img/notas/cuadroTxtNotas.png) center center no-repeat;
-  			background-size: 260px 70px;
-		  	width: 260px;
-		  	height: 70px;
-		  	color: white;
-		  	font-size: 20px;
-		}
-		#menus{
-			display: inline-flex;
-			position: absolute;
-  			left: 13%;
-  			top: 35px;
-		}
-		.txt-btn{
-			padding:10px; 
-		}
-		.pre-voteo{
-			font-size: 25px;
-			position: absolute;
-			z-index: 1001;
-		}
-		.listo-preguntas {
-		    color: white;
-		    border: 1px solid;
-		    padding-bottom: 30px;
-		    background: rgba(26, 51, 70, 0.73);
-		}
-		.respuestas {
-		    font-size: 28px;
-		    margin-top: 1px;
-		    width: 944px;
-		    margin-left: -115px;
-		    height: 600px;
-		}
-		.btn-mostrar {
-		    text-align: center;
-		    padding: 5px;
-		    border-radius: 7px;
-		    background: #1a3346;
-		}
-		.manita{
-			position: absolute;
-		    z-index: 2;
-		    right: -7px;
-		    top: 305px;
-		}
-
-	</style>
+	<meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.:: Empaworld ::.</title>
+	
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/filtro.css">
 </head>
+
 <body>
-	<div class="manita"><img src="img/home/manita.png"></div>
+	<img src="../img/home/logo_empa.png" class="logo" />
 	<div class="div-preguntas contenedores respuestas"></div>
 
 
 	<script src="/js/jquery.js"></script>
-  <script src="/js/jquery-ui.js"></script>
 	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
 	<script type="text/javascript">
-	jQuery(function($){
-		
-		var socket = io.connect();
+		$(document).ready(function() {					
+			var socket = io.connect();
 
-		socket.on("experto",function(data){
-			$(".div-preguntas").html("");
-			console.log("se sacan las pregunta "+data.length);
-			for (var i = 0, p = 1; i < data.length; i++) {
-				if (data[i].estado=="1" && (data[i].mostrada == 0 || data[i].mostrada == 2)) {
-					$(".div-preguntas").append('<div class="row listo-preguntas"><div class="col-sm-12">'+p+'.- '+data[i].comentario+'</div></div>');
-					p++;
-				};
+			socket.on("experto",function(data){
+				$(".div-preguntas").html("");
 				
-			}
-			
+				for (var i = 0, p = 1; i < data.length; i++) {
+					if (data[i].estado=="1" && (data[i].mostrada == 0 || data[i].mostrada == 2)) {
+						$(".div-preguntas").append('<div class="row listo-preguntas"><div class="col-sm-12">'+p+'.- '+data[i].comentario+'</div></div>');
+						p++;
+					};
+					
+				}				
+			});			
 		});
-		
-
-	});
 	</script>
 </body>
 </html>

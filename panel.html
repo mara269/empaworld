@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.:: Dashboard | Tanger ::.</title>
+	
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/dashboard.css">
+</head>
+
+<body>
+	<div class="container space-top">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="col-lg-3 col-md-3 col-sm-12 centered">
+					<div class="btn-gral active" id="1">Alertas</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-12 centered">
+					<div class="btn-gral ver-votacion" id="2">Votación</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-12 centered">
+					<div class="btn-gral add-question" id="3">Agregar pregunta</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-12 centered">
+					<div class="btn-gral btn-reload" id="4">Reload app</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row layer panel-1">
+			<div class="col-lg-12 centered space">
+				<textarea id="msg-notificacion" placeholder="Escribe una notificación..."></textarea>
+				<div id="botones">
+					<div class="btn-notification right" id="mandonotificacion">Enviar</div>
+					<div class="btn-notification" id="cancelonotificacion">Cerrar</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row layer panel-2 oculto">
+			<div class="col-lg-2 centered space">
+				<div class="col-lg-12 space-break">
+					<div class="box-break active" id="1">Breakout 1</div>
+				</div>
+				<div class="col-lg-12 space-break">
+					<div class="box-break" id="2">Breakout 2</div>
+				</div>
+				<div class="col-lg-12 space-break">
+					<div class="box-break" id="3">Breakout 3</div>
+				</div>
+			</div>
+
+			<div class="col-lg-10 centered space">				
+				<div class="breakout-1 breakout"></div>	
+				<div class="breakout-2 breakout oculto"></div>	
+				<div class="breakout-3 breakout oculto"></div>					
+			</div>
+		</div>
+
+		<div class="row layer panel-3 oculto">
+			<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 space-top">
+				<fieldset>
+				    <legend>+ Agregar pregunta</legend>
+				    <div class="form">
+				    	<div class="row-form space-break">
+				    		<div class="col-form txt-pregunta">Pregunta : </div>
+				    		<div class="col-form"><input type="text" class="input" id="pregunta_1" placeholder="escribe tu pregunta..." /></div>
+				    	</div>
+
+				    	<div class="row-form-1">
+				    		<div class="col-form-1 space-break"><input type="text" class="input ip-1" placeholder="respuesta 1" /></div>
+				    		<div class="col-form-1 space-break"><input type="text" class="input ip-1" placeholder="respuesta 2" /></div>
+				    		<div class="col-form-1 space-break"><input type="text" class="input ip-1" placeholder="respuesta 3" /></div>
+				    		<div class="col-form-1 space-break"><input type="text" class="input ip-1" placeholder="respuesta 4" /></div>
+				    		<div class="col-form-1 space-break"><input type="text" class="input ip-1" placeholder="respuesta 5" /></div>
+				    		<div class="col-form-1 space-break"><input type="text" class="input ip-1" placeholder="respuesta 6" /></div>
+				    	</div>
+ 
+				    	<div class="save-break btn btn-primary btn-lg">Guardar</div>
+				    </div>
+
+				</fieldset>
+			</div>
+		</div>
+	</div>
+	
+  	<!-- JS Files Import -->
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="/js/jquery.js"></script>
+
+	<script type="text/javascript" src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+@font-face {
+  font-family: century;
+  src: url("/fonts/century_gothic.otf");
+}
+
+body {
+    width: 1024px;
+    height: 768px;
+    background-image: url('../img/gral/background-voto.jpg');
+    background-repeat: no-repeat;
+    background-size: 1024px;
+}
+
+.oculto{
+	display: none;
+}
+
+.logo {
+    position: absolute;
+    left: 850px;
+    top: 20px;
+
+    width: 120px;
+}
+
+.contenedores {
+    position: absolute;
+    top: 125px;
+    left: 39.5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#msg-notificacion{
+		width: 500px;
+  	height: 260px;
+  	resize: none;
+  	position: absolute;
+  	z-index: 10;
+  	left: 122px;
+  	font-size: 25px;
+}
+#botones{
+	position: absolute;
+		top: 300px;
+		left: 100px;
+		z-index: 1000;
+}
+.btn-gral{
+	background-size: 260px 70px;
+	width: 260px;
+	height: 70px;
+	color: white;
+	font-size: 20px;
+}
+#menus{
+	display: inline-flex;
+	position: absolute;
+  	left: 13%;
+  	top: 35px;
+}
+.txt-btn{
+	padding:10px; 
+}
+.pre-voteo{
+	font-size: 25px;
+	position: absolute;
+	z-index: 1001;
+}
+
+.listo-preguntas {
+    color: #000;
+    border-bottom: solid 2px #50b2ac;
+    padding-bottom: 30px;
+    /*background: rgba(18, 80, 90, 0.6);*/
+    background: rgba(0, 0, 0, 0.2);
+    /*text-shadow: 1px 1px 5px #000;*/
+    font-family: century;
+    padding-left: 10px;
+}
+
+.respuestas {
+    font-size: 28px;
+    width: 945px;
+    height: 600px;
+}
+
+.btn-mostrar {
+    text-align: center;
+    background-color: #5cb85c;
+
+    position: absolute;
+    width: 120px;
+    height: 45px;
+    margin-top: 10px;
+    font-size: 22px;
+    line-height: 45px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-regresar {
+	background-color: #d8534f;
+}	

@@ -1,0 +1,73 @@
+@font-face {
+  font-family: centuryB;
+  src: url("/fonts/century_gothic_bold.otf");
+}
+
+@font-face {
+  font-family: century;
+  src: url("/fonts/century_gothic.otf");
+}
+
+body {
+    background-image: url('../img/gral/background-voto.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+.logo {
+    margin-top: 20px;
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.centered {
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.oculto{
+	display: none;
+}
+
+.format {
+    padding-left: 40px;
+    padding-top: 10px;
+}
+
+.percent {
+    text-align: center;
+    line-height: 45px;
+}
+
+.contenedores {
+    position: absolute;
+    width: 1024px;
+    height: 768px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+
+    margin: auto auto auto auto;
+    border: solid 1px red;
+}
+
+.pregunta {
+    font-size: 23px;
+    font-family: centuryB;
+    width: 1024px;
+    height: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.respuestas {
+    font-family: century;
+    font-size: 23px;
+    margin-top: 30px;
+    width: 1024px;
+}
+
+.progressbar .ui-progressbar-value {
+    background: #50b2ac;
+}

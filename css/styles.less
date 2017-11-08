@@ -572,7 +572,7 @@ input[type=radio].css-checkbox + label.css-label {
 	padding-left:40px;
 	height:35px; 
 	display:inline-block;
-	line-height:30px;
+	line-height:20px;
 	background-repeat:no-repeat;
 	font-family: century;
 	font-size:18px;
@@ -595,4 +595,575 @@ label.css-label {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+}
+
+/************************************** iPhone 6 **************************************/
+@media only screen and (min-width: 375px) and (max-width: 667px) {	
+	body {
+		.sizeElement(375px, 667px, 0px, 0px);
+	}
+
+	#contenedor {
+		.sizeElement(375px, 667px, 0px, 0px);
+	}
+
+	.paginas {
+		.background('../img/gral/background.jpg', 375px, 375px, 667px);
+	}
+
+	.tanger-live, .encuestas, .breakouts, .encuestas_satisfaccion, .encuestas_cientifica {
+		background-image: url(../img/gral/background-internas.jpg);	
+	}
+
+	.logo-empa {
+		.background('../img/home/logo_empa.png', 110px, 120px, 85px );
+	    left: 232px;
+	}
+
+	.menu {
+		.background('../img/home/menu.png', 70px, 71px, 60px );
+		left: 32px;
+	}
+
+	.position-menu {
+	    top: 170px;
+	    left: 36.5px;
+	}
+
+	.position-breakout {
+	    top: 220px;
+	    left: 36.5px;
+	}
+
+	.menu-option {
+	    .sizeElement(375px, 667px, 0px, 0px);
+	}
+
+    .title-app {
+	    font-size: 25px;
+	 	width: 340px;
+
+	    &:first-letter {
+			.title(25px, @app);
+		}
+	}
+
+	#pregunta-ponente {
+	    width: 317px;
+	    height: 320px;
+	    font-size: 25px;	    
+	}
+
+	.btn-envio-pregunta {
+		width: 317px;
+		top: 561px;
+	}
+
+	.mandando-pregunta, .msg-alert {
+		.sizeElement(375px, 667px, 0px, 0px);
+	}
+
+	.txt-enviando {
+		.title(22px, #ffffff);
+		.sizeElement(375px, 75px, 270px, 0px);
+		top: 250px;
+	}
+		
+	
+	#preloader6 {
+    	left: 136px;
+    }
+
+	
+	.txt-confirmado {
+		.sizeElement(375px, 115px, 276px, 0px);
+	}
+
+	.msg-box {
+    	width: 310px;
+    	font-size: 22px;
+    	left: 32px;
+    	top: 208px;
+	}
+
+	.msg-box:before {
+	    width: 70px;
+	    height: 70px;
+	    top: -30px;
+	    left: 250px;
+		line-height: 70px;
+	    font-size: 50px;
+	}
+
+	.contiene-pregunta {
+	    .sizeElement(375px, 667px, 0px, 0px);
+	}
+
+	.pregunta {
+	    font-size: 21px;
+	}
+
+	.reloj {
+		top: 590px;
+    	left: 300px;
+	}
+
+	.gracias {
+		top: 595px;
+	}
+
+	.container-encuesta {
+		width: 356px;
+	    left: 9.5px;
+	    top: 110px;
+	    font-size: 15px;
+	}
+
+	.btn-envio-next {
+	    top: 475px;
+	}
+
+	.btn-envio-next {
+		.sizeElement(356px, 60px, 475px, 0px);
+		.title(30px, @textApp);
+		line-height: 60px;
+
+		&:before {
+			content: "";
+			top: 15px;
+	    	left: 270px;
+		}
+	}
+
+	#nombre {
+		height: 55px;
+		margin-bottom: 10px;
+		font-size: 25px;
+	}
+
+	.save {
+	    top: 275px;
+	}
+
+	.row {
+	    margin-right: -2px;
+	    margin-left: -2px;
+	}
+}
+
+
+/************************************************** iPad styles **************************************************/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	#contenedor {
+		.sizeElement(768px, 1024px, 0px, 0px);
+	}
+
+	.paginas {
+		.background('../img/gral/background.jpg', 768px, 768px, 1024px);
+	}
+
+	.logo-empa {
+		.background('../img/home/logo_empa.png', 110px, 120px, 85px );
+		left: 564px;
+	}
+
+	.menu {
+		.background('../img/home/menu.png', 70px, 71px, 60px );
+		left: 82px;
+	}
+
+	.position-menu, .position-breakout {
+	    .sizeElement(400px, 365px, 284px, 184px);
+	}
+
+	.menu-option {
+	    .sizeElement(768px, 1024px, 0px, 0px);
+	}
+
+	.btn-menu, .btn-menu-b {
+		width: 400px;
+		height: 100px;
+	}
+
+	.btn-menu:before, .btn-menu-b:before {
+		width: 110px;
+		height: 110px;
+	}
+
+	.btn-menu-b:after {
+		width: 110px;
+		height: 110px;
+		line-height: 95px;
+	    width: 110px;
+	    height: 110px;
+	}
+
+	.btn-menu:after {
+		background-size: 250px;
+		background-position: 5px 8px;
+		left: 14px;
+	}
+
+	.sub-encuestas:after {
+	    background-position: -85px 11px;
+	}
+
+	.sub-pregunta-experto:after {
+	    background-position: -170px 13px;
+	}
+
+	.txt-btn-menu {
+	    width: 210px;
+	    left: 145px;
+	    font-size: 35px;
+	    top: 35px;
+	}
+
+	.title-app {
+	    font-size: 40px;
+	    top: 135px;
+	    left: 84px;
+	    text-align: center;
+
+	    width: 600px;
+	    height: 60px;
+	    &:first-letter {
+			.title(40px, @app);
+		}
+	}
+
+	.btn-menu-b > .txt-btn-menu {
+	    font-size: 35px;
+	    top: 35px;
+	}
+
+	.sub-pregunta-experto > .txt-btn-menu {
+	    font-size: 30px;
+	    top: 20px;
+	}
+
+	.sub-encuestas, .breakout-2, .encuesta-2 {
+	    top: 160px;
+	}
+
+	.sub-pregunta-experto, .breakout-3 {
+	    top: 320px;
+	}
+
+	#pregunta-ponente {
+	    width: 500px;
+	    height: 460px;
+	    top: 250px;
+	    left: 134px;
+	    font-size: 30px;
+	}
+
+	.btn-envio-pregunta {
+		width: 500px;
+		top: 760px;
+		left: 134px;
+	}
+
+	.mandando-pregunta, .msg-alert {
+		.sizeElement(768px, 1024px, 0px, 0px);
+	}
+
+	.txt-enviando {
+		.title(35px, #ffffff);
+		.sizeElement(768px, 105px, 367px, 0px);
+	}
+
+	.txt-confirmado {
+		.title(57px, #ffffff);
+		.sizeElement(768px, 170px, 427px, 0px);
+	}
+
+	#preloader6 {
+    	left: 327px;
+    }
+
+    .container-encuesta {
+	    font-size: 22px;
+	    width: 500px;
+	    top: 160px;
+	    left: 134px;
+	}
+
+	.btn-envio-next {
+		top: 650px;
+		width: 500px;
+	}
+
+	.bottom-encuesta {
+	    margin-bottom: 70px;
+	}
+
+	.opt-encuesta {
+	    margin-top: 30px;
+	}
+
+	.opt-1 {
+	    margin-left: 25px;
+	}
+
+	.opt-en {
+	    width: 60px;
+	    height: 60px;
+	    line-height: 60px;
+	    margin-right: 28px;
+	}
+
+	.msg-box {
+    	left: 209px;
+    }
+
+    .btn-envio-next:before {
+	    left: 350px;
+	}
+
+	#pregunta-11 {
+    	width: 500px;
+    	margin-top: 10px;
+	}
+
+	.save {
+    	top: 310px;
+    }
+
+    .contiene-pregunta {
+	    .sizeElement(768px, 1024px, 0px, 0px);
+	}
+
+	input[type=radio].css-checkbox + label.css-label {
+	    font-size: 16px;
+	}
+
+	.reloj {
+	    font-size: 25px;
+	    line-height: 80px;
+	    width: 80px;
+	    height: 80px;
+	    top: 840px;
+	    left: 630px;
+	}
+
+	.gracias {
+	    font-size: 25px;
+	    line-height: 60px;
+	    width: 280px;
+	    height: 60px;
+	    top: 850px;
+	}
+
+	.row {
+	    margin-right: -2px;
+	    margin-left: -2px;
+	}
+}
+
+
+/************************************** iPhone 5 **************************************/
+@media only screen and (max-width: 320px) {
+	body {
+		.sizeElement(320px, 568px, 0px, 0px);
+	}
+
+	#contenedor {
+		.sizeElement(320px, 568px, 0px, 0px);
+	}	
+
+	.mandando-pregunta, .msg-alert {
+		.sizeElement(320px, 568px, 0px, 0px);
+	}
+
+	.paginas {
+		.background('../img/gral/background.jpg', 320px, 320px, 568px);
+	}
+
+	.tanger-live, .encuestas, .breakouts, .encuestas_satisfaccion, .encuestas_cientifica {
+		background-image: url(../img/gral/background-internas.jpg);	
+	}
+
+	.logo-empa {
+		.background('../img/home/logo_empa.png', 90px, 100px, 65px );
+		left: 205px;
+	}	
+
+	.menu {
+		.background('../img/home/menu.png', 60px, 61px, 50px );
+		left: 20px;
+	}
+
+	.position-menu {
+	    top: 140px;
+	    left: 9px;
+	}
+
+	.position-breakout {
+	    top: 190px;
+	    left: 9px;
+	}
+
+	.title-app {
+	    top: 110px;
+	    left: 0px;
+	    width: 320px;
+	    font-size: 24px;
+	    text-align: center;
+	}
+
+	.sub-encuestas, .breakout-2, .encuesta-2 {
+	    top: 120px;
+	}
+
+	.sub-pregunta-experto, .breakout-3 {
+	    top: 240px;
+	}
+
+	.menu-option {
+	    .sizeElement(320px, 568px, 0px, 0px);
+	}
+
+	.option {
+	    font-size: 25px;
+	}
+
+	.container-encuesta {
+		left: 0px;
+	    top: 110px;
+	    font-size: 12px;
+	    width: 320px;
+	}
+
+	#nombre {
+	    height: 40px;
+	    font-size: 20px;
+	}
+
+	.opt-1 {
+	    margin-left: 0px;
+	}
+
+	.opt-en {
+	    margin-right: 10px;
+	}
+
+	.btn-envio-next {
+	    width: 320px;
+	    top: 390px;
+	    height: 40px;
+	    font-size: 20px;
+	    line-height: 40px;
+	}
+
+	.btn-envio-next:before {
+	    top: 5px;
+	    left: 220px;
+	}
+
+	.bottom-encuesta {
+	    margin-bottom: 20px;
+	}
+
+	.radioD {
+	    margin-bottom: 0px;
+	}
+
+	input[type=radio].css-checkbox + label.css-label {
+	    font-size: 14px;
+	}
+
+	.msg-txt {
+	    font-size: 18px;
+	}
+
+	.msg-box {
+	    width: 290px;
+	    font-size: 20px;
+	    left: 15px;
+	    top: 159px;
+	}
+
+	.msg-box:before {
+	    width: 60px;
+	    height: 60px;
+	    top: -30px;
+	    left: 230px;
+	    line-height: 60px;
+	    font-size: 40px;
+	}
+
+	#pregunta-11 {
+    	width: 320px;
+    	margin-top: 10px;
+	}
+
+	.save {
+    	top: 265px;
+    }
+
+    .txt-enviando {
+		.title(18px, #ffffff);
+		.sizeElement(320px, 50px, 213px, 0px);
+	}
+		
+	
+	#preloader6 {
+    	left: 105px;
+    }
+
+	
+	.txt-confirmado {
+		.sizeElement(320px, 75px, 246.5px, 0px);
+		font-size: 25px;
+	}
+
+	#pregunta-ponente {
+	    width: 290px;
+	    height: 260px;
+	    top: 180px;
+	    left: 15px;
+	    font-size: 22px;
+	}
+
+	.btn-envio-pregunta {
+	    width: 290px;
+	    height: 40px;
+	    top: 475px;
+	    left: 15px;
+	    font-size: 20px;
+	    line-height: 40px;
+	}
+
+	.contiene-pregunta {
+	    .sizeElement(320px, 568px, 0px, 0px);
+
+	    border: solid 1px green;
+	}
+
+	.respuestas {
+	    margin-top: 10px;
+	}
+
+	.pregunta {
+	    font-size: 18px;
+	}
+
+	hr {
+	    margin-top: 10px;
+	    margin-bottom: 10px;
+	}
+	.reloj {
+		top: 480px;
+    	left: 260px;
+	}
+
+	.gracias {
+		top: 485px;
+	}
+
+	.row {
+	    margin-right: -2px;
+	    margin-left: -2px;
+	}
 }
