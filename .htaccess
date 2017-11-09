@@ -1,0 +1,8 @@
+<FilesMatch “\.(css|js|ico|pdf|jpg|jpeg|png|gif|php|woff)$”>
+	SetOutputFilter DEFLATE
+</FilesMatch>
+
+<FilesMatch "\.(css|js|ico|pdf|flv|jpg|jpeg|png|gif|swf|mp3|mp4)$">
+	Header set Cache-Control "public"
+	Header set Expires "Thu, 25 Apr 2025 20:00:00 GMT"  
+</FilesMatch>﻿
